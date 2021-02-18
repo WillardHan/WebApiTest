@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiTest</name>
+    </assembly>
+    <members>
+        <member name="T:WebApiTest.Controllers.TestController">
+            <summary>
+            test controller
+            </summary>
+        </member>
+        <member name="M:WebApiTest.Controllers.TestController.Info">
+            <summary>
+            get info
+            </summary>
+        </member>
+        <member name="M:WebApiTest.Controllers.TestController.InfoById(System.String)">
+            <summary>
+            get info by val
+            </summary>
+        </member>
+        <member name="M:WebApiTest.Controllers.TestController.Query(System.String,System.Int32)">
+            <summary>
+            query info by a and b
+            </summary>
+        </member>
+        <member name="M:WebApiTest.Controllers.TestController.InfoById(System.Collections.Generic.List{System.String})">
+            <summary>
+            post info by val
+            </summary>
+        </member>
+        <member name="T:WebApiTest.Controllers.UserController">
+            <summary>
+            user controller
+            </summary>
+        </member>
+        <member name="M:WebApiTest.Controllers.UserController.info">
+            <summary>
+            get info
+            </summary>
+        </member>
+        <member name="M:WebApiTest.Controllers.UserController.InfoById(System.Int32)">
+            <summary>
+            get info by id
+            </summary>
+        </member>
+    </members>
+</doc>
