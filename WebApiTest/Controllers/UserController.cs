@@ -1,8 +1,10 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using WebApiTest.Filters;
-using WebApiTest.Exceptions;
-using WebApiTest.Services;
+using System.Threading;
+using WebApiTest.Application.Services;
+using WebApi.Infrastructure.Filters;
+using WebApi.Infrastructure.Attributes;
+using WebApi.Infrastructure.Exceptions;
 
 namespace WebApiTest.Controllers
 {
@@ -18,14 +20,14 @@ namespace WebApiTest.Controllers
 
         [HttpGet("info")]
         [CheckFilter(10,"123")]
-        [DetectFilter]        
-        public virtual async Task<IActionResult> info()
+        public virtual async Task<IActionResult> info(CancellationToken cancellationToken)
         {
-            var test = await userService.GetByName("11");
+            var test = await userService.GetByName("11", cancellationToken);
             return Ok(test);
         }
 
         [HttpGet("info/{id:int}")]
+        [NoSome]
         public IActionResult InfoById([FromRoute]int id)
         {
             return Ok(id);
@@ -34,7 +36,7 @@ namespace WebApiTest.Controllers
         [HttpGet("error")]
         public async Task<IActionResult> Error()
         {
-            throw new ValidationException("Error Test!");
+            throw new ValidateException("Error Test!");
         }
     }
 }

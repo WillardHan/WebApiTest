@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using WebApiTest.Attributes;
-using WebApiTest.Models;
-using WebApiTest.Utility;
+using WebApi.Infrastructure.Attributes;
+using WebApi.Infrastructure.Utility;
+using WebApiTest.Application.Models;
 
 namespace WebApiTest.Controllers
 {
@@ -14,8 +14,7 @@ namespace WebApiTest.Controllers
         {
         }
 
-        [HttpGet("info")]
-        [NoLogger]
+        [HttpGet("info")]     
         public virtual IActionResult Info()
         {
             var test1 = new Test1
@@ -44,6 +43,7 @@ namespace WebApiTest.Controllers
         }
 
         [HttpPost("list")]
+        [NoLogger]
         public IActionResult InfoById([FromBody]List<string> list)
         {
             return Ok(list);

@@ -8,16 +8,22 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using WebApiTest.Filters;
-using WebApiTest.Attributes;
-using WebApiTest.Middlewares;
-using WebApiTest.Models;
+using WebApiTest.Application.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
-using WebApiTest.Services;
 using Autofac.Extras.DynamicProxy;
-using WebApiTest.Interceptors;
+using WebApi.Infrastructure.Interceptors;
+using Castle.DynamicProxy;
+using WebApi.Infrastructure.LifetimeInterfaces;
+using WebApiTest.Domain;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using MediatR;
+using WebApi.Infrastructure.Filters;
+using WebApi.Infrastructure.Middlewares;
+using WebApi.Infrastructure.Attributes;
+using MediatR.Extensions.Autofac.DependencyInjection;
 //using AspectCore;
 //using AspectCore.Extensions.DependencyInjection;
 //using AspectCore.Configuration;
@@ -35,21 +41,24 @@ namespace WebApiTest
 
         public void ConfigureServices(IServiceCollection services)
         {
-            // IHttpContextAccessor is required by the GetRequestService method.
-            //services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSwagger();
-            services.AddControllers(
-                options =>
+            services.AddControllers(options =>
             {
                 options.Filters.Add<LoggerFilter>();
                 options.Filters.Add<ExceptionFilter>();
-            }
-            ).AddControllersAsServices();
-            //services.AddAspectConfigureServices();
+            }).AddControllersAsServices();
             services.AddAutoMapper();
-            services.AddCustomServices();
+            services.AddDbContext<DatabaseContext>(optionsBuilder =>
+            {
+                optionsBuilder.UseSqlServer(Configuration.GetValue<string>("ConnectionString"), options =>
+                {
+                    options.CommandTimeout(60);
+                })
+                .LogTo(Console.WriteLine, LogLevel.Information);
+            });
+            //services.AddCustomServices();            
             services.AddOptions(Configuration);
-
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -81,25 +90,36 @@ namespace WebApiTest
 
         public void ConfigureContainer(ContainerBuilder builder)
         {
-            var test = builder.RegisterAssemblyTypes(typeof(Program).Assembly)
-                   .Where(t => t.GetCustomAttributes(typeof(ServiceAttribute), false).Length > 0
-                                && t.IsClass && !t.IsAbstract);
+            //Load Assemblies
+            //Get All assemblies.
+            var refAssembyNames = Assembly.GetExecutingAssembly()
+                .GetReferencedAssemblies();
+            //Load referenced assemblies
+            foreach (var asslembyNames in refAssembyNames)
+            {
+                Assembly.Load(asslembyNames);
+            }
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
 
+            builder.RegisterMediatR(assemblies);
 
-            builder.RegisterAssemblyTypes(typeof(Program).Assembly)
+            builder.RegisterAssemblyTypes(assemblies).Where(t => typeof(IInterceptor).IsAssignableFrom(t));
+
+            builder.RegisterAssemblyTypes(assemblies)
                    .Where(t => t.GetCustomAttributes(typeof(ServiceAttribute), false).Length > 0
                                 && t.GetCustomAttribute<ServiceAttribute>().Lifetime == ServiceLifetime.Singleton
                                 && t.IsClass && !t.IsAbstract)
                    .AsImplementedInterfaces()
                    .SingleInstance();
 
-            builder.RegisterAssemblyTypes(typeof(Program).Assembly)
+            builder.RegisterAssemblyTypes(assemblies)
                    .Where(t => t.GetCustomAttributes(typeof(ServiceAttribute), false).Length > 0
                                 && t.GetCustomAttribute<ServiceAttribute>().Lifetime == ServiceLifetime.Transient
                                 && t.IsClass && !t.IsAbstract)
                    .AsImplementedInterfaces()
                    .InstancePerDependency();
-            builder.RegisterAssemblyTypes(typeof(Program).Assembly)
+
+            builder.RegisterAssemblyTypes(assemblies)
                    .Where(t => t.GetCustomAttributes(typeof(ServiceAttribute), false).Length > 0
                                 && t.GetCustomAttribute<ServiceAttribute>().Lifetime == ServiceLifetime.Scoped
                                 && t.IsClass && !t.IsAbstract)
@@ -110,11 +130,15 @@ namespace WebApiTest
             //builder.RegisterAssemblyTypes(typeof(Program).Assembly)
             //       .Where(x => x.Name.EndsWith("service", StringComparison.OrdinalIgnoreCase))
             //       .AsImplementedInterfaces()
-            //       .InstancePerLifetimeScope();
-            //builder.RegisterType<ConnectionService>().As<IConnectionService>().SingleInstance();
-            //builder.RegisterType<TestService>().As<ITestService>().InstancePerLifetimeScope();
-            //builder.RegisterType<UserService>().As<IUserService>().InstancePerLifetimeScope();
+            //       .InstancePerLifetimeScope()
+            //       .EnableInterfaceInterceptors().InterceptedBy(typeof(AnyInterceptor));
         }
+
+        //builder.RegisterType(typeof(SomeInterceptor));
+
+        //builder.RegisterType<ConnectionService>().As<IConnectionService>().SingleInstance();
+        //builder.RegisterType<TestService>().As<ITestService>().InstancePerLifetimeScope();
+        //builder.RegisterType<UserService>().As<IUserService>().InstancePerLifetimeScope();
 
         private static void MapRequest(IApplicationBuilder app)
         {
@@ -127,24 +151,6 @@ namespace WebApiTest
 
     static class ConfigureServicesExtention
     {
-        public static void AddAspectConfigureServices(this IServiceCollection services)
-        {
-            //services.ConfigureDynamicProxy(config =>
-            //{
-            //    config.Interceptors.AddTyped<CustomInterceptorAttribute>();
-            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(Predicates.ForNameSpace("WebApiTest.Services"));
-            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(args: new object[] { "custom" });
-            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(method => method.DeclaringType.Name.EndsWith("Service"));
-            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(Predicates.ForMethod("*Query")); //拦截所有Query后缀的方法
-            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(Predicates.ForService("*Repository")); //拦截所有Repository后缀的类或接口
-            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(Predicates.ForNameSpace("AspectCoreDemo.*")); //拦截所有AspectCoreDemo及其子命名空间下面的接口或类
-            //config.NonAspectPredicates.AddNamespace("*.App1");//最后一级为App1的命名空间下的Service不会被代理
-            //config.NonAspectPredicates.AddService("ICustomService");//ICustomService接口不会被代理
-            //config.NonAspectPredicates.AddService("*Service");//后缀为Service的接口和类不会被代理
-            //config.NonAspectPredicates.AddMethod("*Query");//后缀为Query的方法不会被代理
-            //});
-        }
-
         public static void AddSwagger(this IServiceCollection services)
         {
             services.AddSwaggerGen(c =>
@@ -165,19 +171,33 @@ namespace WebApiTest
             //services.AddSingleton(mapper);
         }
 
+        public static void AddAspectConfigureServices(this IServiceCollection services)
+        {
+            //services.ConfigureDynamicProxy(config =>
+            //{
+            //    config.Interceptors.AddTyped<CustomInterceptorAttribute>();
+            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(Predicates.ForNameSpace("WebApiTest.Services"));
+            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(args: new object[] { "custom" });
+            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(method => method.DeclaringType.Name.EndsWith("Service"));
+            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(Predicates.ForMethod("*Query")); 
+            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(Predicates.ForService("*Repository")); 
+            //config.Interceptors.AddTyped<CustomInterceptorAttribute>(Predicates.ForNameSpace("AspectCoreDemo.*")); 
+            //config.NonAspectPredicates.AddNamespace("*.App1");
+            //config.NonAspectPredicates.AddService("ICustomService");
+            //config.NonAspectPredicates.AddService("*Service");
+            //config.NonAspectPredicates.AddMethod("*Query");
+            //});
+        }
+
         public static void AddCustomServices(this IServiceCollection services)
         {
-            //services.RegisterLifetimes(ServiceLifetime.Singleton);
-            //services.RegisterLifetimes(ServiceLifetime.Scoped);
-            //services.RegisterLifetimes(ServiceLifetime.Transient);
+            services.RegisterLifetimesByAttribute(ServiceLifetime.Singleton);
+            services.RegisterLifetimesByAttribute(ServiceLifetime.Scoped);
+            services.RegisterLifetimesByAttribute(ServiceLifetime.Transient);
 
-            //services.RegisterLifetimeTypes(typeof(ISingletonInterface));
-            //services.RegisterLifetimeTypes(typeof(IScopedInterface));
-            //services.RegisterLifetimeTypes(typeof(ITransientInterface));
-
-            //services.AddScoped<IConnectionService, ConnectionService>();
-            //services.AddScoped<ITestService, TestService>();
-            //services.AddScoped<IUserService, UserService>();
+            //services.RegisterLifetimesByInhreit(typeof(ISingletonInterface));
+            //services.RegisterLifetimesByInhreit(typeof(IScopedInterface));
+            //services.RegisterLifetimesByInhreit(typeof(ITransientInterface));
         }
 
         private static void RegisterLifetimesByAttribute(this IServiceCollection services, ServiceLifetime serviceLifetime)
@@ -194,7 +214,12 @@ namespace WebApiTest
                 Type[] interfaces = type.GetInterfaces();
                 interfaces.ToList().ForEach(r =>
                 {
-                    services.AddSingleton(r, type);
+                    switch (serviceLifetime)
+                    {
+                        case ServiceLifetime.Singleton: services.AddSingleton(r, type); break;
+                        case ServiceLifetime.Scoped: services.AddScoped(r, type); break;
+                        case ServiceLifetime.Transient: services.AddTransient(r, type); break;
+                    }
                 });
             }
         }
@@ -211,7 +236,9 @@ namespace WebApiTest
                 Type[] interfaces = type.GetInterfaces();
                 interfaces.ToList().ForEach(r =>
                 {
-                    services.AddSingleton(r, type);
+                    if (lifetimeType == typeof(ISingletonInterface)) services.AddSingleton(r, type);
+                    else if (lifetimeType == typeof(IScopedInterface)) services.AddScoped(r, type);
+                    else if (lifetimeType == typeof(ITransientInterface)) services.AddTransient(r, type);
                 });
             }
         }
