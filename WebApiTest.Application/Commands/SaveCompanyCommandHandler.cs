@@ -1,32 +1,36 @@
 ﻿using MediatR;
-using Microsoft.EntityFrameworkCore;
 using System.Threading;
 using System.Threading.Tasks;
+using WebApi.Infrastructure.Exceptions;
 using WebApiTest.Application.Commands;
-using WebApiTest.Domain;
 using WebApiTest.Domain.Models;
 
 namespace WebApiTest.Commands
 {
     public class SaveCompanyCommandHandler : IRequestHandler<SaveCompanyCommand, bool>
     {
-        private readonly DatabaseContext databaseContext;
+        private readonly ICompanyRepository repository;
         public SaveCompanyCommandHandler(
-            DatabaseContext databaseContext
+            ICompanyRepository repository
             )
         {
-            this.databaseContext = databaseContext;
+            this.repository = repository;
         }
 
         public async Task<bool> Handle(SaveCompanyCommand request, CancellationToken cancellationToken)
         {
-            var model = new Company
+            if (request.Id.HasValue)
             {
-                Code = request.Code,
-                Name = request.Name
-            };
-            databaseContext.Entry(model).State = EntityState.Added;
-            return await databaseContext.SaveChangesAsync() > 0;
+                if (repository.IsCodeExist(request.Code)) throw new ValidateLevelException("该公司编码已存在");
+                repository.Add(new Company(request.Code, request.Name));
+            }
+            else
+            {
+                var model = repository.Get(request.Id.Value) ?? throw new ValidateLevelException("该公司编码已存在");
+                model.Update(request.Code, request.Name);
+            }
+
+            return await repository.SaveChangesAsync() > 0;
         }
     }
 }

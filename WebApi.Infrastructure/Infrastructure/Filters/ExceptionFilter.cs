@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using WebApi.Infrastructure.Exceptions;
+using WebApi.Infrastructure.Utility;
 
 namespace WebApi.Infrastructure.Filters
 {
@@ -29,14 +31,14 @@ namespace WebApi.Infrastructure.Filters
                 //ContentType = "application/json"   
             };
 
-            if (context.Exception is ValidationException)
+            if (context.Exception is ValidateLevelException)
             {
-                result.Content = context.Exception.Message ?? context.Exception.InnerException?.Message ?? "请求异常";
+                result.Content = context.Exception.Message ?? context.Exception.GetLastInnerException()?.Message ?? "请求参数异常";
                 result.StatusCode = (int)HttpStatusCode.BadRequest;
             }
-            else if (context.Exception is SystemException)
+            else if (context.Exception is SystemLevelException)
             {
-                result.Content = context.Exception.Message ?? context.Exception.InnerException?.Message ?? "系统异常";
+                result.Content = context.Exception.Message ?? context.Exception.GetLastInnerException()?.Message ?? "系统内部异常";
                 result.StatusCode = (int)HttpStatusCode.BadRequest;
             }
             else if (context.Exception is OperationCanceledException)
@@ -53,7 +55,7 @@ namespace WebApi.Infrastructure.Filters
             {
                 if (hostEnvironment.IsDevelopment())
                 {
-                    result.Content = context.Exception.InnerException?.Message ?? "系统繁忙，稍后重试";
+                    result.Content = context.Exception.GetLastInnerException()?.Message ?? "系统繁忙，稍后重试";
                     result.StatusCode = (int)HttpStatusCode.BadRequest;
                 }
                 else

@@ -36,7 +36,7 @@ namespace WebApiTest.Controllers
         [HttpGet("error")]
         public async Task<IActionResult> Error()
         {
-            throw new ValidateException("Error Test!");
+            throw new ValidateLevelException("Error Test!");
         }
     }
 }

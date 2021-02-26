@@ -32,5 +32,11 @@ namespace WebApiTest.Controllers
         {
             return Ok(await mediator.Send(command));
         }
+
+        [HttpPut("Department")]
+        public async Task<IActionResult> Save([FromBody]SaveDepartmentCommand command)
+        {
+            return Ok(await mediator.Send(command));
+        }
     }
 }

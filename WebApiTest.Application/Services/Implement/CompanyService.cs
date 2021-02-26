@@ -36,6 +36,10 @@ namespace WebApiTest.Application.Services
             //}
 
             var models = databaseContext.Company.ToList();
+            foreach (var item in models)
+            {
+                databaseContext.Entry(item).Collection(m => m.Departments).Load();
+            }
             return models.ToDTO<IEnumerable<CompanyModel>>();
         }
     }

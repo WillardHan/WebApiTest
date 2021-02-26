@@ -26,6 +26,12 @@ namespace WebApiTest.Domain.Mappings
             builder.Property(m => m.CreateTime)
                 //.HasDefaultValueSql("getdate()")
                 .IsRequired();
+
+            builder.HasMany(m => m.Departments)
+                .WithOne()
+                .HasForeignKey("CompanyId")
+                .IsRequired()
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

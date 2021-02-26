@@ -11,6 +11,7 @@ namespace WebApiTest.Domain
         }
 
         public DbSet<Company> Company { get; set; }
+        public DbSet<Computer> Computer { get; set; }
 
     }
 }

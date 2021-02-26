@@ -1,9 +1,9 @@
 D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\bin\Debug\netcoreapp3.1\WebApi.Infrastructure.deps.json
 D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\bin\Debug\netcoreapp3.1\WebApi.Infrastructure.dll
-D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\obj\Debug\netcoreapp3.1\WebApi.Infrastructure.csprojAssemblyReference.cache
+D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\bin\Debug\netcoreapp3.1\WebApi.Infrastructure.pdb
 D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\obj\Debug\netcoreapp3.1\WebApi.Infrastructure.AssemblyInfoInputs.cache
 D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\obj\Debug\netcoreapp3.1\WebApi.Infrastructure.AssemblyInfo.cs
-D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\bin\Debug\netcoreapp3.1\WebApi.Infrastructure.pdb
 D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\obj\Debug\netcoreapp3.1\WebApi.Infrastructure.dll
 D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\obj\Debug\netcoreapp3.1\WebApi.Infrastructure.pdb
+D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\obj\Debug\netcoreapp3.1\WebApi.Infrastructure.csprojAssemblyReference.cache
 D:\GitWorkSpaces\WebApiTest\WebApi.Infrastructure\obj\Debug\netcoreapp3.1\WebApi.Infrastructure.csproj.CoreCompileInputs.cache

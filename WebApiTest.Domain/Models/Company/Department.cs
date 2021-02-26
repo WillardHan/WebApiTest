@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace WebApiTest.Domain.Models
 {
-    public class Company
+    public partial class Department
     {
         public Guid Id { get; set; }
         public string Code { get; set; }
