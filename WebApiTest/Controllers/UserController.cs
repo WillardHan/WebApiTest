@@ -5,12 +5,11 @@ using WebApiTest.Application.Services;
 using WebApi.Infrastructure.Filters;
 using WebApi.Infrastructure.Attributes;
 using WebApi.Infrastructure.Exceptions;
+using WebApi.Infrastructure.Controller;
 
 namespace WebApiTest.Controllers
 {
-    [Route("[controller]")]
-    [ApiController]
-    public class UserController : ControllerBase
+    public class UserController : ApiController
     {
         private readonly IUserService userService;
         public UserController(IUserService userService)

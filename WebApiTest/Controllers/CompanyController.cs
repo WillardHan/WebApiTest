@@ -3,12 +3,11 @@ using Microsoft.AspNetCore.Mvc;
 using MediatR;
 using WebApiTest.Application.Services;
 using WebApiTest.Application.Commands;
+using WebApi.Infrastructure.Controller;
 
 namespace WebApiTest.Controllers
 {
-    [Route("[controller]")]
-    [ApiController]
-    public class CompanyController : ControllerBase
+    public class CompanyController : ApiController
     {
         private readonly ICompanyService companyService;
         private readonly IMediator mediator;

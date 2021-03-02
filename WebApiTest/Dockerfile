@@ -3,11 +3,13 @@
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1-buster-slim AS base
 WORKDIR /app
 EXPOSE 80
-EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["WebApiTest/WebApiTest.csproj", "WebApiTest/"]
+COPY ["WebApiTest.Application/WebApiTest.Application.csproj", "WebApiTest.Application/"]
+COPY ["WebApiTest.Domain/WebApiTest.Domain.csproj", "WebApiTest.Domain/"]
+COPY ["WebApi.Infrastructure/WebApi.Infrastructure.csproj", "WebApi.Infrastructure/"]
 RUN dotnet restore "WebApiTest/WebApiTest.csproj"
 COPY . .
 WORKDIR "/src/WebApiTest"

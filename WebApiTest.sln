@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTest", "WebApiTest\We
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTest.Domain", "WebApiTest.Domain\WebApiTest.Domain.csproj", "{E4D915C9-00C2-4B23-82A8-42E4E0912181}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTest.Application", "WebApiTest.Application\WebApiTest.Application.csproj", "{B73C1CC2-5035-424D-A3A8-8D7D92F0D9E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTest.Application", "WebApiTest.Application\WebApiTest.Application.csproj", "{B73C1CC2-5035-424D-A3A8-8D7D92F0D9E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.Infrastructure", "WebApi.Infrastructure\WebApi.Infrastructure.csproj", "{5378A0EB-4FD2-430C-930B-D63A6B308591}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApi.Infrastructure", "WebApi.Infrastructure\WebApi.Infrastructure.csproj", "{5378A0EB-4FD2-430C-930B-D63A6B308591}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{8D7A9C38-2AE4-4F3B-BBA9-6D4C18076CC5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5378A0EB-4FD2-430C-930B-D63A6B308591}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5378A0EB-4FD2-430C-930B-D63A6B308591}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5378A0EB-4FD2-430C-930B-D63A6B308591}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D7A9C38-2AE4-4F3B-BBA9-6D4C18076CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D7A9C38-2AE4-4F3B-BBA9-6D4C18076CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D7A9C38-2AE4-4F3B-BBA9-6D4C18076CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D7A9C38-2AE4-4F3B-BBA9-6D4C18076CC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

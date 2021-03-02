@@ -1,21 +1,28 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using WebApi.Infrastructure.Attributes;
+using WebApi.Infrastructure.Controller;
 using WebApi.Infrastructure.Utility;
 using WebApiTest.Application.Models;
 
 namespace WebApiTest.Controllers
 {
-    [Route("[controller]")]
-    public class TestController : ControllerBase
+    public class TestController : ApiController
     {
         //private readonly IMapper mapper;
         public TestController()
         {
         }
 
+        //[HttpGet("info")]
+        //public IActionResult Get()
+        //{
+        //    return new JsonResult(from c in User.Claims select new { c.Type, c.Value });
+        //}
+
         [HttpGet("info")]     
-        public virtual IActionResult Info()
+        public IActionResult Info()
         {
             var test1 = new Test1
             {

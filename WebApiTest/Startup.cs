@@ -27,6 +27,8 @@ using FluentValidation.AspNetCore;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using WebApiTest.Infrastructure.Repository;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 //using AspectCore;
 //using AspectCore.Extensions.DependencyInjection;
 //using AspectCore.Configuration;
@@ -62,27 +64,10 @@ namespace WebApiTest
             {
                 config.ImplicitlyValidateChildProperties = true;
             });
-            services.Configure<ApiBehaviorOptions>(options =>
-            {
-                options.InvalidModelStateResponseFactory = actionContext =>
-                {
-                    var errorMessage = actionContext.ModelState
-                                .Where(e => e.Value.Errors.Count > 0)
-                                .Select(e => e.Value.Errors.First().ErrorMessage)
-                                .FirstOrDefault();
-                    return new BadRequestObjectResult(errorMessage);
-                };
-            });
+            services.AddFluentValidationExceptionHandler();
+            services.AddIdentityAuth();
+            services.AddEFCore(Configuration);
             services.AddAutoMapper();
-            services.AddDbContext<DatabaseContext>(optionsBuilder =>
-            {
-                optionsBuilder.UseSqlServer(Configuration.GetValue<string>("ConnectionString"), options =>
-                {
-                    options.CommandTimeout(60);
-                })
-                .LogTo(Console.WriteLine, LogLevel.Information);
-            });
-            //services.AddCustomServices();
             services.AddOptions(Configuration);
         }
 
@@ -92,11 +77,14 @@ namespace WebApiTest
             {
                 app.UseDeveloperExceptionPage();
             }
-            //app.UseSerilogRequestLogging();
-            app.UseSwaggerComponent();
-            app.UseHttpsRedirection();
-            app.UseRouting();
 
+            //app.UseSerilogRequestLogging();
+            //app.UseHttpsRedirection();
+            app.UseSwaggerComponent();
+            app.UseRouting();
+            app.UseAuthentication();
+            app.UseAuthorization();
+            #region test middleware
             app.Use(async (context, next) =>
             {
                 DomainParameter.ContentA = context.Request.Scheme;
@@ -104,8 +92,8 @@ namespace WebApiTest
             });
             app.Map("/hello", MapRequest);
             app.UseMyCustomMiddleware();
+            #endregion
 
-            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -142,9 +130,90 @@ namespace WebApiTest
     {
         public static void AddSwagger(this IServiceCollection services)
         {
-            services.AddSwaggerGen(c =>
+            services.AddSwaggerGen(options =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "API Demo", Version = "v1" });
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "API Demo", Version = "v1" });
+                options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+                {
+                    Description = "JWT Authorization header using the Bearer scheme (Example: 'Bearer 12345abcdef')",
+                    Name = "Authorization",
+                    In = ParameterLocation.Header,
+                    Type = SecuritySchemeType.ApiKey,
+                    Scheme = "Bearer"
+                });
+                options.AddSecurityRequirement(new OpenApiSecurityRequirement
+                {
+                    {
+                        new OpenApiSecurityScheme
+                        {
+                            Reference = new OpenApiReference
+                            {
+                                Type = ReferenceType.SecurityScheme,
+                                Id = "Bearer"
+                            }
+                        },
+                        Array.Empty<string>()
+                    }
+                });
+            });
+        }
+
+        public static void AddFluentValidationExceptionHandler(this IServiceCollection services)
+        {
+            services.Configure<ApiBehaviorOptions>(options =>
+            {
+                options.InvalidModelStateResponseFactory = actionContext =>
+                {
+                    var errorMessage = actionContext.ModelState
+                                .Where(e => e.Value.Errors.Count > 0)
+                                .Select(e => e.Value.Errors.First().ErrorMessage)
+                                .FirstOrDefault();
+                    return new BadRequestObjectResult(errorMessage);
+                };
+            });
+        }
+
+        public static void AddIdentityAuth(this IServiceCollection services)
+        {
+            services.AddAuthorization(options =>
+            {
+                //options.AddPolicy("ApiScope", policy =>
+                //{
+                //    policy.RequireAuthenticatedUser();
+                //    policy.RequireClaim(IdentityModel.JwtClaimTypes.Scope, "webapitest");
+                //});
+            });
+            services.AddAuthentication("Bear")
+            .AddJwtBearer("Bear", options =>
+            {
+                options.Authority = DomainParameter.IdentityServerUrl;
+                options.RequireHttpsMetadata = false;
+                options.Audience = "webapitest";
+                //options.SaveToken = true;
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    //ValidateIssuer = true,
+                    ValidateAudience = false,
+                    //ValidateLifetime = true,
+                    //ValidateIssuerSigningKey = true,
+                    //ValidIssuer = "http://localhost:61768/",
+                    ValidAudience = DomainParameter.WebApiTestUrl,
+                    //TokenDecryptionKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ASEFRFDDWSDRGYHF")),
+                    //IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("veryVerySecretKey")),
+                    //ClockSkew = TimeSpan.Zero
+                };
+            });
+        }
+
+        public static void AddEFCore(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddDbContext<DatabaseContext>(optionsBuilder =>
+            {
+                optionsBuilder.UseSqlServer(configuration.GetValue<string>("ConnectionString"), options =>
+                {
+                    options.CommandTimeout(60);
+                })
+                .LogTo(Console.WriteLine, LogLevel.Information);
             });
         }
 
@@ -158,6 +227,12 @@ namespace WebApiTest
             //});
             //IMapper mapper = mappingConfig.CreateMapper();
             //services.AddSingleton(mapper);
+        }
+
+        public static void AddOptions(this IServiceCollection services, IConfiguration configuration)
+        {
+            var section = configuration.GetSection("TestConfigure");
+            services.AddOptions().Configure<TestSetting>(section);
         }
 
         public static void AddAspectConfigureServices(this IServiceCollection services)
@@ -231,12 +306,6 @@ namespace WebApiTest
                 });
             }
         }
-
-        public static void AddOptions(this IServiceCollection services, IConfiguration configuration)
-        {
-            var section = configuration.GetSection("TestConfigure");
-            services.AddOptions().Configure<TestSetting>(section);
-        }
     }
 
     static class ConfigureContainerExtention
@@ -285,7 +354,7 @@ namespace WebApiTest
                 c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Demo v1");
             });
         }
-    } 
+    }
 
     public class MappingProfile : Profile
     {
@@ -297,6 +366,8 @@ namespace WebApiTest
 
     public static class DomainParameter
     {
+        public static string IdentityServerUrl { get; set; } = "http://10.0.75.1:32769";
+        public static string WebApiTestUrl { get; set; } = "http://10.0.75.1:32768";
         public static string ContentA { get; set; }
         public static string ContentB { get; set; }
         public static string ContentC { get; set; }
