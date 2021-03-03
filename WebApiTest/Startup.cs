@@ -29,6 +29,7 @@ using Microsoft.AspNetCore.Mvc;
 using WebApiTest.Infrastructure.Repository;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using IdentityModel;
 //using AspectCore;
 //using AspectCore.Extensions.DependencyInjection;
 //using AspectCore.Configuration;
@@ -96,6 +97,7 @@ namespace WebApiTest
 
             app.UseEndpoints(endpoints =>
             {
+                //endpoints.MapControllers().RequireAuthorization("ApiScope");
                 endpoints.MapControllers();
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
             });
@@ -177,27 +179,28 @@ namespace WebApiTest
         {
             services.AddAuthorization(options =>
             {
-                //options.AddPolicy("ApiScope", policy =>
-                //{
-                //    policy.RequireAuthenticatedUser();
-                //    policy.RequireClaim(IdentityModel.JwtClaimTypes.Scope, "webapitest");
-                //});
+                options.AddPolicy("ApiScope", policy =>
+                {
+                    policy.RequireAuthenticatedUser();
+                    policy.RequireClaim("scope", DomainParameter.Audience);
+                });
             });
+
             services.AddAuthentication("Bear")
             .AddJwtBearer("Bear", options =>
             {
                 options.Authority = DomainParameter.IdentityServerUrl;
                 options.RequireHttpsMetadata = false;
-                options.Audience = "webapitest";
+                options.Audience = DomainParameter.Audience;
                 //options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     //ValidateIssuer = true,
-                    ValidateAudience = false,
+                    ValidateAudience = true,
                     //ValidateLifetime = true,
                     //ValidateIssuerSigningKey = true,
                     //ValidIssuer = "http://localhost:61768/",
-                    ValidAudience = DomainParameter.WebApiTestUrl,
+                    //ValidAudience = DomainParameter.WebApiTestUrl,
                     //TokenDecryptionKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ASEFRFDDWSDRGYHF")),
                     //IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("veryVerySecretKey")),
                     //ClockSkew = TimeSpan.Zero
@@ -366,8 +369,9 @@ namespace WebApiTest
 
     public static class DomainParameter
     {
-        public static string IdentityServerUrl { get; set; } = "http://10.0.75.1:32769";
-        public static string WebApiTestUrl { get; set; } = "http://10.0.75.1:32768";
+        public static string IdentityServerUrl { get; set; } = "http://10.0.75.1:55009";
+        public static string WebApiTestUrl { get; set; } = "http://10.0.75.1:55001";
+        public static string Audience { get; set; } = "webapitest";
         public static string ContentA { get; set; }
         public static string ContentB { get; set; }
         public static string ContentC { get; set; }

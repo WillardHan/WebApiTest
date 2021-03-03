@@ -6,6 +6,7 @@ using IdentityServer4;
 using IdentityServerHost.Quickstart.UI;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -41,6 +42,7 @@ namespace IdentityServer
 
             // in-memory, code config
             builder.AddInMemoryIdentityResources(Config.IdentityResources);
+            builder.AddInMemoryApiResources(Config.Apis);
             builder.AddInMemoryApiScopes(Config.ApiScopes);
             builder.AddInMemoryClients(Config.Clients);
 
@@ -68,7 +70,10 @@ namespace IdentityServer
             }
 
             app.UseStaticFiles();
-
+            app.UseCookiePolicy(new CookiePolicyOptions
+            {
+                MinimumSameSitePolicy = SameSiteMode.Lax
+            });
             app.UseRouting();
             app.UseIdentityServer();
             app.UseAuthorization();
