@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 using WebApiTest.Domain.Models;
-using WebApiTest.Infrastructure.Repository;
+using WebApi.Infrastructure.Repository;
 
 namespace WebApiTest.Domain.Repositories
 {

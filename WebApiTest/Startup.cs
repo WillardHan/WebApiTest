@@ -2,7 +2,6 @@ using Autofac;
 using AutoMapper;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using System;
 using System.Collections.Generic;
@@ -10,124 +9,41 @@ using System.Linq;
 using System.Reflection;
 using WebApiTest.Application.Models;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Hosting;
-using Autofac.Extras.DynamicProxy;
-using WebApi.Infrastructure.Interceptors;
-using Castle.DynamicProxy;
 using WebApi.Infrastructure.LifetimeInterfaces;
 using WebApiTest.Domain;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using WebApi.Infrastructure.Filters;
-using WebApi.Infrastructure.Middlewares;
 using WebApi.Infrastructure.Attributes;
-using MediatR.Extensions.Autofac.DependencyInjection;
-using FluentValidation.AspNetCore;
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
-using WebApiTest.Infrastructure.Repository;
 using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using IdentityModel;
-//using AspectCore;
-//using AspectCore.Extensions.DependencyInjection;
-//using AspectCore.Configuration;
+using WebApiTest.Infrastructure.StartUp;
 
 namespace WebApiTest
 {
-    public class Startup
+    public class Startup : BaseStartup
     {
+        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
-
-        public void ConfigureServices(IServiceCollection services)
+        public override void ConfigureServices(IServiceCollection services)
         {
-            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
-            services.AddSwagger();
-            services.AddControllers(options =>
-            {
-                options.Filters.Add<LoggerFilter>();
-                options.Filters.Add<ExceptionFilter>();
-            })
-            .AddControllersAsServices()
-            .SetCompatibilityVersion(CompatibilityVersion.Latest)
-            .AddNewtonsoftJson(options =>
-            {
-                options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
-                //options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-            })
-            .AddFluentValidation(config =>
-            {
-                config.ImplicitlyValidateChildProperties = true;
-            });
-            services.AddFluentValidationExceptionHandler();
-            services.AddIdentityAuth();
+            base.ConfigureServices(services);
             services.AddEFCore(Configuration);
-            services.AddAutoMapper();
             services.AddOptions(Configuration);
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public override void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
-
-            //app.UseSerilogRequestLogging();
-            //app.UseHttpsRedirection();
-            app.UseSwaggerComponent();
-            app.UseRouting();
-            app.UseAuthentication();
-            app.UseAuthorization();
-            #region test middleware
-            app.Use(async (context, next) =>
-            {
-                DomainParameter.ContentA = context.Request.Scheme;
-                await next();
-            });
-            app.Map("/hello", MapRequest);
-            app.UseMyCustomMiddleware();
-            #endregion
-
-            app.UseEndpoints(endpoints =>
-            {
-                //endpoints.MapControllers().RequireAuthorization("ApiScope");
-                endpoints.MapControllers();
-                endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
-            });
-        }
-
-        public void ConfigureContainer(ContainerBuilder builder)
-        {
-            var refAssembyNames = Assembly.GetExecutingAssembly().GetReferencedAssemblies();
-            foreach (var asslembyNames in refAssembyNames)
-            {
-                Assembly.Load(asslembyNames);
-            }
-            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
-
-            builder.RegisterMediatR(assemblies);
-            builder.RegisterAssemblyTypes(assemblies).Where(t => typeof(IValidator).IsAssignableFrom(t)).AsImplementedInterfaces();
-            builder.RegisterAssemblyTypes(assemblies).Where(t => typeof(IInterceptor).IsAssignableFrom(t));
-            builder.RegisterAssemblyTypes(assemblies).AsClosedTypesOf(typeof(IRepository<>));
-            builder.RegisterCustomService(assemblies);
-        }
-
-        private static void MapRequest(IApplicationBuilder app)
-        {
-            app.Run(async context =>
-            {
-                await context.Response.WriteAsync("This is MapRequest hello");
-            });
+            base.Configure(app, env);
         }
     }
 
+    #region Extensions
     static class ConfigureServicesExtention
     {
         public static void AddSwagger(this IServiceCollection services)
@@ -311,70 +227,71 @@ namespace WebApiTest
         }
     }
 
-    static class ConfigureContainerExtention
-    {
-        public static void RegisterCustomService(this ContainerBuilder builder, Assembly[] assemblies)
-        {
-            builder.RegisterAssemblyTypes(assemblies)
-                   .Where(t => t.GetCustomAttributes(typeof(ServiceAttribute), false).Length > 0
-                                && t.GetCustomAttribute<ServiceAttribute>().Lifetime == ServiceLifetime.Singleton
-                                && t.IsClass && !t.IsAbstract)
-                   .AsImplementedInterfaces()
-                   .SingleInstance();
-            builder.RegisterAssemblyTypes(assemblies)
-                   .Where(t => t.GetCustomAttributes(typeof(ServiceAttribute), false).Length > 0
-                                && t.GetCustomAttribute<ServiceAttribute>().Lifetime == ServiceLifetime.Transient
-                                && t.IsClass && !t.IsAbstract)
-                   .AsImplementedInterfaces()
-                   .InstancePerDependency();
-            builder.RegisterAssemblyTypes(assemblies)
-                   .Where(t => t.GetCustomAttributes(typeof(ServiceAttribute), false).Length > 0
-                                && t.GetCustomAttribute<ServiceAttribute>().Lifetime == ServiceLifetime.Scoped
-                                && t.IsClass && !t.IsAbstract)
-                   .AsImplementedInterfaces()
-                   .InstancePerLifetimeScope()
-                   .EnableInterfaceInterceptors().InterceptedBy(typeof(SomeInterceptor));
-        }
+    //static class ConfigureContainerExtention
+    //{
+    //    public static void RegisterCustomService(this ContainerBuilder builder, Assembly[] assemblies)
+    //    {
+    //        builder.RegisterAssemblyTypes(assemblies)
+    //               .Where(t => t.GetCustomAttributes(typeof(ServiceAttribute), false).Length > 0
+    //                            && t.GetCustomAttribute<ServiceAttribute>().Lifetime == ServiceLifetime.Singleton
+    //                            && t.IsClass && !t.IsAbstract)
+    //               .AsImplementedInterfaces()
+    //               .SingleInstance();
+    //        builder.RegisterAssemblyTypes(assemblies)
+    //               .Where(t => t.GetCustomAttributes(typeof(ServiceAttribute), false).Length > 0
+    //                            && t.GetCustomAttribute<ServiceAttribute>().Lifetime == ServiceLifetime.Transient
+    //                            && t.IsClass && !t.IsAbstract)
+    //               .AsImplementedInterfaces()
+    //               .InstancePerDependency();
+    //        builder.RegisterAssemblyTypes(assemblies)
+    //               .Where(t => t.GetCustomAttributes(typeof(ServiceAttribute), false).Length > 0
+    //                            && t.GetCustomAttribute<ServiceAttribute>().Lifetime == ServiceLifetime.Scoped
+    //                            && t.IsClass && !t.IsAbstract)
+    //               .AsImplementedInterfaces()
+    //               .InstancePerLifetimeScope()
+    //               .EnableInterfaceInterceptors().InterceptedBy(typeof(SomeInterceptor));
+    //    }
 
-        //builder.RegisterAssemblyTypes(typeof(Program).Assembly)
-        //       .Where(x => x.Name.EndsWith("service", StringComparison.OrdinalIgnoreCase))
-        //       .AsImplementedInterfaces()
-        //       .InstancePerLifetimeScope()
-        //       .EnableInterfaceInterceptors().InterceptedBy(typeof(AnyInterceptor));
-        //builder.RegisterType(typeof(SomeInterceptor));
-        //builder.RegisterType<ConnectionService>().As<IConnectionService>().SingleInstance();
-        //builder.RegisterType<TestService>().As<ITestService>().InstancePerLifetimeScope();
-        //builder.RegisterType<UserService>().As<IUserService>().InstancePerLifetimeScope();
-    }
+    //    //builder.RegisterAssemblyTypes(typeof(Program).Assembly)
+    //    //       .Where(x => x.Name.EndsWith("service", StringComparison.OrdinalIgnoreCase))
+    //    //       .AsImplementedInterfaces()
+    //    //       .InstancePerLifetimeScope()
+    //    //       .EnableInterfaceInterceptors().InterceptedBy(typeof(AnyInterceptor));
+    //    //builder.RegisterType(typeof(SomeInterceptor));
+    //    //builder.RegisterType<ConnectionService>().As<IConnectionService>().SingleInstance();
+    //    //builder.RegisterType<TestService>().As<ITestService>().InstancePerLifetimeScope();
+    //    //builder.RegisterType<UserService>().As<IUserService>().InstancePerLifetimeScope();
+    //}
 
-    static class ConfigureExtention
-    {
-        public static void UseSwaggerComponent(this IApplicationBuilder app)
-        {
-            app.UseSwagger();
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Demo v1");
-            });
-        }
-    }
+    //static class ConfigureExtention
+    //{
+    //    public static void UseSwaggerComponent(this IApplicationBuilder app)
+    //    {
+    //        app.UseSwagger();
+    //        app.UseSwaggerUI(c =>
+    //        {
+    //            c.SwaggerEndpoint("/swagger/v1/swagger.json", "API Demo v1");
+    //        });
+    //    }
+    //}
 
-    public class MappingProfile : Profile
-    {
-        public MappingProfile()
-        {
-            CreateMap<Test1, Test2>().ReverseMap();
-        }
-    }
+    //public class MappingProfile : Profile
+    //{
+    //    public MappingProfile()
+    //    {
+    //        CreateMap<Test1, Test2>().ReverseMap();
+    //    }
+    //}
 
-    public static class DomainParameter
-    {
-        public static string IdentityServerUrl { get; set; } = "http://10.0.75.1:55009";
-        public static string WebApiTestUrl { get; set; } = "http://10.0.75.1:55001";
-        public static string Audience { get; set; } = "webapitest";
-        public static string ContentA { get; set; }
-        public static string ContentB { get; set; }
-        public static string ContentC { get; set; }
-        public static string ContentD { get; set; }
-    }
+    //public static class DomainParameter
+    //{
+    //    public static string IdentityServerUrl { get; set; } = "http://10.0.75.1:55009";
+    //    public static string WebApiTestUrl { get; set; } = "http://10.0.75.1:55001";
+    //    public static string Audience { get; set; } = "webapitest";
+    //    public static string ContentA { get; set; }
+    //    public static string ContentB { get; set; }
+    //    public static string ContentC { get; set; }
+    //    public static string ContentD { get; set; }
+    //}
+    #endregion
 }

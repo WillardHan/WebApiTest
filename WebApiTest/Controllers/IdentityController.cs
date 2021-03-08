@@ -11,6 +11,7 @@ using IdentityModel.Client;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using WebApi.Infrastructure.Controller;
+using WebApiTest.Infrastructure.StartUp;
 
 namespace WebApiTest.Controllers
 {

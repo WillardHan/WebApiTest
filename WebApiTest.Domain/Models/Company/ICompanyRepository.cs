@@ -1,4 +1,4 @@
-﻿using WebApiTest.Infrastructure.Repository;
+﻿using WebApi.Infrastructure.Repository;
 
 namespace WebApiTest.Domain.Models
 {
