@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  webapitest:
+    image: ${DOCKER_REGISTRY-}webapitest
+    build:
+      context: .
+      dockerfile: WebApiTest/Dockerfile
+
+  webapitest2:
+    image: ${DOCKER_REGISTRY-}webapitest2
+    build:
+      context: .
+      dockerfile: WebApiTest2/Dockerfile
+
+  identityserver:
+    image: ${DOCKER_REGISTRY-}identityserver
+    build:
+      context: .
+      dockerfile: IdentityServer/Dockerfile
+

@@ -1,0 +1,21 @@
+version: '3.4'
+
+services:
+  webapitest:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "55001:80"
+
+  webapitest2:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "55002:80"
+
+  identityserver:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "55009:80"
+

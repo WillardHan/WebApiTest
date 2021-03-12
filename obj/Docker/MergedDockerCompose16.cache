@@ -1,0 +1,83 @@
+services:
+  identityserver:
+    build:
+      context: D:\GitWorkSpaces\WebApiTest
+      dockerfile: IdentityServer/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: IdentityServer
+    container_name: IdentityServer_1
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: identityserver
+    labels:
+      com.microsoft.visual-studio.project-name: IdentityServer
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/IdentityServer.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 55009
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\Administrator\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Administrator\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Administrator\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  webapitest:
+    build:
+      context: D:\GitWorkSpaces\WebApiTest
+      dockerfile: WebApiTest/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: WebApiTest
+    container_name: WebApiTest_1
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webapitest
+    labels:
+      com.microsoft.visual-studio.project-name: WebApiTest
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/WebApiTest.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 55001
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\Administrator\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Administrator\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Administrator\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+  webapitest2:
+    build:
+      context: D:\GitWorkSpaces\WebApiTest
+      dockerfile: WebApiTest2/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: WebApiTest2
+    container_name: WebApiTest2_1
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webapitest2
+    labels:
+      com.microsoft.visual-studio.project-name: WebApiTest2
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages  "/app/WebApiTest2.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 55002
+      target: 80
+    tty: true
+    volumes:
+    - C:\Users\Administrator\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Administrator\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Administrator\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

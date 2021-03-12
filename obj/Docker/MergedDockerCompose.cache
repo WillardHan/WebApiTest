@@ -1,0 +1,13 @@
+services:
+  webapitest:
+    build:
+      context: D:\GitWorkSpaces\WebApiTest
+      dockerfile: WebApiTest/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: webapitest
+    ports:
+    - target: 80
+    volumes:
+    - C:\Users\Administrator\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+version: '3.4'

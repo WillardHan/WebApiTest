@@ -7,6 +7,10 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR /src
 COPY ["WebApiTest2/WebApiTest2.csproj", "WebApiTest2/"]
+COPY ["WebApiTest2.Application/WebApiTest2.Application.csproj", "WebApiTest2.Application/"]
+COPY ["WebApiTest.Rpc/WebApiTest.Rpc.csproj", "WebApiTest.Rpc/"]
+COPY ["WebApi.Infrastructure/WebApi.Infrastructure.csproj", "WebApi.Infrastructure/"]
+COPY ["WebApiTest2.Domain/WebApiTest2.Domain.csproj", "WebApiTest2.Domain/"]
 RUN dotnet restore "WebApiTest2/WebApiTest2.csproj"
 COPY . .
 WORKDIR "/src/WebApiTest2"
