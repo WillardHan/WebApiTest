@@ -11,6 +11,7 @@ namespace WebApiTest.Controllers
     {
         private readonly ICompanyService companyService;
         private readonly IMediator mediator;
+
         public CompanyController(
             ICompanyService companyService,
             IMediator mediator

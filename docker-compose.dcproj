@@ -5,10 +5,11 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>aaa48066-1614-46c9-84bc-eae1f0c82f6a</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}</DockerServiceUrl>
+    <DockerServiceUrl>http://10.0.75.1:55001</DockerServiceUrl>
     <DockerServiceName>webapitest</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
+    <None Include=".env" />
     <None Include="docker-compose.override.yml">
       <DependentUpon>docker-compose.yml</DependentUpon>
     </None>

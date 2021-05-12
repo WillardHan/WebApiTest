@@ -24,6 +24,8 @@ using Microsoft.AspNetCore.Mvc;
 using WebApi.Infrastructure.HttpClients;
 using WebApi.Infrastructure.Repository;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.Extensions.Configuration;
+using StackExchange.Redis;
 //using AspectCore;
 //using AspectCore.Extensions.DependencyInjection;
 //using AspectCore.Configuration;
@@ -32,6 +34,7 @@ namespace WebApiTest.Infrastructure.StartUp
 {
     public class BaseStartup
     {
+        public IConfiguration Configuration { get; set; }
         public virtual void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
@@ -44,7 +47,7 @@ namespace WebApiTest.Infrastructure.StartUp
             .AddControllersAsServices()
             .SetCompatibilityVersion(CompatibilityVersion.Latest)
             .AddNewtonsoftJson(options =>
-            {
+            { 
                 options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
                 //options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             })
@@ -53,16 +56,17 @@ namespace WebApiTest.Infrastructure.StartUp
                 config.ImplicitlyValidateChildProperties = true;
             });
             services.AddFluentValidationExceptionHandler();
-            services.AddIdentityAuth();
+            services.AddIdentityAuth(Configuration);
             //services.AddEFCore(Configuration);
             //services.AddOptions(Configuration);
             services.AddAutoMapper();
+            services.AddRedisClient(Configuration);
             services.AddTransient<HttpClientTokenHandler>();
             services.AddHttpClient("token")
                 .AddHttpMessageHandler<HttpClientTokenHandler>()
                 .ConfigureHttpClient((sp, httpClient) =>
                 {
-                    httpClient.BaseAddress = new Uri(DomainParameter.WebApiTestUrl);
+                    //httpClient.BaseAddress = new Uri(Configuration.GetValue<string>("Base_URL"));
                 });
         }
 
@@ -168,7 +172,7 @@ namespace WebApiTest.Infrastructure.StartUp
             });
         }
 
-        public static void AddIdentityAuth(this IServiceCollection services)
+        public static void AddIdentityAuth(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddAuthorization(options =>
             {
@@ -182,7 +186,7 @@ namespace WebApiTest.Infrastructure.StartUp
             services.AddAuthentication("Bear")
             .AddJwtBearer("Bear", options =>
             {
-                options.Authority = DomainParameter.IdentityServerUrl;
+                options.Authority = configuration.GetValue<string>("Identityserver_URL");
                 options.RequireHttpsMetadata = false;
                 options.Audience = DomainParameter.Audience;
                 //options.SaveToken = true;
@@ -284,6 +288,47 @@ namespace WebApiTest.Infrastructure.StartUp
                 });
             }
         }
+
+        public static void AddRedisClient(this IServiceCollection services, IConfiguration configuration)
+        {
+            //services.AddMemoryCache();
+
+            var connstr = configuration.GetValue<string>("Redis_ConnectionString");
+            var options = ConfigurationOptions.Parse(connstr, true);
+            options.ConnectTimeout = 10000;
+            options.SyncTimeout = 10000;
+            options.ConnectRetry = 8;
+            options.ResolveDns = true;
+            options.AbortOnConnectFail = true;
+            //options.Password = "123456";
+
+            services.AddSingleton<IConnectionMultiplexer>(sp => ConnectionMultiplexer.Connect(options));
+
+            //IConnectionMultiplexer redis = ConnectionMultiplexer.Connect(options);
+            //services.AddScoped(s => redis.GetDatabase());
+
+            //var options = ConfigurationOptions.Parse(connstr, true);
+            //options.ConnectTimeout = 10000;
+            //options.SyncTimeout = 10000;
+            //options.ConnectRetry = 8;
+            //options.Password = "123456";
+            ////options.ResolveDns = true;
+            //options.AbortOnConnectFail = false;
+            //options.AllowAdmin = true;
+            //services.AddSingleton<IConnectionMultiplexer>(sp => ConnectionMultiplexer.Connect(options));
+
+            //services.AddStackExchangeRedisExtensions
+            //var redisConfiguration = configuration.GetSection("Redis_ConnectionString").Get<RedisConfiguration>();
+            //redisConfiguration.ConnectTimeout = 10000;
+            //redisConfiguration.SyncTimeout = 10000;
+            //redisConfiguration.ConfigurationOptions.ConnectRetry = 8;
+            //redisConfiguration.Password = "123456";
+            //redisConfiguration.ConfigurationOptions.ResolveDns = true;
+            //redisConfiguration.AbortOnConnectFail = false;
+            //redisConfiguration.AllowAdmin = true;
+            //services.AddStackExchangeRedisExtensions<NewtonsoftSerializer>(redisConfiguration);
+
+        }
     }
 
     static class ConfigureContainerExtention
@@ -336,12 +381,6 @@ namespace WebApiTest.Infrastructure.StartUp
 
     public static class DomainParameter
     {
-        public static string IdentityServerUrl { get; set; } = "http://10.0.75.1:55009";
-        public static string WebApiTestUrl { get; set; } = "http://10.0.75.1:55001";
         public static string Audience { get; set; } = "webapitest";
-        public static string ContentA { get; set; }
-        public static string ContentB { get; set; }
-        public static string ContentC { get; set; }
-        public static string ContentD { get; set; }
     }
 }

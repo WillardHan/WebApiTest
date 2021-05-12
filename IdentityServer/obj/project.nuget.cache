@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "yJc1NeHVjhBmQ+CJ2k+DPUTZFIIPjU+9C50R+L2GRxVldN9uoA+MhTc2/cS4SizsAOqJm0+V4J8DgLg1CMNevA==",
+  "dgSpecHash": "mecDVYtSzLxSkM8Vb6sHL3NCeHkEGnCGBaUgCVlCFfG5flblYWvsiuR8jA39vMPH4cJD/Wts9ztlhbSoLMsG4Q==",
   "success": true,
   "projectFilePath": "D:\\GitWorkSpaces\\WebApiTest\\IdentityServer\\IdentityServer.csproj",
   "expectedPackageFiles": [

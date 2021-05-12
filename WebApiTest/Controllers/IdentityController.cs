@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using IdentityModel;
 using IdentityModel.Client;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using WebApi.Infrastructure.Controller;
 using WebApiTest.Infrastructure.StartUp;
@@ -19,8 +20,10 @@ namespace WebApiTest.Controllers
     [ApiController]
     public class IdentityController : ControllerBase
     {
-        public IdentityController()
+        public IConfiguration configuration { get; set; }
+        public IdentityController(IConfiguration configuration)
         {
+            this.configuration = configuration;
         }
 
         [HttpGet]
@@ -31,7 +34,7 @@ namespace WebApiTest.Controllers
             var client = new HttpClient();
             var response = await client.GetDiscoveryDocumentAsync(new DiscoveryDocumentRequest
             {
-                Address = DomainParameter.IdentityServerUrl,
+                Address = configuration.GetValue<string>("Identityserver_URL"),
                 Policy ={
                             RequireHttps = false
                         }

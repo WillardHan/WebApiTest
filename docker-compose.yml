@@ -1,21 +1,39 @@
-version: '3.4'
+﻿version: '3.4'
 
 services:
-  webapitest:
-    image: ${DOCKER_REGISTRY-}webapitest
-    build:
-      context: .
-      dockerfile: WebApiTest/Dockerfile
+  nginx:
+    container_name: test_nginx
+    image: nginx:1.20.0
 
-  webapitest2:
-    image: ${DOCKER_REGISTRY-}webapitest2
-    build:
-      context: .
-      dockerfile: WebApiTest2/Dockerfile
+  redis:
+    container_name: test_redis
+    image: redis:6.2
 
   identityserver:
-    image: ${DOCKER_REGISTRY-}identityserver
+    container_name: test_identityserver
+    image: test_identityserver:${TAG:-latest}
     build:
       context: .
       dockerfile: IdentityServer/Dockerfile
+    depends_on:
+      - nginx
+      - redis
 
+  webapitest:
+    container_name: test_webapitest
+    image: test_webapitest:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: WebApiTest/Dockerfile
+    depends_on:
+      - identityserver
+
+  webapitest2:
+    container_name: test_webapitest2
+    image: test_webapitest2:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: WebApiTest2/Dockerfile
+    depends_on:
+      - identityserver
+      

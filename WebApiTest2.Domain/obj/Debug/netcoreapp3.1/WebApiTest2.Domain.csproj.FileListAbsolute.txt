@@ -4,9 +4,9 @@ D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\bin\Debug\netcoreapp3.1\WebApiTes
 D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\bin\Debug\netcoreapp3.1\WebApi.Infrastructure.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\bin\Debug\netcoreapp3.1\WebApi.Infrastructure.pdb
 D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\obj\Debug\netcoreapp3.1\WebApiTest2.Domain.csprojAssemblyReference.cache
-D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\obj\Debug\netcoreapp3.1\WebApiTest2.Domain.csproj.CoreCompileInputs.cache
 D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\obj\Debug\netcoreapp3.1\WebApiTest2.Domain.AssemblyInfoInputs.cache
 D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\obj\Debug\netcoreapp3.1\WebApiTest2.Domain.AssemblyInfo.cs
+D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\obj\Debug\netcoreapp3.1\WebApiTest2.Domain.csproj.CoreCompileInputs.cache
 D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\obj\Debug\netcoreapp3.1\WebApiTest2.Domain.csproj.CopyComplete
 D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\obj\Debug\netcoreapp3.1\WebApiTest2.Domain.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2.Domain\obj\Debug\netcoreapp3.1\WebApiTest2.Domain.pdb

@@ -1,13 +1,73 @@
 services:
+  identityserver:
+    build:
+      context: D:\GitWorkSpaces\WebApiTest
+      dockerfile: IdentityServer/Dockerfile
+    container_name: test_identityserver
+    depends_on:
+    - nginx
+    - redis
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: test_identityserver:latest
+    ports:
+    - published: 55009
+      target: 80
+  nginx:
+    command: nginx -g "daemon off;"
+    container_name: test_nginx
+    environment:
+      TZ: Asia/Shanghai
+    image: nginx:1.20.0
+    ports:
+    - published: 55000
+      target: 80
+    volumes:
+    - D:\GitWorkSpaces\WebApiTest\Images\nginx\conf\nginx.conf:/etc/nginx/nginx.conf:rw
+    - D:\GitWorkSpaces\WebApiTest\Images\nginx\www:/usr/share/nginx/html:rw
+    - D:\GitWorkSpaces\WebApiTest\Images\nginx\logs:/var/log/nginx:rw
+  redis:
+    command: redis-server /etc/redis/redis.conf
+    container_name: test_redis
+    environment:
+      TZ: Asia/Shanghai
+    image: redis:6.2
+    volumes:
+    - D:\GitWorkSpaces\WebApiTest\Images\redis\conf\redis.conf:/etc/redis/redis.conf:rw
   webapitest:
     build:
       context: D:\GitWorkSpaces\WebApiTest
       dockerfile: WebApiTest/Dockerfile
+    container_name: test_webapitest
+    depends_on:
+    - identityserver
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-    image: webapitest
+      ConnectionString: Server=192.168.11.100;Database=WebApiTest;User ID=sa;Password=sa.123;
+      Identityserver_URL: http://10.0.75.1:55009
+      Redis_ConnectionString: redis:6379
+      WebApiTest2_URL: http://10.0.75.1:55002
+      WebApiTest_URL: http://10.0.75.1:55001
+    image: test_webapitest:latest
     ports:
-    - target: 80
-    volumes:
-    - C:\Users\Administrator\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - published: 55001
+      target: 80
+  webapitest2:
+    build:
+      context: D:\GitWorkSpaces\WebApiTest
+      dockerfile: WebApiTest2/Dockerfile
+    container_name: test_webapitest2
+    depends_on:
+    - identityserver
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionString: Server=192.168.11.100;Database=WebApiTest2;User ID=sa;Password=sa.123;
+      Identityserver_URL: http://10.0.75.1:55009
+      Redis_ConnectionString: redis:6379
+      WebApiTest2_URL: http://10.0.75.1:55002
+      WebApiTest_URL: http://10.0.75.1:55001
+    image: test_webapitest2:latest
+    ports:
+    - published: 55002
+      target: 80
 version: '3.4'

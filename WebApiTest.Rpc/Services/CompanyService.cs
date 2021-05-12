@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -13,6 +14,7 @@ namespace WebApiTest.Rpc.Services
     [Service(ServiceLifetime.Scoped)]
     public class CompanyService : ICompanyService, IScopedInterface
     {
+        public IConfiguration configuration;
         private readonly HttpClient httpClient;
         //private string BaseUrl 
         //{
@@ -21,14 +23,18 @@ namespace WebApiTest.Rpc.Services
         //        return "http://10.0.75.1:55001/";
         //    }
         //}
-        public CompanyService(IHttpClientFactory httpClientFactory)
+        public CompanyService(
+            IConfiguration configuration,
+            IHttpClientFactory httpClientFactory
+            )
         {
+            this.configuration = configuration;
             this.httpClient = httpClientFactory.CreateClient("token");
         }
 
         public async Task<IEnumerable<CompanyDTO>> GetAllAsync()
         {
-            var uri = $"{httpClient.BaseAddress}Company";
+            var uri = $"{configuration.GetValue<string>("WebApiTest_URL")}/Company";
             var responseObj = await httpClient.GetAsync(uri);
             if (!responseObj.IsSuccessStatusCode)
             {

@@ -5,7 +5,7 @@ namespace WebApi.Infrastructure.Controller
 {
     [Route("[controller]")]
     [ApiController]
-    [Authorize]
+    //[Authorize]
     public class ApiController : ControllerBase
     {
     }

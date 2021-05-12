@@ -25,9 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test2", "Test2", "{0423DC0F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTest2", "WebApiTest2\WebApiTest2.csproj", "{07DA3818-75E0-467F-A546-2C7D2DA9F323}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTest2.Application", "WebApiTest2.Application\WebApiTest2.Application.csproj", "{138BE416-1536-4E06-AA29-6AC470DBFDCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTest2.Application", "WebApiTest2.Application\WebApiTest2.Application.csproj", "{138BE416-1536-4E06-AA29-6AC470DBFDCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApiTest2.Domain", "WebApiTest2.Domain\WebApiTest2.Domain.csproj", "{1D9B7EBC-ECA1-47E5-927B-70DA3394742E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApiTest2.Domain", "WebApiTest2.Domain\WebApiTest2.Domain.csproj", "{1D9B7EBC-ECA1-47E5-927B-70DA3394742E}"
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AAA48066-1614-46C9-84BC-EAE1F0C82F6A}"
 EndProject
@@ -36,6 +36,42 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Ids4", "Ids4", "{09A84203-C874-4898-B7AB-40FDD54DAD50}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{753CAADF-937B-4A07-98FD-4EAD9FD83BFC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{95B25880-2751-4D45-B170-8D3A53E09FBD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "nginx", "nginx", "{00810006-C742-4403-A7C3-32E413B703FA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conf", "conf", "{AF87A596-DA08-47EA-9AD5-8E191A7EFF6F}"
+	ProjectSection(SolutionItems) = preProject
+		Images\nginx\conf\nginx.conf = Images\nginx\conf\nginx.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "redis", "redis", "{3503EDC8-4453-4D6E-B1C3-294FE40171BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "www", "www", "{65A5C148-1DF1-4D2F-9F4E-7DE7FFAA0907}"
+	ProjectSection(SolutionItems) = preProject
+		Images\nginx\www\index.html = Images\nginx\www\index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "www.willard.com", "www.willard.com", "{10C69B88-8DD6-49D9-885B-E0E5FDD4DD3A}"
+	ProjectSection(SolutionItems) = preProject
+		Images\nginx\www\www.willard.com\index.html = Images\nginx\www\www.willard.com\index.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "logs", "logs", "{C4D40AD4-4C37-4DA5-B918-F639C4335F7A}"
+	ProjectSection(SolutionItems) = preProject
+		Images\nginx\logs\access.log = Images\nginx\logs\access.log
+		Images\nginx\logs\error.log = Images\nginx\logs\error.log
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "conf", "conf", "{099B417F-BC73-47B1-AE02-A825E0D65717}"
+	ProjectSection(SolutionItems) = preProject
+		Images\redis\conf\redis.conf = Images\redis\conf\redis.conf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "data", "data", "{66D0C2F5-6FB4-4661-B3D0-E698604CE509}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "logs", "logs", "{56D13211-541F-4476-BF0C-20E5F8DFB7F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -104,6 +140,15 @@ Global
 		{07DA3818-75E0-467F-A546-2C7D2DA9F323} = {0423DC0F-6066-4CF0-82C2-0DEE128EA2DE}
 		{138BE416-1536-4E06-AA29-6AC470DBFDCC} = {0423DC0F-6066-4CF0-82C2-0DEE128EA2DE}
 		{1D9B7EBC-ECA1-47E5-927B-70DA3394742E} = {0423DC0F-6066-4CF0-82C2-0DEE128EA2DE}
+		{00810006-C742-4403-A7C3-32E413B703FA} = {95B25880-2751-4D45-B170-8D3A53E09FBD}
+		{AF87A596-DA08-47EA-9AD5-8E191A7EFF6F} = {00810006-C742-4403-A7C3-32E413B703FA}
+		{3503EDC8-4453-4D6E-B1C3-294FE40171BF} = {95B25880-2751-4D45-B170-8D3A53E09FBD}
+		{65A5C148-1DF1-4D2F-9F4E-7DE7FFAA0907} = {00810006-C742-4403-A7C3-32E413B703FA}
+		{10C69B88-8DD6-49D9-885B-E0E5FDD4DD3A} = {65A5C148-1DF1-4D2F-9F4E-7DE7FFAA0907}
+		{C4D40AD4-4C37-4DA5-B918-F639C4335F7A} = {00810006-C742-4403-A7C3-32E413B703FA}
+		{099B417F-BC73-47B1-AE02-A825E0D65717} = {3503EDC8-4453-4D6E-B1C3-294FE40171BF}
+		{66D0C2F5-6FB4-4661-B3D0-E698604CE509} = {3503EDC8-4453-4D6E-B1C3-294FE40171BF}
+		{56D13211-541F-4476-BF0C-20E5F8DFB7F7} = {3503EDC8-4453-4D6E-B1C3-294FE40171BF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {D7CECB9A-1739-4C0C-B8D3-0FB9CAAABFB0}

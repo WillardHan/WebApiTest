@@ -19,7 +19,7 @@ namespace WebApiTest.Application.Services
         private readonly IOptions<TestSetting> testSetting;
         public UserService(
             IConnectionService connectionService, 
-            ITestService testService, 
+            ITestService testService,
             IOptions<TestSetting> testSetting
             )
         {

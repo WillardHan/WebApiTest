@@ -1,22 +1,145 @@
 services:
+  identityserver:
+    build:
+      context: D:\GitWorkSpaces\WebApiTest
+      dockerfile: IdentityServer/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: IdentityServer
+      target: base
+    container_name: test_identityserver
+    depends_on:
+    - nginx
+    - redis
+    entrypoint: tail -f /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: test_identityserver:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/IdentityServer.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    ports:
+    - published: 55009
+      target: 80
+    tty: true
+    volumes:
+    - D:\GitWorkSpaces\WebApiTest\IdentityServer:/app:rw
+    - C:\Users\Administrator\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Administrator\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Administrator\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Users\Administrator\.nuget\packages:/root/.nuget/packages:ro
+    - D:\GitWorkSpaces\WebApiTest:/src:rw
+  nginx:
+    command: nginx -g "daemon off;"
+    container_name: test_nginx
+    environment:
+      TZ: Asia/Shanghai
+    image: nginx:1.20.0
+    ports:
+    - published: 55000
+      target: 80
+    volumes:
+    - D:\GitWorkSpaces\WebApiTest\Images\nginx\conf\nginx.conf:/etc/nginx/nginx.conf:rw
+    - D:\GitWorkSpaces\WebApiTest\Images\nginx\www:/usr/share/nginx/html:rw
+    - D:\GitWorkSpaces\WebApiTest\Images\nginx\logs:/var/log/nginx:rw
+  redis:
+    command: redis-server /etc/redis/redis.conf
+    container_name: test_redis
+    environment:
+      TZ: Asia/Shanghai
+    image: redis:6.2
+    volumes:
+    - D:\GitWorkSpaces\WebApiTest\Images\redis\conf\redis.conf:/etc/redis/redis.conf:rw
   webapitest:
     build:
       context: D:\GitWorkSpaces\WebApiTest
       dockerfile: WebApiTest/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: WebApiTest
+      target: base
+    container_name: test_webapitest
+    depends_on:
+    - identityserver
+    entrypoint: tail -f /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-    image: webapitest
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ConnectionString: Server=192.168.11.100;Database=WebApiTest;User ID=sa;Password=sa.123;
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      Identityserver_URL: http://10.0.75.1:55009
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+      Redis_ConnectionString: redis:6379
+      WebApiTest2_URL: http://10.0.75.1:55002
+      WebApiTest_URL: http://10.0.75.1:55001
+    image: test_webapitest:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/WebApiTest.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
     ports:
-    - target: 80
+    - published: 55001
+      target: 80
+    tty: true
     volumes:
+    - D:\GitWorkSpaces\WebApiTest\WebApiTest:/app:rw
+    - C:\Users\Administrator\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Administrator\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
     - C:\Users\Administrator\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Users\Administrator\.nuget\packages:/root/.nuget/packages:ro
+    - D:\GitWorkSpaces\WebApiTest:/src:rw
   webapitest2:
     build:
       context: D:\GitWorkSpaces\WebApiTest
       dockerfile: WebApiTest2/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: WebApiTest2
+      target: base
+    container_name: test_webapitest2
+    depends_on:
+    - identityserver
+    entrypoint: tail -f /dev/null
     environment:
       ASPNETCORE_ENVIRONMENT: Development
-    image: webapitest2
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      ConnectionString: Server=192.168.11.100;Database=WebApiTest2;User ID=sa;Password=sa.123;
+      DOTNET_USE_POLLING_FILE_WATCHER: '1'
+      Identityserver_URL: http://10.0.75.1:55009
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+      Redis_ConnectionString: redis:6379
+      WebApiTest2_URL: http://10.0.75.1:55002
+      WebApiTest_URL: http://10.0.75.1:55001
+    image: test_webapitest2:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/netcoreapp3.1/WebApiTest2.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
     ports:
-    - target: 80
+    - published: 55002
+      target: 80
+    tty: true
+    volumes:
+    - D:\GitWorkSpaces\WebApiTest\WebApiTest2:/app:rw
+    - C:\Users\Administrator\vsdbg\vs2017u5:/remote_debugger:rw
+    - C:\Users\Administrator\AppData\Roaming\ASP.NET\Https:/root/.aspnet/https:ro
+    - C:\Users\Administrator\AppData\Roaming\Microsoft\UserSecrets:/root/.microsoft/usersecrets:ro
+    - C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages:/root/.nuget/fallbackpackages:ro
+    - C:\Users\Administrator\.nuget\packages:/root/.nuget/packages:ro
+    - D:\GitWorkSpaces\WebApiTest:/src:rw
 version: '3.4'

@@ -1,0 +1,1752 @@
+2021/04/25 10:07:31 [notice] 1#1: using the "epoll" event method
+2021/04/25 10:07:31 [notice] 1#1: nginx/1.19.10
+2021/04/25 10:07:31 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/25 10:07:31 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/25 10:07:31 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/25 10:07:31 [notice] 1#1: start worker processes
+2021/04/25 10:07:31 [notice] 1#1: start worker process 31
+2021/04/25 10:07:31 [notice] 1#1: start worker process 32
+2021/04/25 10:07:31 [notice] 1#1: start worker process 33
+2021/04/25 10:07:31 [notice] 1#1: start worker process 34
+2021/04/25 10:07:31 [notice] 1#1: start worker process 35
+2021/04/25 10:18:58 [notice] 1#1: using the "epoll" event method
+2021/04/25 10:18:58 [notice] 1#1: nginx/1.20.0
+2021/04/25 10:18:58 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/25 10:18:58 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/25 10:18:58 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/25 10:18:58 [notice] 1#1: start worker processes
+2021/04/25 10:18:58 [notice] 1#1: start worker process 31
+2021/04/25 10:18:58 [notice] 1#1: start worker process 32
+2021/04/25 10:18:58 [notice] 1#1: start worker process 33
+2021/04/25 10:18:58 [notice] 1#1: start worker process 34
+2021/04/25 10:18:58 [notice] 1#1: start worker process 35
+2021/04/25 10:19:52 [error] 31#31: *2 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:55000", referrer: "http://localhost:55000/"
+2021/04/25 10:20:33 [error] 31#31: *3 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "blog.willard.com:55000", referrer: "http://blog.willard.com:55000/"
+2021/04/25 10:20:42 [error] 31#31: *4 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "www.willard.com:55000", referrer: "http://www.willard.com:55000/"
+2021/04/26 10:10:16 [notice] 1#1: using the "epoll" event method
+2021/04/26 10:10:16 [notice] 1#1: nginx/1.20.0
+2021/04/26 10:10:16 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 10:10:16 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 10:10:16 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 10:10:16 [notice] 1#1: start worker processes
+2021/04/26 10:10:16 [notice] 1#1: start worker process 23
+2021/04/26 10:10:16 [notice] 1#1: start worker process 24
+2021/04/26 10:10:16 [notice] 1#1: start worker process 25
+2021/04/26 10:10:16 [notice] 1#1: start worker process 26
+2021/04/26 10:10:16 [notice] 1#1: start worker process 27
+2021/04/26 10:10:50 [error] 23#23: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:55000", referrer: "http://localhost:55000/"
+2021/04/26 10:11:36 [error] 23#23: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:55000", referrer: "http://localhost:55000/"
+2021/04/26 10:11:37 [error] 23#23: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:55000", referrer: "http://localhost:55000/"
+2021/04/26 10:11:37 [error] 23#23: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:55000", referrer: "http://localhost:55000/"
+2021/04/26 10:11:37 [error] 23#23: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:55000", referrer: "http://localhost:55000/"
+2021/04/26 10:12:17 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:39 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:40 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:40 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:40 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:46 [error] 23#23: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:55000", referrer: "http://localhost:55000/"
+2021/04/26 10:12:49 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:49 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:49 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:49 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:49 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:49 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:49 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:50 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:50 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:50 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:12:50 [error] 23#23: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:14:17 [error] 23#23: *3 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:55000", referrer: "http://localhost:55000/"
+2021/04/26 10:14:21 [error] 23#23: *4 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:14:22 [error] 23#23: *4 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:14:22 [error] 23#23: *4 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:14:22 [error] 23#23: *4 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:14:23 [error] 23#23: *4 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 10:15:34 [notice] 1#1: using the "epoll" event method
+2021/04/26 10:15:34 [notice] 1#1: nginx/1.20.0
+2021/04/26 10:15:34 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 10:15:34 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 10:15:34 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 10:15:34 [notice] 1#1: start worker processes
+2021/04/26 10:15:34 [notice] 1#1: start worker process 32
+2021/04/26 10:15:34 [notice] 1#1: start worker process 33
+2021/04/26 10:15:34 [notice] 1#1: start worker process 34
+2021/04/26 10:15:34 [notice] 1#1: start worker process 35
+2021/04/26 10:15:34 [notice] 1#1: start worker process 36
+2021/04/26 10:15:51 [error] 32#32: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:55000", referrer: "http://localhost:55000/"
+2021/04/26 10:16:47 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "www.willard.com:55000", referrer: "http://www.willard.com:55000/"
+2021/04/26 10:19:05 [notice] 1#1: using the "epoll" event method
+2021/04/26 10:19:05 [notice] 1#1: nginx/1.20.0
+2021/04/26 10:19:05 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 10:19:05 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 10:19:05 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 10:19:05 [notice] 1#1: start worker processes
+2021/04/26 10:19:05 [notice] 1#1: start worker process 31
+2021/04/26 10:19:05 [notice] 1#1: start worker process 32
+2021/04/26 10:19:05 [notice] 1#1: start worker process 33
+2021/04/26 10:19:05 [notice] 1#1: start worker process 34
+2021/04/26 10:19:05 [notice] 1#1: start worker process 35
+2021/04/26 10:39:59 [error] 31#31: *15 open() "/usr/share/nginx/html/www.willard.com/abc" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /abc HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 10:42:55 [notice] 1#1: using the "epoll" event method
+2021/04/26 10:42:55 [notice] 1#1: nginx/1.20.0
+2021/04/26 10:42:55 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 10:42:55 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 10:42:55 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 10:42:55 [notice] 1#1: start worker processes
+2021/04/26 10:42:55 [notice] 1#1: start worker process 31
+2021/04/26 10:42:55 [notice] 1#1: start worker process 32
+2021/04/26 10:42:55 [notice] 1#1: start worker process 33
+2021/04/26 10:42:55 [notice] 1#1: start worker process 34
+2021/04/26 10:42:55 [notice] 1#1: start worker process 35
+2021/04/26 11:00:04 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:84
+2021/04/26 11:08:42 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:84
+2021/04/26 11:52:23 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:84
+2021/04/26 11:58:19 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:84
+2021/04/26 12:05:24 [notice] 1#1: using the "epoll" event method
+2021/04/26 12:05:24 [notice] 1#1: nginx/1.20.0
+2021/04/26 12:05:24 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 12:05:24 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 12:05:24 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 12:05:24 [notice] 1#1: start worker processes
+2021/04/26 12:05:24 [notice] 1#1: start worker process 30
+2021/04/26 12:05:24 [notice] 1#1: start worker process 31
+2021/04/26 12:05:24 [notice] 1#1: start worker process 32
+2021/04/26 12:05:24 [notice] 1#1: start worker process 33
+2021/04/26 12:05:24 [notice] 1#1: start worker process 34
+2021/04/26 12:05:47 [error] 30#30: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.20.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:55000", referrer: "http://localhost:55000/"
+2021/04/26 12:07:24 [notice] 1#1: using the "epoll" event method
+2021/04/26 12:07:24 [notice] 1#1: nginx/1.20.0
+2021/04/26 12:07:24 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 12:07:24 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 12:07:24 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 12:07:24 [notice] 1#1: start worker processes
+2021/04/26 12:07:24 [notice] 1#1: start worker process 32
+2021/04/26 12:07:24 [notice] 1#1: start worker process 33
+2021/04/26 12:07:24 [notice] 1#1: start worker process 34
+2021/04/26 12:07:24 [notice] 1#1: start worker process 35
+2021/04/26 12:07:24 [notice] 1#1: start worker process 36
+2021/04/26 12:17:27 [notice] 1#1: using the "epoll" event method
+2021/04/26 12:17:27 [notice] 1#1: nginx/1.20.0
+2021/04/26 12:17:27 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 12:17:27 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 12:17:27 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 12:17:27 [notice] 1#1: start worker processes
+2021/04/26 12:17:27 [notice] 1#1: start worker process 31
+2021/04/26 12:17:27 [notice] 1#1: start worker process 32
+2021/04/26 12:17:27 [notice] 1#1: start worker process 33
+2021/04/26 12:17:27 [notice] 1#1: start worker process 34
+2021/04/26 12:17:27 [notice] 1#1: start worker process 35
+2021/04/26 12:20:14 [emerg] 1#1: "proxy_pass" cannot have URI part in location given by regular expression, or inside named location, or inside "if" statement, or inside "limit_except" block in /etc/nginx/nginx.conf:84
+2021/04/26 12:47:37 [notice] 1#1: using the "epoll" event method
+2021/04/26 12:47:37 [notice] 1#1: nginx/1.20.0
+2021/04/26 12:47:37 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 12:47:37 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 12:47:37 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 12:47:37 [notice] 1#1: start worker processes
+2021/04/26 12:47:37 [notice] 1#1: start worker process 30
+2021/04/26 12:47:37 [notice] 1#1: start worker process 31
+2021/04/26 12:47:37 [notice] 1#1: start worker process 32
+2021/04/26 12:47:37 [notice] 1#1: start worker process 33
+2021/04/26 12:47:37 [notice] 1#1: start worker process 34
+2021/04/26 12:48:17 [error] 30#30: *6 upstream prematurely closed connection while reading response header from upstream, client: 172.25.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 12:48:48 [error] 30#30: *6 upstream prematurely closed connection while reading response header from upstream, client: 172.25.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "www.willard.com:55000"
+2021/04/26 12:48:54 [error] 30#30: *6 upstream prematurely closed connection while reading response header from upstream, client: 172.25.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "www.willard.com:55000"
+2021/04/26 12:57:22 [notice] 1#1: using the "epoll" event method
+2021/04/26 12:57:22 [notice] 1#1: nginx/1.20.0
+2021/04/26 12:57:22 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 12:57:22 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 12:57:22 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 12:57:22 [notice] 1#1: start worker processes
+2021/04/26 12:57:22 [notice] 1#1: start worker process 32
+2021/04/26 12:57:22 [notice] 1#1: start worker process 33
+2021/04/26 12:57:22 [notice] 1#1: start worker process 34
+2021/04/26 12:57:22 [notice] 1#1: start worker process 35
+2021/04/26 12:57:22 [notice] 1#1: start worker process 36
+2021/04/26 12:57:51 [error] 32#32: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.26.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "www.willard.com:55000"
+2021/04/26 12:57:53 [error] 32#32: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.26.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "www.willard.com:55000"
+2021/04/26 12:57:53 [error] 32#32: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.26.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "www.willard.com:55000"
+2021/04/26 12:57:53 [error] 32#32: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.26.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "www.willard.com:55000"
+2021/04/26 12:57:58 [error] 32#32: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.26.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 12:59:07 [notice] 1#1: using the "epoll" event method
+2021/04/26 12:59:07 [notice] 1#1: nginx/1.20.0
+2021/04/26 12:59:07 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 12:59:07 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 12:59:07 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 12:59:07 [notice] 1#1: start worker processes
+2021/04/26 12:59:07 [notice] 1#1: start worker process 34
+2021/04/26 12:59:07 [notice] 1#1: start worker process 35
+2021/04/26 12:59:07 [notice] 1#1: start worker process 36
+2021/04/26 12:59:07 [notice] 1#1: start worker process 37
+2021/04/26 12:59:07 [notice] 1#1: start worker process 38
+2021/04/26 13:00:45 [notice] 1#1: using the "epoll" event method
+2021/04/26 13:00:45 [notice] 1#1: nginx/1.20.0
+2021/04/26 13:00:45 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 13:00:45 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 13:00:45 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 13:00:45 [notice] 1#1: start worker processes
+2021/04/26 13:00:45 [notice] 1#1: start worker process 30
+2021/04/26 13:00:45 [notice] 1#1: start worker process 31
+2021/04/26 13:00:45 [notice] 1#1: start worker process 32
+2021/04/26 13:00:45 [notice] 1#1: start worker process 33
+2021/04/26 13:00:45 [notice] 1#1: start worker process 34
+2021/04/26 13:01:45 [warn] 30#30: *13 an upstream response is buffered to a temporary file /var/cache/nginx/proxy_temp/1/00/0000000001 while reading upstream, client: 172.28.0.1, server: www.willard.com, request: "GET /webapitest2/swagger/swagger-ui-standalone-preset.js HTTP/1.1", upstream: "http://192.168.11.100:55002/swagger/swagger-ui-standalone-preset.js", host: "www.willard.com:55000", referrer: "http://www.willard.com:55000/webapitest2/swagger/index.html"
+2021/04/26 13:05:40 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:72
+2021/04/26 13:05:40 [notice] 1#1: using the "epoll" event method
+2021/04/26 13:05:40 [notice] 1#1: nginx/1.20.0
+2021/04/26 13:05:40 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 13:05:40 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 13:05:40 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 13:05:40 [notice] 1#1: start worker processes
+2021/04/26 13:05:40 [notice] 1#1: start worker process 31
+2021/04/26 13:05:40 [notice] 1#1: start worker process 32
+2021/04/26 13:05:40 [notice] 1#1: start worker process 33
+2021/04/26 13:05:40 [notice] 1#1: start worker process 34
+2021/04/26 13:05:40 [notice] 1#1: start worker process 35
+2021/04/26 13:06:04 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.29.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 13:06:05 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.29.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 13:06:06 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.29.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 13:06:06 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.29.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 13:06:06 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.29.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 13:06:06 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.29.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 13:06:07 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.29.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 13:06:44 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.29.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "www.willard.com:55000"
+2021/04/26 13:08:22 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:72
+2021/04/26 13:08:22 [notice] 1#1: using the "epoll" event method
+2021/04/26 13:08:22 [notice] 1#1: nginx/1.20.0
+2021/04/26 13:08:22 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 13:08:22 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 13:08:22 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 13:08:22 [notice] 1#1: start worker processes
+2021/04/26 13:08:22 [notice] 1#1: start worker process 32
+2021/04/26 13:08:22 [notice] 1#1: start worker process 33
+2021/04/26 13:08:22 [notice] 1#1: start worker process 34
+2021/04/26 13:08:22 [notice] 1#1: start worker process 35
+2021/04/26 13:08:22 [notice] 1#1: start worker process 36
+2021/04/26 13:08:41 [error] 32#32: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.30.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "www.willard.com:55000"
+2021/04/26 13:08:52 [error] 32#32: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.30.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 13:15:36 [notice] 1#1: using the "epoll" event method
+2021/04/26 13:15:36 [notice] 1#1: nginx/1.20.0
+2021/04/26 13:15:36 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 13:15:36 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 13:15:36 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 13:15:36 [notice] 1#1: start worker processes
+2021/04/26 13:15:36 [notice] 1#1: start worker process 30
+2021/04/26 13:15:36 [notice] 1#1: start worker process 31
+2021/04/26 13:15:36 [notice] 1#1: start worker process 32
+2021/04/26 13:15:36 [notice] 1#1: start worker process 33
+2021/04/26 13:15:36 [notice] 1#1: start worker process 34
+2021/04/26 13:15:58 [error] 30#30: *1 upstream prematurely closed connection while reading response header from upstream, client: 172.31.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "www.willard.com:55000"
+2021/04/26 13:17:31 [notice] 1#1: using the "epoll" event method
+2021/04/26 13:17:31 [notice] 1#1: nginx/1.20.0
+2021/04/26 13:17:31 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 13:17:31 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 13:17:31 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 13:17:31 [notice] 1#1: start worker processes
+2021/04/26 13:17:31 [notice] 1#1: start worker process 33
+2021/04/26 13:17:31 [notice] 1#1: start worker process 34
+2021/04/26 13:17:31 [notice] 1#1: start worker process 35
+2021/04/26 13:17:31 [notice] 1#1: start worker process 36
+2021/04/26 13:17:31 [notice] 1#1: start worker process 37
+2021/04/26 13:18:02 [error] 33#33: *1 connect() failed (113: No route to host) while connecting to upstream, client: 192.168.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "www.willard.com:55000"
+2021/04/26 05:26:16 [notice] 1#1: using the "epoll" event method
+2021/04/26 05:26:16 [notice] 1#1: nginx/1.20.0
+2021/04/26 05:26:16 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 05:26:16 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 05:26:16 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 05:26:16 [notice] 1#1: start worker processes
+2021/04/26 05:26:16 [notice] 1#1: start worker process 32
+2021/04/26 05:26:16 [notice] 1#1: start worker process 33
+2021/04/26 05:26:16 [notice] 1#1: start worker process 34
+2021/04/26 05:26:16 [notice] 1#1: start worker process 35
+2021/04/26 05:26:16 [notice] 1#1: start worker process 36
+2021/04/26 05:26:36 [error] 33#33: *1 open() "/usr/share/nginx/html/favicon.ico" failed (2: No such file or directory), client: 172.17.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8013", referrer: "http://localhost:8013/"
+2021/04/26 05:27:42 [error] 33#33: *2 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET / HTTP/1.1", upstream: "http://192.168.11.100:55009/", host: "10.0.75.1:8013"
+2021/04/26 05:28:58 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 05:28:58 [notice] 33#33: gracefully shutting down
+2021/04/26 05:28:58 [notice] 34#34: gracefully shutting down
+2021/04/26 05:28:58 [notice] 34#34: exiting
+2021/04/26 05:28:58 [notice] 34#34: exit
+2021/04/26 05:28:58 [notice] 35#35: gracefully shutting down
+2021/04/26 05:28:58 [notice] 33#33: exiting
+2021/04/26 05:28:58 [notice] 36#36: gracefully shutting down
+2021/04/26 05:28:58 [notice] 32#32: gracefully shutting down
+2021/04/26 05:28:58 [notice] 35#35: exiting
+2021/04/26 05:28:58 [notice] 33#33: exit
+2021/04/26 05:28:58 [notice] 36#36: exiting
+2021/04/26 05:28:58 [notice] 32#32: exiting
+2021/04/26 05:28:58 [notice] 35#35: exit
+2021/04/26 05:28:58 [notice] 36#36: exit
+2021/04/26 05:28:58 [notice] 32#32: exit
+2021/04/26 05:28:58 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2021/04/26 05:28:58 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 05:28:58 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 05:28:58 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 05:28:58 [notice] 1#1: worker process 35 exited with code 0
+2021/04/26 05:28:58 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 05:28:58 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2021/04/26 05:28:58 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2021/04/26 05:28:58 [notice] 1#1: worker process 36 exited with code 0
+2021/04/26 05:28:58 [notice] 1#1: exit
+2021/04/26 05:29:00 [notice] 1#1: using the "epoll" event method
+2021/04/26 05:29:00 [notice] 1#1: nginx/1.20.0
+2021/04/26 05:29:00 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 05:29:00 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 05:29:00 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 05:29:00 [notice] 1#1: start worker processes
+2021/04/26 05:29:00 [notice] 1#1: start worker process 25
+2021/04/26 05:29:00 [notice] 1#1: start worker process 26
+2021/04/26 05:29:00 [notice] 1#1: start worker process 27
+2021/04/26 05:29:00 [notice] 1#1: start worker process 28
+2021/04/26 05:29:00 [notice] 1#1: start worker process 29
+2021/04/26 05:30:34 [error] 25#25: *49 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:55009/", host: "10.0.75.1:8013"
+2021/04/26 05:30:45 [error] 25#25: *43 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:55009/", host: "10.0.75.1:8013"
+2021/04/26 05:31:10 [error] 25#25: *50 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:55009/", host: "10.0.75.1:8013"
+2021/04/26 06:05:45 [error] 25#25: *97 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:55009/", host: "10.0.75.1:8013"
+2021/04/26 06:07:15 [error] 25#25: *100 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:55009/", host: "www.willard.com:8013"
+2021/04/26 06:08:05 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 06:08:05 [notice] 26#26: gracefully shutting down
+2021/04/26 06:08:05 [notice] 27#27: gracefully shutting down
+2021/04/26 06:08:05 [notice] 27#27: exiting
+2021/04/26 06:08:05 [notice] 26#26: exiting
+2021/04/26 06:08:05 [notice] 28#28: gracefully shutting down
+2021/04/26 06:08:05 [notice] 25#25: gracefully shutting down
+2021/04/26 06:08:05 [notice] 29#29: gracefully shutting down
+2021/04/26 06:08:05 [notice] 28#28: exiting
+2021/04/26 06:08:05 [notice] 29#29: exiting
+2021/04/26 06:08:05 [notice] 27#27: exit
+2021/04/26 06:08:05 [notice] 26#26: exit
+2021/04/26 06:08:05 [notice] 28#28: exit
+2021/04/26 06:08:05 [notice] 25#25: exiting
+2021/04/26 06:08:05 [notice] 29#29: exit
+2021/04/26 06:08:05 [notice] 25#25: exit
+2021/04/26 06:08:05 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2021/04/26 06:08:05 [notice] 1#1: worker process 26 exited with code 0
+2021/04/26 06:08:05 [notice] 1#1: worker process 28 exited with code 0
+2021/04/26 06:08:05 [notice] 1#1: worker process 29 exited with code 0
+2021/04/26 06:08:05 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 06:08:05 [notice] 1#1: signal 17 (SIGCHLD) received from 29
+2021/04/26 06:08:05 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2021/04/26 06:08:05 [notice] 1#1: worker process 25 exited with code 0
+2021/04/26 06:08:05 [notice] 1#1: worker process 27 exited with code 0
+2021/04/26 06:08:05 [notice] 1#1: exit
+2021/04/26 06:08:07 [notice] 1#1: using the "epoll" event method
+2021/04/26 06:08:07 [notice] 1#1: nginx/1.20.0
+2021/04/26 06:08:07 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 06:08:07 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 06:08:07 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 06:08:07 [notice] 1#1: start worker processes
+2021/04/26 06:08:07 [notice] 1#1: start worker process 24
+2021/04/26 06:08:07 [notice] 1#1: start worker process 25
+2021/04/26 06:08:07 [notice] 1#1: start worker process 26
+2021/04/26 06:08:07 [notice] 1#1: start worker process 27
+2021/04/26 06:08:07 [notice] 1#1: start worker process 28
+2021/04/26 06:09:17 [error] 24#24: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "POST /fd/ls/lsp.aspx HTTP/1.1", upstream: "https://202.89.233.101:443/fd/ls/lsp.aspx", host: "www.willard.com:8013", referrer: "http://www.willard.com:8013/identity/"
+2021/04/26 06:09:17 [warn] 24#24: *5 upstream server temporarily disabled while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "POST /fd/ls/lsp.aspx HTTP/1.1", upstream: "https://202.89.233.101:443/fd/ls/lsp.aspx", host: "www.willard.com:8013", referrer: "http://www.willard.com:8013/identity/"
+2021/04/26 06:09:32 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 06:09:32 [notice] 24#24: gracefully shutting down
+2021/04/26 06:09:32 [notice] 26#26: gracefully shutting down
+2021/04/26 06:09:32 [notice] 26#26: exiting
+2021/04/26 06:09:32 [notice] 27#27: gracefully shutting down
+2021/04/26 06:09:32 [notice] 27#27: exiting
+2021/04/26 06:09:32 [notice] 27#27: exit
+2021/04/26 06:09:32 [notice] 28#28: gracefully shutting down
+2021/04/26 06:09:32 [notice] 25#25: gracefully shutting down
+2021/04/26 06:09:32 [notice] 26#26: exit
+2021/04/26 06:09:32 [notice] 28#28: exiting
+2021/04/26 06:09:32 [notice] 25#25: exiting
+2021/04/26 06:09:32 [notice] 28#28: exit
+2021/04/26 06:09:32 [notice] 25#25: exit
+2021/04/26 06:09:32 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2021/04/26 06:09:32 [notice] 1#1: worker process 25 exited with code 0
+2021/04/26 06:09:32 [notice] 1#1: worker process 26 exited with code 0
+2021/04/26 06:09:32 [notice] 1#1: worker process 27 exited with code 0
+2021/04/26 06:09:32 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 06:09:32 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2021/04/26 06:09:32 [notice] 1#1: worker process 28 exited with code 0
+2021/04/26 06:09:32 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 06:09:38 [error] 24#24: *5 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "POST /fd/ls/lsp.aspx HTTP/1.1", upstream: "https://202.89.233.100:443/fd/ls/lsp.aspx", host: "www.willard.com:8013", referrer: "http://www.willard.com:8013/identity/"
+2021/04/26 06:09:38 [warn] 24#24: *5 upstream server temporarily disabled while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "POST /fd/ls/lsp.aspx HTTP/1.1", upstream: "https://202.89.233.100:443/fd/ls/lsp.aspx", host: "www.willard.com:8013", referrer: "http://www.willard.com:8013/identity/"
+2021/04/26 06:09:39 [notice] 24#24: exiting
+2021/04/26 06:09:39 [notice] 24#24: exit
+2021/04/26 06:09:39 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/04/26 06:09:39 [notice] 1#1: worker process 24 exited with code 0
+2021/04/26 06:09:39 [notice] 1#1: exit
+2021/04/26 06:09:42 [notice] 1#1: using the "epoll" event method
+2021/04/26 06:09:42 [notice] 1#1: nginx/1.20.0
+2021/04/26 06:09:42 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 06:09:42 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 06:09:42 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 06:09:42 [notice] 1#1: start worker processes
+2021/04/26 06:09:42 [notice] 1#1: start worker process 24
+2021/04/26 06:09:42 [notice] 1#1: start worker process 25
+2021/04/26 06:09:42 [notice] 1#1: start worker process 26
+2021/04/26 06:09:42 [notice] 1#1: start worker process 27
+2021/04/26 06:09:42 [notice] 1#1: start worker process 28
+2021/04/26 06:10:09 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 06:10:09 [notice] 26#26: gracefully shutting down
+2021/04/26 06:10:09 [notice] 27#27: gracefully shutting down
+2021/04/26 06:10:09 [notice] 28#28: gracefully shutting down
+2021/04/26 06:10:09 [notice] 24#24: gracefully shutting down
+2021/04/26 06:10:09 [notice] 25#25: gracefully shutting down
+2021/04/26 06:10:09 [notice] 25#25: exiting
+2021/04/26 06:10:09 [notice] 26#26: exiting
+2021/04/26 06:10:09 [notice] 27#27: exiting
+2021/04/26 06:10:09 [notice] 28#28: exiting
+2021/04/26 06:10:09 [notice] 24#24: exiting
+2021/04/26 06:10:09 [notice] 25#25: exit
+2021/04/26 06:10:09 [notice] 26#26: exit
+2021/04/26 06:10:09 [notice] 27#27: exit
+2021/04/26 06:10:09 [notice] 28#28: exit
+2021/04/26 06:10:09 [notice] 24#24: exit
+2021/04/26 06:10:09 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/04/26 06:10:09 [notice] 1#1: worker process 24 exited with code 0
+2021/04/26 06:10:09 [notice] 1#1: worker process 25 exited with code 0
+2021/04/26 06:10:09 [notice] 1#1: worker process 26 exited with code 0
+2021/04/26 06:10:09 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 06:10:09 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/04/26 06:10:09 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2021/04/26 06:10:09 [notice] 1#1: worker process 27 exited with code 0
+2021/04/26 06:10:09 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 06:10:09 [notice] 1#1: signal 17 (SIGCHLD) received from 28
+2021/04/26 06:10:09 [notice] 1#1: worker process 28 exited with code 0
+2021/04/26 06:10:09 [notice] 1#1: exit
+2021/04/26 06:10:11 [notice] 1#1: using the "epoll" event method
+2021/04/26 06:10:11 [notice] 1#1: nginx/1.20.0
+2021/04/26 06:10:11 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 06:10:11 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 06:10:11 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 06:10:11 [notice] 1#1: start worker processes
+2021/04/26 06:10:11 [notice] 1#1: start worker process 24
+2021/04/26 06:10:11 [notice] 1#1: start worker process 25
+2021/04/26 06:10:11 [notice] 1#1: start worker process 26
+2021/04/26 06:10:11 [notice] 1#1: start worker process 27
+2021/04/26 06:10:11 [notice] 1#1: start worker process 28
+2021/04/26 06:10:46 [error] 24#24: *10 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /ipv6test/test?FORM=MONITR HTTP/1.1", upstream: "https://202.89.233.100:443/ipv6test/test?FORM=MONITR", host: "www.willard.com:8013", referrer: "http://www.willard.com:8013/"
+2021/04/26 06:10:46 [warn] 24#24: *10 upstream server temporarily disabled while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /ipv6test/test?FORM=MONITR HTTP/1.1", upstream: "https://202.89.233.100:443/ipv6test/test?FORM=MONITR", host: "www.willard.com:8013", referrer: "http://www.willard.com:8013/"
+2021/04/26 06:10:46 [error] 24#24: *12 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /fd/ls/l?IG=4DD0CA6425A5457F9E231E27CC548FFB&Type=Event.PPT&DATA={%22S%22:124,%22E%22:384,%22T%22:0,%22I%22:0,%22N%22:{%22H%22:{%22S%22:373,%22E%22:373,%22T%22:0}},%22M%22:{}}&P=SERP&DA=CO4 HTTP/1.1", upstream: "https://202.89.233.101:443/fd/ls/l?IG=4DD0CA6425A5457F9E231E27CC548FFB&Type=Event.PPT&DATA={%22S%22:124,%22E%22:384,%22T%22:0,%22I%22:0,%22N%22:{%22H%22:{%22S%22:373,%22E%22:373,%22T%22:0}},%22M%22:{}}&P=SERP&DA=CO4", host: "www.willard.com:8013", referrer: "http://www.willard.com:8013/"
+2021/04/26 06:10:46 [warn] 24#24: *12 upstream server temporarily disabled while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /fd/ls/l?IG=4DD0CA6425A5457F9E231E27CC548FFB&Type=Event.PPT&DATA={%22S%22:124,%22E%22:384,%22T%22:0,%22I%22:0,%22N%22:{%22H%22:{%22S%22:373,%22E%22:373,%22T%22:0}},%22M%22:{}}&P=SERP&DA=CO4 HTTP/1.1", upstream: "https://202.89.233.101:443/fd/ls/l?IG=4DD0CA6425A5457F9E231E27CC548FFB&Type=Event.PPT&DATA={%22S%22:124,%22E%22:384,%22T%22:0,%22I%22:0,%22N%22:{%22H%22:{%22S%22:373,%22E%22:373,%22T%22:0}},%22M%22:{}}&P=SERP&DA=CO4", host: "www.willard.com:8013", referrer: "http://www.willard.com:8013/"
+2021/04/26 06:10:46 [error] 24#24: *12 no live upstreams while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /fd/ls/l?IG=4DD0CA6425A5457F9E231E27CC548FFB&Type=Event.PPT&DATA={%22S%22:124,%22E%22:384,%22T%22:0,%22I%22:0,%22N%22:{%22H%22:{%22S%22:373,%22E%22:373,%22T%22:0}},%22M%22:{}}&P=SERP&DA=CO4 HTTP/1.1", upstream: "https://cn.bing.com/fd/ls/l?IG=4DD0CA6425A5457F9E231E27CC548FFB&Type=Event.PPT&DATA={%22S%22:124,%22E%22:384,%22T%22:0,%22I%22:0,%22N%22:{%22H%22:{%22S%22:373,%22E%22:373,%22T%22:0}},%22M%22:{}}&P=SERP&DA=CO4", host: "www.willard.com:8013", referrer: "http://www.willard.com:8013/"
+2021/04/26 06:11:40 [error] 24#24: *1 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:55009/", host: "www.willard.com:8013"
+2021/04/26 06:12:43 [error] 24#24: *1 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:55009/", host: "www.willard.com:8013"
+2021/04/26 06:12:46 [error] 24#24: *10 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:55009/", host: "www.willard.com:8013"
+2021/04/26 06:13:57 [error] 24#24: *21 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "POST /fd/ls/lsp.aspx? HTTP/1.1", upstream: "https://202.89.233.101:443/fd/ls/lsp.aspx", host: "10.0.75.1:8013", referrer: "http://10.0.75.1:8013/"
+2021/04/26 06:13:57 [warn] 24#24: *21 upstream server temporarily disabled while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "POST /fd/ls/lsp.aspx? HTTP/1.1", upstream: "https://202.89.233.101:443/fd/ls/lsp.aspx", host: "10.0.75.1:8013", referrer: "http://10.0.75.1:8013/"
+2021/04/26 06:14:54 [error] 24#24: *25 connect() failed (111: Connection refused) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "POST /fd/ls/lsp.aspx HTTP/1.1", upstream: "https://202.89.233.100:443/fd/ls/lsp.aspx", host: "10.0.75.1:8013", referrer: "http://10.0.75.1:8013/"
+2021/04/26 06:14:54 [warn] 24#24: *25 upstream server temporarily disabled while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "POST /fd/ls/lsp.aspx HTTP/1.1", upstream: "https://202.89.233.100:443/fd/ls/lsp.aspx", host: "10.0.75.1:8013", referrer: "http://10.0.75.1:8013/"
+2021/04/26 06:14:57 [error] 24#24: *29 upstream timed out (110: Connection timed out) while connecting to upstream, client: 172.17.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:55009/", host: "10.0.75.1:8013"
+2021/04/26 06:16:48 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 06:16:48 [notice] 27#27: gracefully shutting down
+2021/04/26 06:16:48 [notice] 27#27: exiting
+2021/04/26 06:16:48 [notice] 27#27: exit
+2021/04/26 06:16:48 [notice] 25#25: gracefully shutting down
+2021/04/26 06:16:48 [notice] 26#26: gracefully shutting down
+2021/04/26 06:16:48 [notice] 26#26: exiting
+2021/04/26 06:16:48 [notice] 24#24: gracefully shutting down
+2021/04/26 06:16:48 [notice] 28#28: gracefully shutting down
+2021/04/26 06:16:48 [notice] 25#25: exiting
+2021/04/26 06:16:48 [notice] 26#26: exit
+2021/04/26 06:16:48 [notice] 24#24: exiting
+2021/04/26 06:16:48 [notice] 28#28: exiting
+2021/04/26 06:16:48 [notice] 28#28: exit
+2021/04/26 06:16:48 [notice] 25#25: exit
+2021/04/26 06:16:48 [notice] 24#24: exit
+2021/04/26 06:16:48 [notice] 1#1: signal 17 (SIGCHLD) received from 27
+2021/04/26 06:16:48 [notice] 1#1: worker process 27 exited with code 0
+2021/04/26 06:16:48 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 06:16:48 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/04/26 06:16:48 [notice] 1#1: worker process 24 exited with code 0
+2021/04/26 06:16:48 [notice] 1#1: worker process 25 exited with code 0
+2021/04/26 06:16:48 [notice] 1#1: worker process 26 exited with code 0
+2021/04/26 06:16:48 [notice] 1#1: worker process 28 exited with code 0
+2021/04/26 06:16:48 [notice] 1#1: exit
+2021/04/26 14:20:24 [notice] 1#1: using the "epoll" event method
+2021/04/26 14:20:24 [notice] 1#1: nginx/1.20.0
+2021/04/26 14:20:24 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 14:20:24 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 14:20:24 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 14:20:24 [notice] 1#1: start worker processes
+2021/04/26 14:20:24 [notice] 1#1: start worker process 32
+2021/04/26 14:20:24 [notice] 1#1: start worker process 33
+2021/04/26 14:20:24 [notice] 1#1: start worker process 34
+2021/04/26 14:20:24 [notice] 1#1: start worker process 35
+2021/04/26 14:20:24 [notice] 1#1: start worker process 36
+2021/04/26 14:21:14 [error] 32#32: *2 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 192.168.16.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/04/26 14:31:48 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 14:31:48 [notice] 32#32: gracefully shutting down
+2021/04/26 14:31:48 [notice] 35#35: gracefully shutting down
+2021/04/26 14:31:48 [notice] 33#33: gracefully shutting down
+2021/04/26 14:31:48 [notice] 34#34: gracefully shutting down
+2021/04/26 14:31:48 [notice] 36#36: gracefully shutting down
+2021/04/26 14:31:48 [notice] 32#32: exiting
+2021/04/26 14:31:48 [notice] 35#35: exiting
+2021/04/26 14:31:48 [notice] 33#33: exiting
+2021/04/26 14:31:48 [notice] 34#34: exiting
+2021/04/26 14:31:48 [notice] 36#36: exiting
+2021/04/26 14:31:48 [notice] 32#32: exit
+2021/04/26 14:31:48 [notice] 35#35: exit
+2021/04/26 14:31:48 [notice] 33#33: exit
+2021/04/26 14:31:48 [notice] 34#34: exit
+2021/04/26 14:31:48 [notice] 36#36: exit
+2021/04/26 14:31:48 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2021/04/26 14:31:48 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 14:31:48 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 14:31:48 [notice] 1#1: worker process 35 exited with code 0
+2021/04/26 14:31:48 [notice] 1#1: worker process 36 exited with code 0
+2021/04/26 14:31:48 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 14:31:48 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2021/04/26 14:31:48 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2021/04/26 14:31:48 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 14:31:48 [notice] 1#1: exit
+2021/04/26 14:41:23 [notice] 1#1: using the "epoll" event method
+2021/04/26 14:41:23 [notice] 1#1: nginx/1.20.0
+2021/04/26 14:41:23 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 14:41:23 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 14:41:23 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 14:41:23 [notice] 1#1: start worker processes
+2021/04/26 14:41:23 [notice] 1#1: start worker process 31
+2021/04/26 14:41:23 [notice] 1#1: start worker process 32
+2021/04/26 14:41:23 [notice] 1#1: start worker process 33
+2021/04/26 14:41:23 [notice] 1#1: start worker process 34
+2021/04/26 14:41:23 [notice] 1#1: start worker process 35
+2021/04/26 14:41:54 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" failed (2: No such file or directory), client: 192.168.32.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 14:41:54 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 192.168.32.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 14:41:56 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" failed (2: No such file or directory), client: 192.168.32.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 14:41:56 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 192.168.32.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 14:47:23 [notice] 1#1: using the "epoll" event method
+2021/04/26 14:47:23 [notice] 1#1: nginx/1.20.0
+2021/04/26 14:47:23 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 14:47:23 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 14:47:23 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 14:47:23 [notice] 1#1: start worker processes
+2021/04/26 14:47:23 [notice] 1#1: start worker process 30
+2021/04/26 14:47:23 [notice] 1#1: start worker process 31
+2021/04/26 14:47:23 [notice] 1#1: start worker process 32
+2021/04/26 14:47:23 [notice] 1#1: start worker process 33
+2021/04/26 14:47:23 [notice] 1#1: start worker process 34
+2021/04/26 14:49:05 [error] 30#30: *1 open() "/usr/share/nginx/html/www.willard.com/swagger" failed (2: No such file or directory), client: 192.168.48.1, server: www.willard.com, request: "GET /swagger HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 14:49:20 [error] 30#30: *1 open() "/usr/share/nginx/html/www.willard.com/swagger" failed (2: No such file or directory), client: 192.168.48.1, server: www.willard.com, request: "GET /swagger HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 14:50:27 [error] 30#30: *6 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 192.168.48.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 14:50:27 [error] 30#30: *6 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" failed (2: No such file or directory), client: 192.168.48.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 14:52:21 [notice] 1#1: using the "epoll" event method
+2021/04/26 14:52:21 [notice] 1#1: nginx/1.20.0
+2021/04/26 14:52:21 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 14:52:21 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 14:52:21 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 14:52:21 [notice] 1#1: start worker processes
+2021/04/26 14:52:21 [notice] 1#1: start worker process 33
+2021/04/26 14:52:21 [notice] 1#1: start worker process 34
+2021/04/26 14:52:21 [notice] 1#1: start worker process 35
+2021/04/26 14:52:21 [notice] 1#1: start worker process 36
+2021/04/26 14:52:21 [notice] 1#1: start worker process 37
+2021/04/26 14:52:49 [error] 33#33: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 192.168.80.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 14:52:49 [error] 33#33: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" failed (2: No such file or directory), client: 192.168.80.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 14:58:14 [notice] 1#1: using the "epoll" event method
+2021/04/26 14:58:14 [notice] 1#1: nginx/1.20.0
+2021/04/26 14:58:14 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 14:58:14 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 14:58:14 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 14:58:14 [notice] 1#1: start worker processes
+2021/04/26 14:58:14 [notice] 1#1: start worker process 31
+2021/04/26 14:58:14 [notice] 1#1: start worker process 32
+2021/04/26 14:58:14 [notice] 1#1: start worker process 33
+2021/04/26 14:58:14 [notice] 1#1: start worker process 34
+2021/04/26 14:58:14 [notice] 1#1: start worker process 35
+2021/04/26 14:59:50 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.96.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "10.0.75.1:55000"
+2021/04/26 15:00:46 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:00:46 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:00:46 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:00:46 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:00:46 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:00:46 [notice] 1#1: start worker processes
+2021/04/26 15:00:46 [notice] 1#1: start worker process 32
+2021/04/26 15:00:46 [notice] 1#1: start worker process 33
+2021/04/26 15:00:46 [notice] 1#1: start worker process 34
+2021/04/26 15:00:46 [notice] 1#1: start worker process 35
+2021/04/26 15:00:46 [notice] 1#1: start worker process 36
+2021/04/26 15:04:50 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:04:50 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:04:50 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:04:50 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:04:50 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:04:50 [notice] 1#1: start worker processes
+2021/04/26 15:04:50 [notice] 1#1: start worker process 30
+2021/04/26 15:04:50 [notice] 1#1: start worker process 31
+2021/04/26 15:04:50 [notice] 1#1: start worker process 32
+2021/04/26 15:04:50 [notice] 1#1: start worker process 33
+2021/04/26 15:04:50 [notice] 1#1: start worker process 34
+2021/04/26 15:07:57 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:07:57 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:07:57 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:07:57 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:07:57 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:07:57 [notice] 1#1: start worker processes
+2021/04/26 15:07:57 [notice] 1#1: start worker process 31
+2021/04/26 15:07:57 [notice] 1#1: start worker process 32
+2021/04/26 15:07:57 [notice] 1#1: start worker process 33
+2021/04/26 15:07:57 [notice] 1#1: start worker process 34
+2021/04/26 15:07:57 [notice] 1#1: start worker process 35
+2021/04/26 15:08:25 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.144.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:55001/", host: "10.0.75.1:55000"
+2021/04/26 15:08:40 [error] 31#31: *1 upstream prematurely closed connection while reading response header from upstream, client: 192.168.144.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://192.168.11.100:55001/swagger/index.html", host: "10.0.75.1:55000"
+2021/04/26 15:13:22 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:13:22 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:13:22 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:13:22 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:13:22 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:13:22 [notice] 1#1: start worker processes
+2021/04/26 15:13:22 [notice] 1#1: start worker process 30
+2021/04/26 15:13:22 [notice] 1#1: start worker process 31
+2021/04/26 15:13:22 [notice] 1#1: start worker process 32
+2021/04/26 15:13:22 [notice] 1#1: start worker process 33
+2021/04/26 15:13:22 [notice] 1#1: start worker process 34
+2021/04/26 15:14:33 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:14:33 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:14:33 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:14:33 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:14:33 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:14:33 [notice] 1#1: start worker processes
+2021/04/26 15:14:33 [notice] 1#1: start worker process 30
+2021/04/26 15:14:33 [notice] 1#1: start worker process 31
+2021/04/26 15:14:33 [notice] 1#1: start worker process 32
+2021/04/26 15:14:33 [notice] 1#1: start worker process 33
+2021/04/26 15:14:33 [notice] 1#1: start worker process 34
+2021/04/26 15:14:55 [error] 30#30: *1 open() "/usr/share/nginx/html/www.willard.com/swagger" failed (2: No such file or directory), client: 192.168.176.1, server: www.willard.com, request: "GET /swagger HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 15:17:26 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:17:26 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:17:26 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:17:26 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:17:26 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:17:26 [notice] 1#1: start worker processes
+2021/04/26 15:17:26 [notice] 1#1: start worker process 30
+2021/04/26 15:17:26 [notice] 1#1: start worker process 31
+2021/04/26 15:17:26 [notice] 1#1: start worker process 32
+2021/04/26 15:17:26 [notice] 1#1: start worker process 33
+2021/04/26 15:17:26 [notice] 1#1: start worker process 34
+2021/04/26 15:18:30 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:18:30 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:18:30 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:18:30 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:18:30 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:18:30 [notice] 1#1: start worker processes
+2021/04/26 15:18:30 [notice] 1#1: start worker process 32
+2021/04/26 15:18:30 [notice] 1#1: start worker process 33
+2021/04/26 15:18:30 [notice] 1#1: start worker process 34
+2021/04/26 15:18:30 [notice] 1#1: start worker process 35
+2021/04/26 15:18:30 [notice] 1#1: start worker process 36
+2021/04/26 15:19:44 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:19:44 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:19:44 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:19:44 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:19:44 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:19:44 [notice] 1#1: start worker processes
+2021/04/26 15:19:44 [notice] 1#1: start worker process 30
+2021/04/26 15:19:44 [notice] 1#1: start worker process 31
+2021/04/26 15:19:44 [notice] 1#1: start worker process 32
+2021/04/26 15:19:44 [notice] 1#1: start worker process 33
+2021/04/26 15:19:44 [notice] 1#1: start worker process 34
+2021/04/26 15:20:47 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:20:47 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:20:47 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:20:47 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:20:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:20:47 [notice] 1#1: start worker processes
+2021/04/26 15:20:47 [notice] 1#1: start worker process 31
+2021/04/26 15:20:47 [notice] 1#1: start worker process 32
+2021/04/26 15:20:47 [notice] 1#1: start worker process 33
+2021/04/26 15:20:47 [notice] 1#1: start worker process 34
+2021/04/26 15:20:47 [notice] 1#1: start worker process 35
+2021/04/26 15:23:04 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:23:04 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:23:04 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:23:04 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:23:04 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:23:04 [notice] 1#1: start worker processes
+2021/04/26 15:23:04 [notice] 1#1: start worker process 34
+2021/04/26 15:23:04 [notice] 1#1: start worker process 35
+2021/04/26 15:23:04 [notice] 1#1: start worker process 36
+2021/04/26 15:23:04 [notice] 1#1: start worker process 37
+2021/04/26 15:23:04 [notice] 1#1: start worker process 38
+2021/04/26 15:23:31 [error] 34#34: *1 open() "/usr/share/nginx/html/www.willard.com/swagger" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 15:24:41 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:24:41 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:24:41 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:24:41 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:24:41 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:24:41 [notice] 1#1: start worker processes
+2021/04/26 15:24:41 [notice] 1#1: start worker process 31
+2021/04/26 15:24:41 [notice] 1#1: start worker process 32
+2021/04/26 15:24:41 [notice] 1#1: start worker process 33
+2021/04/26 15:24:41 [notice] 1#1: start worker process 34
+2021/04/26 15:24:41 [notice] 1#1: start worker process 35
+2021/04/26 15:25:36 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:25:36 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:25:36 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:25:36 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:25:36 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:25:36 [notice] 1#1: start worker processes
+2021/04/26 15:25:36 [notice] 1#1: start worker process 31
+2021/04/26 15:25:36 [notice] 1#1: start worker process 32
+2021/04/26 15:25:36 [notice] 1#1: start worker process 33
+2021/04/26 15:25:36 [notice] 1#1: start worker process 34
+2021/04/26 15:25:36 [notice] 1#1: start worker process 35
+2021/04/26 15:27:53 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:27:53 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:27:53 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:27:53 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:27:53 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:27:53 [notice] 1#1: start worker processes
+2021/04/26 15:27:53 [notice] 1#1: start worker process 31
+2021/04/26 15:27:53 [notice] 1#1: start worker process 32
+2021/04/26 15:27:53 [notice] 1#1: start worker process 33
+2021/04/26 15:27:53 [notice] 1#1: start worker process 34
+2021/04/26 15:27:53 [notice] 1#1: start worker process 35
+2021/04/26 15:28:49 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.23.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/04/26 15:32:32 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:47
+2021/04/26 15:34:28 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:47
+2021/04/26 15:47:12 [emerg] 1#1: "upstream" directive is not allowed here in /etc/nginx/nginx.conf:47
+2021/04/26 15:55:48 [notice] 1#1: using the "epoll" event method
+2021/04/26 15:55:48 [notice] 1#1: nginx/1.20.0
+2021/04/26 15:55:48 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 15:55:48 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 15:55:48 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 15:55:48 [notice] 1#1: start worker processes
+2021/04/26 15:55:48 [notice] 1#1: start worker process 30
+2021/04/26 15:55:48 [notice] 1#1: start worker process 31
+2021/04/26 15:55:48 [notice] 1#1: start worker process 32
+2021/04/26 15:55:48 [notice] 1#1: start worker process 33
+2021/04/26 15:55:48 [notice] 1#1: start worker process 34
+2021/04/26 15:56:19 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.27.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:5009/", host: "10.0.75.1:55000"
+2021/04/26 15:56:30 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.27.0.1, server: www.willard.com, request: "GET /identity/ HTTP/1.1", upstream: "http://192.168.11.100:5009/", host: "10.0.75.1:55000"
+2021/04/26 15:57:19 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.27.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:5001/", host: "10.0.75.1:55000"
+2021/04/26 15:58:15 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.27.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:5001/", host: "10.0.75.1:55000"
+2021/04/26 16:00:24 [emerg] 1#1: host not found in upstream "webapitest_server" in /etc/nginx/nginx.conf:78
+2021/04/26 16:02:33 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:02:33 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:02:33 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:02:33 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:02:33 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:02:33 [notice] 1#1: start worker processes
+2021/04/26 16:02:33 [notice] 1#1: start worker process 31
+2021/04/26 16:02:33 [notice] 1#1: start worker process 32
+2021/04/26 16:02:33 [notice] 1#1: start worker process 33
+2021/04/26 16:02:33 [notice] 1#1: start worker process 34
+2021/04/26 16:02:33 [notice] 1#1: start worker process 35
+2021/04/26 16:02:57 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.29.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 16:02:57 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" failed (2: No such file or directory), client: 172.29.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 16:03:07 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.29.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.11.100:5001/", host: "10.0.75.1:55000"
+2021/04/26 16:04:43 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:04:43 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:04:43 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:04:43 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:04:43 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:04:43 [notice] 1#1: start worker processes
+2021/04/26 16:04:43 [notice] 1#1: start worker process 30
+2021/04/26 16:04:43 [notice] 1#1: start worker process 31
+2021/04/26 16:04:43 [notice] 1#1: start worker process 32
+2021/04/26 16:04:43 [notice] 1#1: start worker process 33
+2021/04/26 16:04:43 [notice] 1#1: start worker process 34
+2021/04/26 16:07:11 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:07:11 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:07:11 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:07:11 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:07:11 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:07:11 [notice] 1#1: start worker processes
+2021/04/26 16:07:11 [notice] 1#1: start worker process 31
+2021/04/26 16:07:11 [notice] 1#1: start worker process 32
+2021/04/26 16:07:11 [notice] 1#1: start worker process 33
+2021/04/26 16:07:11 [notice] 1#1: start worker process 34
+2021/04/26 16:07:11 [notice] 1#1: start worker process 35
+2021/04/26 16:07:49 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://172.31.0.3:80/", host: "10.0.75.1:55000"
+2021/04/26 16:07:56 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://172.31.0.3:80/swagger/index.html", host: "10.0.75.1:55000"
+2021/04/26 16:09:30 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:09:30 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:09:30 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:09:30 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:09:30 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:09:30 [notice] 1#1: start worker processes
+2021/04/26 16:09:30 [notice] 1#1: start worker process 32
+2021/04/26 16:09:30 [notice] 1#1: start worker process 33
+2021/04/26 16:09:30 [notice] 1#1: start worker process 34
+2021/04/26 16:09:30 [notice] 1#1: start worker process 35
+2021/04/26 16:09:30 [notice] 1#1: start worker process 36
+2021/04/26 16:21:58 [emerg] 1#1: host not found in upstream "identityserver" in /etc/nginx/nginx.conf:34
+2021/04/26 16:28:07 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:28:07 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:28:07 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:28:07 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:28:07 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:28:07 [notice] 1#1: start worker processes
+2021/04/26 16:28:07 [notice] 1#1: start worker process 23
+2021/04/26 16:28:07 [notice] 1#1: start worker process 24
+2021/04/26 16:28:07 [notice] 1#1: start worker process 25
+2021/04/26 16:28:07 [notice] 1#1: start worker process 26
+2021/04/26 16:28:07 [notice] 1#1: start worker process 27
+2021/04/26 16:30:19 [emerg] 1#1: host not found in upstream "identityserver" in /etc/nginx/nginx.conf:34
+2021/04/26 16:34:20 [emerg] 1#1: host not found in upstream "identityserver" in /etc/nginx/nginx.conf:34
+2021/04/26 16:36:26 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:36:26 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:36:26 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:36:26 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:36:26 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:36:26 [notice] 1#1: start worker processes
+2021/04/26 16:36:26 [notice] 1#1: start worker process 24
+2021/04/26 16:36:26 [notice] 1#1: start worker process 25
+2021/04/26 16:36:26 [notice] 1#1: start worker process 26
+2021/04/26 16:36:26 [notice] 1#1: start worker process 27
+2021/04/26 16:36:26 [notice] 1#1: start worker process 28
+2021/04/26 16:39:46 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:39:46 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:39:46 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:39:46 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:39:46 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:39:46 [notice] 1#1: start worker processes
+2021/04/26 16:39:46 [notice] 1#1: start worker process 31
+2021/04/26 16:39:46 [notice] 1#1: start worker process 32
+2021/04/26 16:39:46 [notice] 1#1: start worker process 33
+2021/04/26 16:39:46 [notice] 1#1: start worker process 34
+2021/04/26 16:39:46 [notice] 1#1: start worker process 35
+2021/04/26 16:44:25 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:44:25 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:44:25 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:44:25 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:44:25 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:44:25 [notice] 1#1: start worker processes
+2021/04/26 16:44:25 [notice] 1#1: start worker process 30
+2021/04/26 16:44:25 [notice] 1#1: start worker process 31
+2021/04/26 16:44:25 [notice] 1#1: start worker process 32
+2021/04/26 16:44:25 [notice] 1#1: start worker process 33
+2021/04/26 16:44:25 [notice] 1#1: start worker process 34
+2021/04/26 16:45:37 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.96.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.96.2:80/", host: "10.0.75.1:55000"
+2021/04/26 16:49:06 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:49:06 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:49:06 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:49:06 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:49:06 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:49:06 [notice] 1#1: start worker processes
+2021/04/26 16:49:06 [notice] 1#1: start worker process 30
+2021/04/26 16:49:06 [notice] 1#1: start worker process 31
+2021/04/26 16:49:06 [notice] 1#1: start worker process 32
+2021/04/26 16:49:06 [notice] 1#1: start worker process 33
+2021/04/26 16:49:06 [notice] 1#1: start worker process 34
+2021/04/26 16:53:57 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:53:57 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:53:57 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:53:57 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:53:57 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:53:57 [notice] 1#1: start worker processes
+2021/04/26 16:53:57 [notice] 1#1: start worker process 30
+2021/04/26 16:53:57 [notice] 1#1: start worker process 31
+2021/04/26 16:53:57 [notice] 1#1: start worker process 32
+2021/04/26 16:53:57 [notice] 1#1: start worker process 33
+2021/04/26 16:53:57 [notice] 1#1: start worker process 34
+2021/04/26 16:55:50 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:55:50 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:55:50 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:55:50 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:55:50 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:55:50 [notice] 1#1: start worker processes
+2021/04/26 16:55:50 [notice] 1#1: start worker process 31
+2021/04/26 16:55:50 [notice] 1#1: start worker process 32
+2021/04/26 16:55:50 [notice] 1#1: start worker process 33
+2021/04/26 16:55:50 [notice] 1#1: start worker process 34
+2021/04/26 16:55:50 [notice] 1#1: start worker process 35
+2021/04/26 16:56:22 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.144.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://192.168.144.2:80/", host: "10.0.75.1:55000"
+2021/04/26 16:56:27 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.144.1, server: www.willard.com, request: "GET /webapitest/Company HTTP/1.1", upstream: "http://192.168.144.2:80/Company", host: "10.0.75.1:55000"
+2021/04/26 16:56:41 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.144.1, server: www.willard.com, request: "GET /webapitest/Company HTTP/1.1", upstream: "http://192.168.144.2:80/Company", host: "10.0.75.1:55000"
+2021/04/26 16:57:23 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 16:57:23 [notice] 31#31: gracefully shutting down
+2021/04/26 16:57:23 [notice] 32#32: gracefully shutting down
+2021/04/26 16:57:23 [notice] 33#33: gracefully shutting down
+2021/04/26 16:57:23 [notice] 34#34: gracefully shutting down
+2021/04/26 16:57:23 [notice] 35#35: gracefully shutting down
+2021/04/26 16:57:23 [notice] 31#31: exiting
+2021/04/26 16:57:23 [notice] 32#32: exiting
+2021/04/26 16:57:23 [notice] 33#33: exiting
+2021/04/26 16:57:23 [notice] 34#34: exiting
+2021/04/26 16:57:23 [notice] 35#35: exiting
+2021/04/26 16:57:23 [notice] 31#31: exit
+2021/04/26 16:57:23 [notice] 32#32: exit
+2021/04/26 16:57:23 [notice] 33#33: exit
+2021/04/26 16:57:23 [notice] 34#34: exit
+2021/04/26 16:57:23 [notice] 35#35: exit
+2021/04/26 16:57:23 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2021/04/26 16:57:23 [notice] 1#1: worker process 31 exited with code 0
+2021/04/26 16:57:23 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 16:57:23 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2021/04/26 16:57:23 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 16:57:23 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 16:57:23 [notice] 1#1: worker process 35 exited with code 0
+2021/04/26 16:57:23 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 16:57:23 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2021/04/26 16:57:23 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 16:57:23 [notice] 1#1: exit
+2021/04/26 16:57:26 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:57:26 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:57:26 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:57:26 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:57:26 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:57:26 [notice] 1#1: start worker processes
+2021/04/26 16:57:26 [notice] 1#1: start worker process 31
+2021/04/26 16:57:26 [notice] 1#1: start worker process 32
+2021/04/26 16:57:26 [notice] 1#1: start worker process 33
+2021/04/26 16:57:26 [notice] 1#1: start worker process 34
+2021/04/26 16:57:26 [notice] 1#1: start worker process 35
+2021/04/26 16:59:08 [notice] 1#1: using the "epoll" event method
+2021/04/26 16:59:08 [notice] 1#1: nginx/1.20.0
+2021/04/26 16:59:08 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 16:59:08 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 16:59:08 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 16:59:08 [notice] 1#1: start worker processes
+2021/04/26 16:59:08 [notice] 1#1: start worker process 31
+2021/04/26 16:59:08 [notice] 1#1: start worker process 32
+2021/04/26 16:59:08 [notice] 1#1: start worker process 33
+2021/04/26 16:59:08 [notice] 1#1: start worker process 34
+2021/04/26 16:59:08 [notice] 1#1: start worker process 35
+2021/04/26 17:02:07 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:02:07 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:02:07 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:02:07 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:02:07 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:02:07 [notice] 1#1: start worker processes
+2021/04/26 17:02:07 [notice] 1#1: start worker process 30
+2021/04/26 17:02:07 [notice] 1#1: start worker process 31
+2021/04/26 17:02:07 [notice] 1#1: start worker process 32
+2021/04/26 17:02:07 [notice] 1#1: start worker process 33
+2021/04/26 17:02:07 [notice] 1#1: start worker process 34
+2021/04/26 17:02:56 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 192.168.176.1, server: www.willard.com, request: "GET /webapitest/Company HTTP/1.1", upstream: "http://192.168.176.3:80/Company", host: "10.0.75.1:55000"
+2021/04/26 17:06:12 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 17:06:12 [notice] 30#30: gracefully shutting down
+2021/04/26 17:06:12 [notice] 30#30: exiting
+2021/04/26 17:06:12 [notice] 31#31: gracefully shutting down
+2021/04/26 17:06:12 [notice] 32#32: gracefully shutting down
+2021/04/26 17:06:12 [notice] 33#33: gracefully shutting down
+2021/04/26 17:06:12 [notice] 33#33: exiting
+2021/04/26 17:06:12 [notice] 34#34: gracefully shutting down
+2021/04/26 17:06:12 [notice] 30#30: exit
+2021/04/26 17:06:12 [notice] 31#31: exiting
+2021/04/26 17:06:12 [notice] 32#32: exiting
+2021/04/26 17:06:12 [notice] 33#33: exit
+2021/04/26 17:06:12 [notice] 34#34: exiting
+2021/04/26 17:06:12 [notice] 31#31: exit
+2021/04/26 17:06:12 [notice] 32#32: exit
+2021/04/26 17:06:12 [notice] 34#34: exit
+2021/04/26 17:06:12 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2021/04/26 17:06:12 [notice] 1#1: worker process 31 exited with code 0
+2021/04/26 17:06:12 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 17:06:12 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 17:06:12 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2021/04/26 17:06:12 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 17:06:12 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 17:06:12 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2021/04/26 17:06:12 [notice] 1#1: worker process 30 exited with code 0
+2021/04/26 17:06:12 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 17:06:12 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2021/04/26 17:06:12 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 17:06:12 [notice] 1#1: exit
+2021/04/26 17:06:16 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:06:16 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:06:16 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:06:16 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:06:16 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:06:16 [notice] 1#1: start worker processes
+2021/04/26 17:06:16 [notice] 1#1: start worker process 32
+2021/04/26 17:06:16 [notice] 1#1: start worker process 33
+2021/04/26 17:06:16 [notice] 1#1: start worker process 34
+2021/04/26 17:06:16 [notice] 1#1: start worker process 35
+2021/04/26 17:06:16 [notice] 1#1: start worker process 36
+2021/04/26 17:08:10 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 17:08:10 [notice] 33#33: gracefully shutting down
+2021/04/26 17:08:10 [notice] 36#36: gracefully shutting down
+2021/04/26 17:08:10 [notice] 34#34: gracefully shutting down
+2021/04/26 17:08:10 [notice] 34#34: exiting
+2021/04/26 17:08:10 [notice] 35#35: gracefully shutting down
+2021/04/26 17:08:10 [notice] 35#35: exiting
+2021/04/26 17:08:10 [notice] 35#35: exit
+2021/04/26 17:08:10 [notice] 32#32: gracefully shutting down
+2021/04/26 17:08:10 [notice] 33#33: exiting
+2021/04/26 17:08:10 [notice] 36#36: exiting
+2021/04/26 17:08:10 [notice] 34#34: exit
+2021/04/26 17:08:10 [notice] 32#32: exiting
+2021/04/26 17:08:10 [notice] 33#33: exit
+2021/04/26 17:08:10 [notice] 36#36: exit
+2021/04/26 17:08:10 [notice] 32#32: exit
+2021/04/26 17:08:10 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2021/04/26 17:08:10 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 17:08:10 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 17:08:10 [notice] 1#1: worker process 35 exited with code 0
+2021/04/26 17:08:10 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 17:08:10 [notice] 1#1: signal 17 (SIGCHLD) received from 36
+2021/04/26 17:08:10 [notice] 1#1: worker process 36 exited with code 0
+2021/04/26 17:08:10 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 17:08:10 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2021/04/26 17:08:10 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 17:08:10 [notice] 1#1: exit
+2021/04/26 17:08:13 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:08:13 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:08:13 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:08:13 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:08:13 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:08:13 [notice] 1#1: start worker processes
+2021/04/26 17:08:13 [notice] 1#1: start worker process 30
+2021/04/26 17:08:13 [notice] 1#1: start worker process 31
+2021/04/26 17:08:13 [notice] 1#1: start worker process 32
+2021/04/26 17:08:13 [notice] 1#1: start worker process 33
+2021/04/26 17:08:13 [notice] 1#1: start worker process 34
+2021/04/26 17:11:00 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:11:00 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:11:00 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:11:00 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:11:00 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:11:00 [notice] 1#1: start worker processes
+2021/04/26 17:11:00 [notice] 1#1: start worker process 30
+2021/04/26 17:11:00 [notice] 1#1: start worker process 31
+2021/04/26 17:11:00 [notice] 1#1: start worker process 32
+2021/04/26 17:11:00 [notice] 1#1: start worker process 33
+2021/04/26 17:11:00 [notice] 1#1: start worker process 34
+2021/04/26 17:14:49 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 17:14:49 [notice] 30#30: gracefully shutting down
+2021/04/26 17:14:49 [notice] 31#31: gracefully shutting down
+2021/04/26 17:14:49 [notice] 32#32: gracefully shutting down
+2021/04/26 17:14:49 [notice] 34#34: gracefully shutting down
+2021/04/26 17:14:49 [notice] 33#33: gracefully shutting down
+2021/04/26 17:14:49 [notice] 30#30: exiting
+2021/04/26 17:14:49 [notice] 31#31: exiting
+2021/04/26 17:14:49 [notice] 32#32: exiting
+2021/04/26 17:14:49 [notice] 34#34: exiting
+2021/04/26 17:14:49 [notice] 33#33: exiting
+2021/04/26 17:14:49 [notice] 30#30: exit
+2021/04/26 17:14:49 [notice] 31#31: exit
+2021/04/26 17:14:49 [notice] 32#32: exit
+2021/04/26 17:14:49 [notice] 34#34: exit
+2021/04/26 17:14:49 [notice] 33#33: exit
+2021/04/26 17:14:49 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2021/04/26 17:14:49 [notice] 1#1: worker process 30 exited with code 0
+2021/04/26 17:14:49 [notice] 1#1: worker process 31 exited with code 0
+2021/04/26 17:14:49 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 17:14:49 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 17:14:49 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2021/04/26 17:14:49 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 17:14:49 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 17:14:49 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2021/04/26 17:14:49 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 17:14:49 [notice] 1#1: exit
+2021/04/26 17:14:54 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:14:54 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:14:54 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:14:54 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:14:54 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:14:54 [notice] 1#1: start worker processes
+2021/04/26 17:14:54 [notice] 1#1: start worker process 30
+2021/04/26 17:14:54 [notice] 1#1: start worker process 31
+2021/04/26 17:14:54 [notice] 1#1: start worker process 32
+2021/04/26 17:14:54 [notice] 1#1: start worker process 33
+2021/04/26 17:14:54 [notice] 1#1: start worker process 34
+2021/04/26 17:17:33 [error] 30#30: *1 "/usr/share/nginx/html/www.willard.com/webapitest/index.html" is not found (2: No such file or directory), client: 192.168.192.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 17:18:35 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:18:35 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:18:35 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:18:35 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:18:35 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:18:35 [notice] 1#1: start worker processes
+2021/04/26 17:18:35 [notice] 1#1: start worker process 30
+2021/04/26 17:18:35 [notice] 1#1: start worker process 31
+2021/04/26 17:18:35 [notice] 1#1: start worker process 32
+2021/04/26 17:18:35 [notice] 1#1: start worker process 33
+2021/04/26 17:18:35 [notice] 1#1: start worker process 34
+2021/04/26 17:29:52 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:29:52 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:29:52 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:29:52 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:29:52 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:29:52 [notice] 1#1: start worker processes
+2021/04/26 17:29:52 [notice] 1#1: start worker process 33
+2021/04/26 17:29:52 [notice] 1#1: start worker process 34
+2021/04/26 17:29:52 [notice] 1#1: start worker process 35
+2021/04/26 17:29:52 [notice] 1#1: start worker process 36
+2021/04/26 17:29:52 [notice] 1#1: start worker process 37
+2021/04/26 17:33:58 [error] 33#33: *4 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 192.168.224.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "www.willard.com:55000", referrer: "http://www.willard.com:55000/webapitest/swagger/index.html"
+2021/04/26 17:34:14 [error] 33#33: *4 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 192.168.224.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "www.willard.com:55000", referrer: "http://www.willard.com:55000/webapitest/swagger/index.html"
+2021/04/26 17:39:48 [error] 33#33: *10 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 192.168.224.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css.map HTTP/1.1", host: "www.willard.com:55000"
+2021/04/26 17:39:48 [error] 33#33: *10 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" failed (2: No such file or directory), client: 192.168.224.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map HTTP/1.1", host: "www.willard.com:55000"
+2021/04/26 17:42:07 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:42:07 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:42:07 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:42:07 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:42:07 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:42:07 [notice] 1#1: start worker processes
+2021/04/26 17:42:07 [notice] 1#1: start worker process 33
+2021/04/26 17:42:07 [notice] 1#1: start worker process 34
+2021/04/26 17:42:07 [notice] 1#1: start worker process 35
+2021/04/26 17:42:07 [notice] 1#1: start worker process 36
+2021/04/26 17:42:07 [notice] 1#1: start worker process 37
+2021/04/26 17:43:48 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:43:48 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:43:48 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:43:48 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:43:48 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:43:48 [notice] 1#1: start worker processes
+2021/04/26 17:43:48 [notice] 1#1: start worker process 31
+2021/04/26 17:43:48 [notice] 1#1: start worker process 32
+2021/04/26 17:43:48 [notice] 1#1: start worker process 33
+2021/04/26 17:43:48 [notice] 1#1: start worker process 34
+2021/04/26 17:43:48 [notice] 1#1: start worker process 35
+2021/04/26 17:44:29 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: www.willard.com, request: "GET /webapitest/ HTTP/1.1", upstream: "http://172.19.0.4:80/", host: "10.0.75.1:55000"
+2021/04/26 17:47:00 [error] 31#31: *4 connect() failed (111: Connection refused) while connecting to upstream, client: 172.19.0.1, server: www.willard.com, request: "GET /webapitest/Company HTTP/1.1", upstream: "http://172.19.0.4:80/Company", host: "10.0.75.1:55000"
+2021/04/26 17:49:45 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:49:45 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:49:45 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:49:45 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:49:45 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:49:45 [notice] 1#1: start worker processes
+2021/04/26 17:49:45 [notice] 1#1: start worker process 33
+2021/04/26 17:49:45 [notice] 1#1: start worker process 34
+2021/04/26 17:49:45 [notice] 1#1: start worker process 35
+2021/04/26 17:49:45 [notice] 1#1: start worker process 36
+2021/04/26 17:49:45 [notice] 1#1: start worker process 37
+2021/04/26 17:50:50 [error] 33#33: *2 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 17:50:50 [error] 33#33: *2 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 17:50:52 [error] 33#33: *2 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 17:50:52 [error] 33#33: *2 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css.map" failed (2: No such file or directory), client: 172.20.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css.map HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 17:52:12 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:52:12 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:52:12 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:52:12 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:52:12 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:52:12 [notice] 1#1: start worker processes
+2021/04/26 17:52:12 [notice] 1#1: start worker process 32
+2021/04/26 17:52:12 [notice] 1#1: start worker process 33
+2021/04/26 17:52:12 [notice] 1#1: start worker process 34
+2021/04/26 17:52:12 [notice] 1#1: start worker process 35
+2021/04/26 17:52:12 [notice] 1#1: start worker process 36
+2021/04/26 17:55:35 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:55:35 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:55:35 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:55:35 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:55:35 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:55:35 [notice] 1#1: start worker processes
+2021/04/26 17:55:35 [notice] 1#1: start worker process 31
+2021/04/26 17:55:35 [notice] 1#1: start worker process 32
+2021/04/26 17:55:35 [notice] 1#1: start worker process 33
+2021/04/26 17:55:35 [notice] 1#1: start worker process 34
+2021/04/26 17:55:35 [notice] 1#1: start worker process 35
+2021/04/26 17:56:37 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:56:37 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:56:37 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:56:37 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:56:37 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:56:37 [notice] 1#1: start worker processes
+2021/04/26 17:56:37 [notice] 1#1: start worker process 30
+2021/04/26 17:56:37 [notice] 1#1: start worker process 31
+2021/04/26 17:56:37 [notice] 1#1: start worker process 32
+2021/04/26 17:56:37 [notice] 1#1: start worker process 33
+2021/04/26 17:56:37 [notice] 1#1: start worker process 34
+2021/04/26 17:57:45 [error] 30#30: *1 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.24.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/04/26 17:59:33 [notice] 1#1: using the "epoll" event method
+2021/04/26 17:59:33 [notice] 1#1: nginx/1.20.0
+2021/04/26 17:59:33 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 17:59:33 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 17:59:33 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 17:59:33 [notice] 1#1: start worker processes
+2021/04/26 17:59:33 [notice] 1#1: start worker process 30
+2021/04/26 17:59:33 [notice] 1#1: start worker process 31
+2021/04/26 17:59:33 [notice] 1#1: start worker process 32
+2021/04/26 17:59:33 [notice] 1#1: start worker process 33
+2021/04/26 17:59:33 [notice] 1#1: start worker process 34
+2021/04/26 17:59:47 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.25.0.1, server: www.willard.com, request: "GET /webapitest/Company HTTP/1.1", upstream: "http://172.25.0.4:80/Company", host: "10.0.75.1:55000"
+2021/04/26 17:59:49 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.25.0.1, server: www.willard.com, request: "GET /webapitest/Company HTTP/1.1", upstream: "http://172.25.0.4:80/Company", host: "10.0.75.1:55000"
+2021/04/26 17:59:49 [error] 30#30: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.25.0.1, server: www.willard.com, request: "GET /webapitest/Company HTTP/1.1", upstream: "http://172.25.0.4:80/Company", host: "10.0.75.1:55000"
+2021/04/26 18:01:54 [notice] 1#1: using the "epoll" event method
+2021/04/26 18:01:54 [notice] 1#1: nginx/1.20.0
+2021/04/26 18:01:54 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 18:01:54 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 18:01:54 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 18:01:54 [notice] 1#1: start worker processes
+2021/04/26 18:01:54 [notice] 1#1: start worker process 31
+2021/04/26 18:01:54 [notice] 1#1: start worker process 32
+2021/04/26 18:01:54 [notice] 1#1: start worker process 33
+2021/04/26 18:01:54 [notice] 1#1: start worker process 34
+2021/04/26 18:01:54 [notice] 1#1: start worker process 35
+2021/04/26 18:03:32 [notice] 1#1: using the "epoll" event method
+2021/04/26 18:03:32 [notice] 1#1: nginx/1.20.0
+2021/04/26 18:03:32 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 18:03:32 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 18:03:32 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 18:03:32 [notice] 1#1: start worker processes
+2021/04/26 18:03:32 [notice] 1#1: start worker process 31
+2021/04/26 18:03:32 [notice] 1#1: start worker process 32
+2021/04/26 18:03:32 [notice] 1#1: start worker process 33
+2021/04/26 18:03:32 [notice] 1#1: start worker process 34
+2021/04/26 18:03:32 [notice] 1#1: start worker process 35
+2021/04/26 18:04:49 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 18:04:49 [notice] 33#33: gracefully shutting down
+2021/04/26 18:04:49 [notice] 32#32: gracefully shutting down
+2021/04/26 18:04:49 [notice] 35#35: gracefully shutting down
+2021/04/26 18:04:49 [notice] 31#31: gracefully shutting down
+2021/04/26 18:04:49 [notice] 34#34: gracefully shutting down
+2021/04/26 18:04:49 [notice] 34#34: exiting
+2021/04/26 18:04:49 [notice] 34#34: exit
+2021/04/26 18:04:49 [notice] 33#33: exiting
+2021/04/26 18:04:49 [notice] 33#33: exit
+2021/04/26 18:04:49 [notice] 32#32: exiting
+2021/04/26 18:04:49 [notice] 35#35: exiting
+2021/04/26 18:04:49 [notice] 31#31: exiting
+2021/04/26 18:04:49 [notice] 32#32: exit
+2021/04/26 18:04:49 [notice] 35#35: exit
+2021/04/26 18:04:49 [notice] 31#31: exit
+2021/04/26 18:04:49 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2021/04/26 18:04:49 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 18:04:49 [notice] 1#1: worker process 35 exited with code 0
+2021/04/26 18:04:49 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 18:04:49 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2021/04/26 18:04:49 [notice] 1#1: worker process 31 exited with code 0
+2021/04/26 18:04:49 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 18:04:49 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 18:04:49 [notice] 1#1: exit
+2021/04/26 18:04:53 [notice] 1#1: using the "epoll" event method
+2021/04/26 18:04:53 [notice] 1#1: nginx/1.20.0
+2021/04/26 18:04:53 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 18:04:53 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 18:04:53 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 18:04:53 [notice] 1#1: start worker processes
+2021/04/26 18:04:53 [notice] 1#1: start worker process 30
+2021/04/26 18:04:53 [notice] 1#1: start worker process 31
+2021/04/26 18:04:53 [notice] 1#1: start worker process 32
+2021/04/26 18:04:53 [notice] 1#1: start worker process 33
+2021/04/26 18:04:53 [notice] 1#1: start worker process 34
+2021/04/26 18:07:13 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 18:07:13 [notice] 30#30: gracefully shutting down
+2021/04/26 18:07:13 [notice] 31#31: gracefully shutting down
+2021/04/26 18:07:13 [notice] 33#33: gracefully shutting down
+2021/04/26 18:07:13 [notice] 33#33: exiting
+2021/04/26 18:07:13 [notice] 34#34: gracefully shutting down
+2021/04/26 18:07:13 [notice] 34#34: exiting
+2021/04/26 18:07:13 [notice] 32#32: gracefully shutting down
+2021/04/26 18:07:13 [notice] 30#30: exiting
+2021/04/26 18:07:13 [notice] 31#31: exiting
+2021/04/26 18:07:13 [notice] 33#33: exit
+2021/04/26 18:07:13 [notice] 34#34: exit
+2021/04/26 18:07:13 [notice] 32#32: exiting
+2021/04/26 18:07:13 [notice] 30#30: exit
+2021/04/26 18:07:13 [notice] 31#31: exit
+2021/04/26 18:07:13 [notice] 32#32: exit
+2021/04/26 18:07:13 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2021/04/26 18:07:13 [notice] 1#1: worker process 30 exited with code 0
+2021/04/26 18:07:13 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 18:07:13 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 18:07:13 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 18:07:13 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2021/04/26 18:07:13 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2021/04/26 18:07:13 [notice] 1#1: worker process 31 exited with code 0
+2021/04/26 18:07:13 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 18:07:13 [notice] 1#1: exit
+2021/04/26 18:07:16 [notice] 1#1: using the "epoll" event method
+2021/04/26 18:07:16 [notice] 1#1: nginx/1.20.0
+2021/04/26 18:07:16 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 18:07:16 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 18:07:16 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 18:07:16 [notice] 1#1: start worker processes
+2021/04/26 18:07:16 [notice] 1#1: start worker process 31
+2021/04/26 18:07:16 [notice] 1#1: start worker process 32
+2021/04/26 18:07:16 [notice] 1#1: start worker process 33
+2021/04/26 18:07:16 [notice] 1#1: start worker process 34
+2021/04/26 18:07:16 [notice] 1#1: start worker process 35
+2021/04/26 18:07:53 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/swagger" failed (2: No such file or directory), client: 172.27.0.1, server: www.willard.com, request: "GET /swagger HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 18:07:55 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.27.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/04/26 18:09:13 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 18:09:13 [notice] 31#31: gracefully shutting down
+2021/04/26 18:09:13 [notice] 32#32: gracefully shutting down
+2021/04/26 18:09:13 [notice] 33#33: gracefully shutting down
+2021/04/26 18:09:13 [notice] 34#34: gracefully shutting down
+2021/04/26 18:09:13 [notice] 35#35: gracefully shutting down
+2021/04/26 18:09:13 [notice] 31#31: exiting
+2021/04/26 18:09:13 [notice] 32#32: exiting
+2021/04/26 18:09:13 [notice] 33#33: exiting
+2021/04/26 18:09:13 [notice] 34#34: exiting
+2021/04/26 18:09:13 [notice] 35#35: exiting
+2021/04/26 18:09:13 [notice] 31#31: exit
+2021/04/26 18:09:13 [notice] 32#32: exit
+2021/04/26 18:09:13 [notice] 33#33: exit
+2021/04/26 18:09:13 [notice] 34#34: exit
+2021/04/26 18:09:13 [notice] 35#35: exit
+2021/04/26 18:09:13 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2021/04/26 18:09:13 [notice] 1#1: worker process 35 exited with code 0
+2021/04/26 18:09:13 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 18:09:13 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2021/04/26 18:09:13 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 18:09:13 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 18:09:13 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 18:09:13 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2021/04/26 18:09:13 [notice] 1#1: worker process 31 exited with code 0
+2021/04/26 18:09:13 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 18:09:13 [notice] 1#1: exit
+2021/04/26 18:09:18 [notice] 1#1: using the "epoll" event method
+2021/04/26 18:09:18 [notice] 1#1: nginx/1.20.0
+2021/04/26 18:09:18 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 18:09:18 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 18:09:18 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 18:09:18 [notice] 1#1: start worker processes
+2021/04/26 18:09:18 [notice] 1#1: start worker process 31
+2021/04/26 18:09:18 [notice] 1#1: start worker process 32
+2021/04/26 18:09:18 [notice] 1#1: start worker process 33
+2021/04/26 18:09:18 [notice] 1#1: start worker process 34
+2021/04/26 18:09:18 [notice] 1#1: start worker process 35
+2021/04/26 19:00:49 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 19:00:49 [notice] 31#31: gracefully shutting down
+2021/04/26 19:00:49 [notice] 33#33: gracefully shutting down
+2021/04/26 19:00:49 [notice] 35#35: gracefully shutting down
+2021/04/26 19:00:49 [notice] 31#31: exiting
+2021/04/26 19:00:49 [notice] 34#34: gracefully shutting down
+2021/04/26 19:00:49 [notice] 32#32: gracefully shutting down
+2021/04/26 19:00:49 [notice] 33#33: exiting
+2021/04/26 19:00:49 [notice] 35#35: exiting
+2021/04/26 19:00:49 [notice] 31#31: exit
+2021/04/26 19:00:49 [notice] 34#34: exiting
+2021/04/26 19:00:49 [notice] 32#32: exiting
+2021/04/26 19:00:49 [notice] 33#33: exit
+2021/04/26 19:00:49 [notice] 35#35: exit
+2021/04/26 19:00:49 [notice] 34#34: exit
+2021/04/26 19:00:49 [notice] 32#32: exit
+2021/04/26 19:00:49 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2021/04/26 19:00:49 [notice] 1#1: worker process 31 exited with code 0
+2021/04/26 19:00:49 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 19:00:49 [notice] 1#1: worker process 35 exited with code 0
+2021/04/26 19:00:49 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 19:00:49 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2021/04/26 19:00:49 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 19:00:49 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 19:00:49 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2021/04/26 19:00:49 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 19:00:49 [notice] 1#1: exit
+2021/04/26 19:00:53 [notice] 1#1: using the "epoll" event method
+2021/04/26 19:00:53 [notice] 1#1: nginx/1.20.0
+2021/04/26 19:00:53 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 19:00:53 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 19:00:53 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 19:00:53 [notice] 1#1: start worker processes
+2021/04/26 19:00:53 [notice] 1#1: start worker process 30
+2021/04/26 19:00:53 [notice] 1#1: start worker process 31
+2021/04/26 19:00:53 [notice] 1#1: start worker process 32
+2021/04/26 19:00:53 [notice] 1#1: start worker process 33
+2021/04/26 19:00:53 [notice] 1#1: start worker process 34
+2021/04/26 19:05:01 [error] 30#30: *6 open() "/usr/share/nginx/html/www.willard.com/swagger" failed (2: No such file or directory), client: 172.27.0.1, server: www.willard.com, request: "GET /swagger HTTP/1.1", host: "10.0.75.1:55000"
+2021/04/26 19:05:04 [error] 30#30: *4 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.27.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/04/26 19:10:43 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 19:10:43 [notice] 31#31: gracefully shutting down
+2021/04/26 19:10:43 [notice] 32#32: gracefully shutting down
+2021/04/26 19:10:43 [notice] 33#33: gracefully shutting down
+2021/04/26 19:10:43 [notice] 30#30: gracefully shutting down
+2021/04/26 19:10:43 [notice] 30#30: exiting
+2021/04/26 19:10:43 [notice] 34#34: gracefully shutting down
+2021/04/26 19:10:43 [notice] 31#31: exiting
+2021/04/26 19:10:43 [notice] 32#32: exiting
+2021/04/26 19:10:43 [notice] 33#33: exiting
+2021/04/26 19:10:43 [notice] 30#30: exit
+2021/04/26 19:10:43 [notice] 34#34: exiting
+2021/04/26 19:10:43 [notice] 31#31: exit
+2021/04/26 19:10:43 [notice] 32#32: exit
+2021/04/26 19:10:43 [notice] 33#33: exit
+2021/04/26 19:10:43 [notice] 34#34: exit
+2021/04/26 19:10:43 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2021/04/26 19:10:43 [notice] 1#1: worker process 30 exited with code 0
+2021/04/26 19:10:43 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 19:10:43 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 19:10:43 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2021/04/26 19:10:43 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2021/04/26 19:10:43 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 19:10:43 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 19:10:43 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2021/04/26 19:10:43 [notice] 1#1: worker process 31 exited with code 0
+2021/04/26 19:10:43 [notice] 1#1: signal 29 (SIGIO) received
+2021/04/26 19:10:43 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2021/04/26 19:10:43 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 19:10:43 [notice] 1#1: exit
+2021/04/26 19:10:46 [notice] 1#1: using the "epoll" event method
+2021/04/26 19:10:46 [notice] 1#1: nginx/1.20.0
+2021/04/26 19:10:46 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 19:10:46 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 19:10:46 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 19:10:46 [notice] 1#1: start worker processes
+2021/04/26 19:10:46 [notice] 1#1: start worker process 31
+2021/04/26 19:10:46 [notice] 1#1: start worker process 32
+2021/04/26 19:10:46 [notice] 1#1: start worker process 33
+2021/04/26 19:10:46 [notice] 1#1: start worker process 34
+2021/04/26 19:10:46 [notice] 1#1: start worker process 35
+2021/04/26 19:11:13 [error] 31#31: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 172.27.0.1, server: www.willard.com, request: "GET /webapitest/swagger/index.html HTTP/1.1", upstream: "http://172.27.0.3:80/swagger/index.html", host: "10.0.75.1:55000"
+2021/04/26 19:11:58 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/04/26 19:11:58 [notice] 31#31: gracefully shutting down
+2021/04/26 19:11:58 [notice] 32#32: gracefully shutting down
+2021/04/26 19:11:58 [notice] 33#33: gracefully shutting down
+2021/04/26 19:11:58 [notice] 34#34: gracefully shutting down
+2021/04/26 19:11:58 [notice] 35#35: gracefully shutting down
+2021/04/26 19:11:58 [notice] 31#31: exiting
+2021/04/26 19:11:58 [notice] 32#32: exiting
+2021/04/26 19:11:58 [notice] 33#33: exiting
+2021/04/26 19:11:58 [notice] 34#34: exiting
+2021/04/26 19:11:58 [notice] 35#35: exiting
+2021/04/26 19:11:58 [notice] 31#31: exit
+2021/04/26 19:11:58 [notice] 32#32: exit
+2021/04/26 19:11:58 [notice] 33#33: exit
+2021/04/26 19:11:58 [notice] 34#34: exit
+2021/04/26 19:11:58 [notice] 35#35: exit
+2021/04/26 19:11:58 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2021/04/26 19:11:58 [notice] 1#1: worker process 31 exited with code 0
+2021/04/26 19:11:58 [notice] 1#1: worker process 32 exited with code 0
+2021/04/26 19:11:58 [notice] 1#1: worker process 33 exited with code 0
+2021/04/26 19:11:58 [notice] 1#1: worker process 34 exited with code 0
+2021/04/26 19:11:58 [notice] 1#1: worker process 35 exited with code 0
+2021/04/26 19:11:58 [notice] 1#1: exit
+2021/04/26 19:12:02 [notice] 1#1: using the "epoll" event method
+2021/04/26 19:12:02 [notice] 1#1: nginx/1.20.0
+2021/04/26 19:12:02 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/04/26 19:12:02 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/04/26 19:12:02 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/04/26 19:12:02 [notice] 1#1: start worker processes
+2021/04/26 19:12:02 [notice] 1#1: start worker process 30
+2021/04/26 19:12:02 [notice] 1#1: start worker process 31
+2021/04/26 19:12:02 [notice] 1#1: start worker process 32
+2021/04/26 19:12:02 [notice] 1#1: start worker process 33
+2021/04/26 19:12:02 [notice] 1#1: start worker process 34
+2021/05/12 12:25:33 [notice] 1#1: using the "epoll" event method
+2021/05/12 12:25:33 [notice] 1#1: nginx/1.20.0
+2021/05/12 12:25:33 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/12 12:25:33 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/12 12:25:33 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/12 12:25:33 [notice] 1#1: start worker processes
+2021/05/12 12:25:33 [notice] 1#1: start worker process 30
+2021/05/12 12:25:33 [notice] 1#1: start worker process 31
+2021/05/12 12:25:33 [notice] 1#1: start worker process 32
+2021/05/12 12:25:33 [notice] 1#1: start worker process 33
+2021/05/12 12:25:33 [notice] 1#1: start worker process 34
+2021/05/12 13:01:51 [error] 30#30: *1 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/05/12 13:02:11 [error] 30#30: *3 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "www.willard.com:55000", referrer: "http://www.willard.com:55000/"
+2021/05/12 13:02:32 [error] 30#30: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:02:32 [error] 30#30: *2 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:02:32 [error] 31#31: *6 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:02:32 [error] 30#30: *8 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:02:32 [error] 30#30: *9 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:02:32 [error] 31#31: *7 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:02:54 [error] 31#31: *7 open() "/usr/share/nginx/html/www.willard.com/swagger" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:04 [error] 31#31: *7 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:04 [error] 30#30: *9 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:04 [error] 30#30: *8 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:04 [error] 30#30: *2 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:04 [error] 30#30: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:04 [error] 31#31: *6 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:11 [error] 31#31: *6 open() "/usr/share/nginx/html/www.willard.com/swagger" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:16 [warn] 30#30: *1 an upstream response is buffered to a temporary file /var/cache/nginx/proxy_temp/1/00/0000000001 while reading upstream, client: 172.19.0.1, server: www.willard.com, request: "GET /webapitest/swagger/swagger-ui-bundle.js HTTP/1.1", upstream: "http://172.19.0.3:80/swagger/swagger-ui-bundle.js", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/05/12 13:03:16 [error] 30#30: *1 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/05/12 13:03:23 [warn] 30#30: *2 an upstream response is buffered to a temporary file /var/cache/nginx/proxy_temp/2/00/0000000002 while reading upstream, client: 172.19.0.1, server: www.willard.com, request: "GET /webapitest2/swagger/swagger-ui-bundle.js HTTP/1.1", upstream: "http://172.19.0.4:80/swagger/swagger-ui-bundle.js", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest2/swagger/index.html"
+2021/05/12 13:03:23 [error] 30#30: *2 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest2/swagger/index.html"
+2021/05/12 13:03:30 [error] 30#30: *2 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:30 [error] 31#31: *6 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:30 [error] 30#30: *1 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:30 [error] 30#30: *8 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:30 [error] 31#31: *7 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:03:30 [error] 30#30: *9 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:37 [error] 30#30: *24 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:37 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:37 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:37 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:37 [error] 30#30: *29 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:37 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 30#30: *29 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 30#30: *29 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:38 [error] 30#30: *24 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *24 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *29 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *24 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *24 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *29 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *29 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:39 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:41 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:41 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:45 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:45 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:45 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:45 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:45 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:45 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:54 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:56 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:56 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:56 [error] 30#30: *30 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:56 [error] 31#31: *27 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:56 [error] 30#30: *25 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:56 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:04:56 [error] 30#30: *28 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:36 [error] 30#30: *41 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:36 [error] 30#30: *42 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:36 [error] 30#30: *42 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:36 [error] 30#30: *41 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:36 [error] 30#30: *44 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:36 [error] 30#30: *45 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *45 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *44 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *44 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *45 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *41 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *42 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *42 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *41 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *41 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *42 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *45 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:38 [error] 30#30: *44 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *44 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *45 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *45 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *44 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *42 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *41 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *41 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *42 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *42 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *41 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *44 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:11:39 [error] 30#30: *45 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:12:45 [error] 30#30: *45 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:12:45 [error] 31#31: *51 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:12:45 [error] 31#31: *51 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:12:45 [error] 30#30: *45 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:12:45 [error] 30#30: *52 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:12:45 [error] 30#30: *53 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:12:45 [error] 30#30: *53 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:21:10 [error] 30#30: *55 open() "/usr/share/nginx/html/www.willard.com/swagger" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:27 [error] 30#30: *57 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:27 [error] 30#30: *58 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:27 [error] 30#30: *58 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:27 [error] 30#30: *57 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:27 [error] 30#30: *60 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:27 [error] 30#30: *61 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:28 [error] 30#30: *61 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:28 [error] 30#30: *60 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:28 [error] 30#30: *60 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:28 [error] 30#30: *61 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:28 [error] 30#30: *57 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:28 [error] 30#30: *58 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *58 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *57 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *57 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *58 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *61 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *60 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *60 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *61 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *61 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *60 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *58 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:29 [error] 30#30: *57 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:33 [error] 30#30: *57 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:33 [error] 30#30: *58 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:33 [error] 30#30: *58 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:33 [error] 30#30: *57 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:33 [error] 30#30: *60 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:33 [error] 30#30: *61 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:25:33 [error] 30#30: *61 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:33:00 [error] 30#30: *68 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:33:00 [error] 30#30: *72 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:33:00 [error] 30#30: *73 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:33:00 [error] 31#31: *71 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:33:00 [error] 30#30: *68 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:33:00 [error] 30#30: *74 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 13:33:00 [error] 30#30: *74 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:15 [error] 30#30: *75 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:15 [error] 31#31: *77 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:15 [error] 30#30: *78 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:15 [error] 30#30: *79 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:15 [error] 30#30: *80 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:15 [error] 30#30: *81 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:16 [error] 30#30: *81 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:16 [error] 30#30: *80 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:16 [error] 30#30: *80 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:16 [error] 30#30: *81 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:16 [error] 30#30: *79 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:16 [error] 30#30: *81 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:22 [error] 30#30: *81 open() "/usr/share/nginx/html/www.willard.com/swagger" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:26:25 [error] 30#30: *81 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/05/12 14:26:31 [error] 30#30: *79 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/05/12 14:27:41 [error] 30#30: *100 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/05/12 14:27:43 [error] 30#30: *96 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/05/12 14:28:49 [error] 30#30: *111 open() "/usr/share/nginx/html/www.willard.com/swagger/v1/swagger.json" failed (2: No such file or directory), client: 172.19.0.1, server: www.willard.com, request: "GET /swagger/v1/swagger.json HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/webapitest/swagger/index.html"
+2021/05/12 14:30:31 [emerg] 1#1: host not found in upstream "identityserver" in /etc/nginx/nginx.conf:34
+2021/05/12 14:33:37 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:81
+2021/05/12 14:33:37 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:98
+2021/05/12 14:33:37 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:107
+2021/05/12 14:33:37 [notice] 1#1: using the "epoll" event method
+2021/05/12 14:33:37 [notice] 1#1: nginx/1.20.0
+2021/05/12 14:33:37 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/12 14:33:37 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/12 14:33:37 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/12 14:33:37 [notice] 1#1: start worker processes
+2021/05/12 14:33:37 [notice] 1#1: start worker process 30
+2021/05/12 14:33:37 [notice] 1#1: start worker process 31
+2021/05/12 14:33:37 [notice] 1#1: start worker process 32
+2021/05/12 14:33:37 [notice] 1#1: start worker process 33
+2021/05/12 14:33:37 [notice] 1#1: start worker process 34
+2021/05/12 14:35:57 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:88
+2021/05/12 14:35:57 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:97
+2021/05/12 14:35:57 [notice] 1#1: using the "epoll" event method
+2021/05/12 14:35:57 [notice] 1#1: nginx/1.20.0
+2021/05/12 14:35:57 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/12 14:35:57 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/12 14:35:57 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/12 14:35:57 [notice] 1#1: start worker processes
+2021/05/12 14:35:57 [notice] 1#1: start worker process 31
+2021/05/12 14:35:57 [notice] 1#1: start worker process 32
+2021/05/12 14:35:57 [notice] 1#1: start worker process 33
+2021/05/12 14:35:57 [notice] 1#1: start worker process 34
+2021/05/12 14:35:57 [notice] 1#1: start worker process 35
+2021/05/12 14:37:06 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:06 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:06 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:06 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:06 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:06 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:06 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:06 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 33#33: *5 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:07 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *5 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *5 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *5 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *5 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:08 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *7 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 33#33: *5 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 31#31: *18 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:09 [error] 31#31: *18 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 31#31: *18 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 31#31: *18 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:10 [error] 31#31: *18 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:11 [error] 31#31: *18 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/css/bootstrap.min.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/css/bootstrap.min.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:11 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/css/site.css" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /css/site.css HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:11 [error] 33#33: *6 open() "/usr/share/nginx/html/www.willard.com/icon.png" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.png HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:11 [error] 31#31: *18 open() "/usr/share/nginx/html/www.willard.com/icon.jpg" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /icon.jpg HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:11 [error] 31#31: *1 open() "/usr/share/nginx/html/www.willard.com/lib/jquery/dist/jquery.slim.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/jquery/dist/jquery.slim.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:11 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/lib/bootstrap/dist/js/bootstrap.bundle.min.js" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:37:11 [error] 32#32: *3 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.22.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000"
+2021/05/12 14:38:26 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:81
+2021/05/12 14:38:26 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:98
+2021/05/12 14:38:26 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:107
+2021/05/12 14:38:26 [notice] 1#1: using the "epoll" event method
+2021/05/12 14:38:26 [notice] 1#1: nginx/1.20.0
+2021/05/12 14:38:26 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/12 14:38:26 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/12 14:38:26 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/12 14:38:26 [notice] 1#1: start worker processes
+2021/05/12 14:38:26 [notice] 1#1: start worker process 30
+2021/05/12 14:38:26 [notice] 1#1: start worker process 31
+2021/05/12 14:38:26 [notice] 1#1: start worker process 32
+2021/05/12 14:38:26 [notice] 1#1: start worker process 33
+2021/05/12 14:38:26 [notice] 1#1: start worker process 34
+2021/05/12 14:45:20 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:81
+2021/05/12 14:45:20 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:98
+2021/05/12 14:45:20 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:112
+2021/05/12 14:45:20 [notice] 1#1: using the "epoll" event method
+2021/05/12 14:45:20 [notice] 1#1: nginx/1.20.0
+2021/05/12 14:45:20 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/12 14:45:20 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/12 14:45:20 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576

@@ -11,6 +11,7 @@ namespace WebApiTest2.Controllers
     {
         private readonly IUserService userService;
         private readonly IMediator mediator;
+
         public UserController(
             IUserService userService,
             IMediator mediator

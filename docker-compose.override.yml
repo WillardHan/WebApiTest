@@ -1,21 +1,49 @@
 version: '3.4'
 
 services:
-  webapitest:
+  nginx:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
+      - TZ=Asia/Shanghai
     ports:
-      - "55001:80"
+      - "55000:80"
+    volumes:
+      - ./Images/nginx/www:/usr/share/nginx/html 
+      - ./Images/nginx/conf/nginx.conf:/etc/nginx/nginx.conf 
+      - ./Images/nginx/logs:/var/log/nginx
+    command: nginx -g "daemon off;"
 
-  webapitest2:
+  redis:
     environment:
-      - ASPNETCORE_ENVIRONMENT=Development
-    ports:
-      - "55002:80"
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./Images/redis/conf/redis.conf:/etc/redis/redis.conf
+    command: redis-server /etc/redis/redis.conf
 
   identityserver:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     ports:
       - "55009:80"
+
+  webapitest:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionString=Server=192.168.11.100;Database=WebApiTest;User ID=sa;Password=sa.123;
+      - Redis_ConnectionString=redis:6379
+      - Identityserver_URL=http://10.0.75.1:55009
+      - WebApiTest_URL=http://10.0.75.1:55001
+      - WebApiTest2_URL=http://10.0.75.1:55002
+    ports:
+      - "55001:80"
+
+  webapitest2:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionString=Server=192.168.11.100;Database=WebApiTest2;User ID=sa;Password=sa.123;
+      - Redis_ConnectionString=redis:6379
+      - Identityserver_URL=http://10.0.75.1:55009
+      - WebApiTest_URL=http://10.0.75.1:55001
+      - WebApiTest2_URL=http://10.0.75.1:55002
+    ports:
+      - "55002:80"
 

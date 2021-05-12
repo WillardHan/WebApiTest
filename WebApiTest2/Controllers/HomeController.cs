@@ -11,6 +11,7 @@ namespace WebApiTest2.Controllers
     {
         public IActionResult Index()
         {
+            
             return new RedirectResult("~/swagger");
         }
     }

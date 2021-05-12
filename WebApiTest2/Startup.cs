@@ -12,7 +12,6 @@ namespace WebApiTest2
 {
     public class Startup : BaseStartup
     {
-        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;

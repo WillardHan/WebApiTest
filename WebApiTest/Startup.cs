@@ -24,10 +24,9 @@ namespace WebApiTest
 {
     public class Startup : BaseStartup
     {
-        public IConfiguration Configuration { get; }
         public Startup(IConfiguration configuration)
         {
-            Configuration = configuration;
+            this.Configuration = configuration;
         }
 
         public override void ConfigureServices(IServiceCollection services)
@@ -87,39 +86,6 @@ namespace WebApiTest
                                 .Select(e => e.Value.Errors.First().ErrorMessage)
                                 .FirstOrDefault();
                     return new BadRequestObjectResult(errorMessage);
-                };
-            });
-        }
-
-        public static void AddIdentityAuth(this IServiceCollection services)
-        {
-            services.AddAuthorization(options =>
-            {
-                options.AddPolicy("ApiScope", policy =>
-                {
-                    policy.RequireAuthenticatedUser();
-                    policy.RequireClaim("scope", DomainParameter.Audience);
-                });
-            });
-
-            services.AddAuthentication("Bear")
-            .AddJwtBearer("Bear", options =>
-            {
-                options.Authority = DomainParameter.IdentityServerUrl;
-                options.RequireHttpsMetadata = false;
-                options.Audience = DomainParameter.Audience;
-                //options.SaveToken = true;
-                options.TokenValidationParameters = new TokenValidationParameters
-                {
-                    //ValidateIssuer = true,
-                    ValidateAudience = true,
-                    //ValidateLifetime = true,
-                    //ValidateIssuerSigningKey = true,
-                    //ValidIssuer = "http://localhost:61768/",
-                    //ValidAudience = DomainParameter.WebApiTestUrl,
-                    //TokenDecryptionKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("ASEFRFDDWSDRGYHF")),
-                    //IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("veryVerySecretKey")),
-                    //ClockSkew = TimeSpan.Zero
                 };
             });
         }
