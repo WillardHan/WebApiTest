@@ -1750,3 +1750,9 @@
 2021/05/12 14:45:20 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
 2021/05/12 14:45:20 [notice] 1#1: OS: Linux 4.9.125-linuxkit
 2021/05/12 14:45:20 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/12 14:45:20 [notice] 1#1: start worker processes
+2021/05/12 14:45:20 [notice] 1#1: start worker process 30
+2021/05/12 14:45:20 [notice] 1#1: start worker process 31
+2021/05/12 14:45:20 [notice] 1#1: start worker process 32
+2021/05/12 14:45:20 [notice] 1#1: start worker process 33
+2021/05/12 14:45:20 [notice] 1#1: start worker process 34
