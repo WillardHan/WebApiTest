@@ -4,10 +4,22 @@ services:
   nginx:
     container_name: test_nginx
     image: nginx:1.20.0
+    
+  elasticsearch:
+    container_name: test_elasticsearch
+    image: elasticsearch:7.12.1
+
+  kibana:
+    container_name: test_kibana
+    image: kibana:7.12.1
 
   redis:
     container_name: test_redis
     image: redis:6.2
+
+  mongo:
+    container_name: test_mongo
+    image: mongo:4.4.6
 
   identityserver:
     container_name: test_identityserver
@@ -17,7 +29,10 @@ services:
       dockerfile: IdentityServer/Dockerfile
     depends_on:
       - nginx
+      - elasticsearch
+      - kibana
       - redis
+      - mongo
 
   webapitest:
     container_name: test_webapitest

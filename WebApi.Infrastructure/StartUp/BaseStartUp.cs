@@ -26,6 +26,8 @@ using WebApi.Infrastructure.Repository;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.Extensions.Configuration;
 using StackExchange.Redis;
+using Newtonsoft.Json;
+using Serilog;
 //using AspectCore;
 //using AspectCore.Extensions.DependencyInjection;
 //using AspectCore.Configuration;
@@ -49,7 +51,7 @@ namespace WebApiTest.Infrastructure.StartUp
             .AddNewtonsoftJson(options =>
             { 
                 options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
-                //options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+                options.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
             })
             .AddFluentValidation(config =>
             {
@@ -57,8 +59,6 @@ namespace WebApiTest.Infrastructure.StartUp
             });
             services.AddFluentValidationExceptionHandler();
             services.AddIdentityAuth(Configuration);
-            //services.AddEFCore(Configuration);
-            //services.AddOptions(Configuration);
             services.AddAutoMapper();
             services.AddRedisClient(Configuration);
             services.AddTransient<HttpClientTokenHandler>();
@@ -77,7 +77,7 @@ namespace WebApiTest.Infrastructure.StartUp
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseSerilogRequestLogging();
+            app.UseSerilogRequestLogging();
             //app.UseHttpsRedirection();
             app.UseSwaggerComponent();
             app.UseRouting();
@@ -291,8 +291,6 @@ namespace WebApiTest.Infrastructure.StartUp
 
         public static void AddRedisClient(this IServiceCollection services, IConfiguration configuration)
         {
-            //services.AddMemoryCache();
-
             var connstr = configuration.GetValue<string>("Redis_ConnectionString");
             var options = ConfigurationOptions.Parse(connstr, true);
             options.ConnectTimeout = 10000;
@@ -300,33 +298,11 @@ namespace WebApiTest.Infrastructure.StartUp
             options.ConnectRetry = 8;
             options.ResolveDns = true;
             options.AbortOnConnectFail = true;
-            //options.Password = "123456";
-
             services.AddSingleton<IConnectionMultiplexer>(sp => ConnectionMultiplexer.Connect(options));
+        }
 
-            //IConnectionMultiplexer redis = ConnectionMultiplexer.Connect(options);
-            //services.AddScoped(s => redis.GetDatabase());
-
-            //var options = ConfigurationOptions.Parse(connstr, true);
-            //options.ConnectTimeout = 10000;
-            //options.SyncTimeout = 10000;
-            //options.ConnectRetry = 8;
-            //options.Password = "123456";
-            ////options.ResolveDns = true;
-            //options.AbortOnConnectFail = false;
-            //options.AllowAdmin = true;
-            //services.AddSingleton<IConnectionMultiplexer>(sp => ConnectionMultiplexer.Connect(options));
-
-            //services.AddStackExchangeRedisExtensions
-            //var redisConfiguration = configuration.GetSection("Redis_ConnectionString").Get<RedisConfiguration>();
-            //redisConfiguration.ConnectTimeout = 10000;
-            //redisConfiguration.SyncTimeout = 10000;
-            //redisConfiguration.ConfigurationOptions.ConnectRetry = 8;
-            //redisConfiguration.Password = "123456";
-            //redisConfiguration.ConfigurationOptions.ResolveDns = true;
-            //redisConfiguration.AbortOnConnectFail = false;
-            //redisConfiguration.AllowAdmin = true;
-            //services.AddStackExchangeRedisExtensions<NewtonsoftSerializer>(redisConfiguration);
+        public static void AddMongoClient(this IServiceCollection services, IConfiguration configuration)
+        {
 
         }
     }

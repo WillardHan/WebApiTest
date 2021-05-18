@@ -1,10 +1,25 @@
 services:
+  elasticsearch:
+    container_name: test_elasticsearch
+    environment:
+      TZ: Asia/Shanghai
+    image: elasticsearch:7.12.1
+    ports:
+    - published: 59200
+      target: 9200
+    volumes:
+    - D:\GitWorkSpaces\WebApiTest\Images\elasticsearch\config\elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:rw
+    - D:\GitWorkSpaces\WebApiTest\Images\elasticsearch\data:/usr/share/elasticsearch/data:rw
+    - D:\GitWorkSpaces\WebApiTest\Images\elasticsearch\logs:/usr/share/elasticsearch/logs:rw
   identityserver:
     build:
       context: D:\GitWorkSpaces\WebApiTest
       dockerfile: IdentityServer/Dockerfile
     container_name: test_identityserver
     depends_on:
+    - elasticsearch
+    - kibana
+    - mongo
     - nginx
     - redis
     environment:
@@ -13,6 +28,21 @@ services:
     ports:
     - published: 55009
       target: 80
+  kibana:
+    container_name: test_kibana
+    environment:
+      TZ: Asia/Shanghai
+    image: kibana:7.12.1
+    ports:
+    - published: 55601
+      target: 5601
+    volumes:
+    - D:\GitWorkSpaces\WebApiTest\Images\kibana\config\kibana.yml:/usr/share/kibana/config/kibana.yml:rw
+  mongo:
+    container_name: test_mongo
+    environment:
+      TZ: Asia/Shanghai
+    image: mongo:4.4.6
   nginx:
     command: nginx -g "daemon off;"
     container_name: test_nginx
@@ -45,6 +75,7 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionString: Server=192.168.11.100;Database=WebApiTest;User ID=sa;Password=sa.123;
       Identityserver_URL: http://10.0.75.1:55009
+      Mongo_ConnectionString: mongodb://mongo:27017
       Redis_ConnectionString: redis:6379
       WebApiTest2_URL: http://10.0.75.1:55002
       WebApiTest_URL: http://10.0.75.1:55001
@@ -63,6 +94,7 @@ services:
       ASPNETCORE_ENVIRONMENT: Development
       ConnectionString: Server=192.168.11.100;Database=WebApiTest2;User ID=sa;Password=sa.123;
       Identityserver_URL: http://10.0.75.1:55009
+      Mongo_ConnectionString: mongodb://mongo:27017
       Redis_ConnectionString: redis:6379
       WebApiTest2_URL: http://10.0.75.1:55002
       WebApiTest_URL: http://10.0.75.1:55001

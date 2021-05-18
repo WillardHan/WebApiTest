@@ -19,10 +19,10 @@ namespace WebApiTest
                 //.UseServiceProviderFactory(new DynamicProxyServiceProviderFactory())
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
-                    //webBuilder.UseSerilog((context, logger) =>
-                    //{
-                    //    logger.ReadFrom.Configuration(context.Configuration);
-                    //});
+                    webBuilder.UseSerilog((context, logger) =>
+                    {
+                        logger.ReadFrom.Configuration(context.Configuration);
+                    });
                     webBuilder.UseStartup<Startup>();
                 });
     }

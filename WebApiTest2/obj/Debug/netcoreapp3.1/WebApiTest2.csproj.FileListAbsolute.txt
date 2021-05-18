@@ -1,5 +1,6 @@
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\appsettings.Development.json
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\appsettings.json
+D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Logs\webapitest2-elasticsearch-buffer-20210518.json
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\WebApiTest2.exe
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\WebApiTest2.deps.json
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\WebApiTest2.runtimeconfig.json
@@ -13,6 +14,7 @@ D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\AutoMapper.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Castle.Core.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Castle.Windsor.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Dapper.dll
+D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Elasticsearch.Net.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\FluentValidation.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
@@ -59,10 +61,13 @@ D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.AspNetCo
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Formatting.Elasticsearch.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
+D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Sinks.Elasticsearch.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Sinks.PeriodicBatching.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Serilog.Sinks.RollingFile.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\StackExchange.Redis.dll
 D:\GitWorkSpaces\WebApiTest\WebApiTest2\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll

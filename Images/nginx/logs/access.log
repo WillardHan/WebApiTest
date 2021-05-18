@@ -995,3 +995,5 @@
 172.24.0.1 - - [12/May/2021:14:45:53 +0800] "GET /identity/ HTTP/1.1" 200 2096 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4442.4 Safari/537.36" "-"
 172.24.0.1 - - [12/May/2021:14:45:53 +0800] "GET /identity/favicon.ico HTTP/1.1" 200 1150 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4442.4 Safari/537.36" "-"
 172.24.0.1 - - [12/May/2021:14:46:05 +0800] "GET /webapitest/ HTTP/1.1" 302 0 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4442.4 Safari/537.36" "-"
+172.28.0.1 - - [17/May/2021:21:14:17 +0800] "GET / HTTP/1.1" 200 37 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4442.4 Safari/537.36" "-"
+172.28.0.1 - - [17/May/2021:21:14:17 +0800] "GET /favicon.ico HTTP/1.1" 404 555 "http://10.0.75.1:55000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4442.4 Safari/537.36" "-"

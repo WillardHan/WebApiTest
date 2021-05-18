@@ -1,0 +1,8 @@
+07:59:17 [WRN] Storing keys in a directory '/root/.aspnet/DataProtection-Keys' that may not be persisted outside of the container. Protected data will be unavailable when container is destroyed.
+07:59:18 [WRN] No XML encryptor configured. Key {0ccd49a1-10e4-406e-97c8-51ef1fcbaa60} may be persisted to storage in unencrypted form.
+07:59:27 [WRN] before logger
+07:59:30 [WRN] after logger
+07:59:32 [WRN] before logger
+07:59:32 [WRN] after logger
+07:59:52 [WRN] before logger
+07:59:52 [WRN] after logger

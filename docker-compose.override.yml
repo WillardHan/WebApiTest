@@ -12,12 +12,34 @@ services:
       - ./Images/nginx/logs:/var/log/nginx
     command: nginx -g "daemon off;"
 
+  elasticsearch:
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./Images/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - ./Images/elasticsearch/data:/usr/share/elasticsearch/data
+      - ./Images/elasticsearch/logs:/usr/share/elasticsearch/logs
+    ports:
+      - "59200:9200"
+
+  kibana:
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./Images/kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - "55601:5601"
+
   redis:
     environment:
       - TZ=Asia/Shanghai
     volumes:
       - ./Images/redis/conf/redis.conf:/etc/redis/redis.conf
     command: redis-server /etc/redis/redis.conf
+
+  mongo:
+    environment:
+      - TZ=Asia/Shanghai
 
   identityserver:
     environment:
@@ -30,6 +52,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionString=Server=192.168.11.100;Database=WebApiTest;User ID=sa;Password=sa.123;
       - Redis_ConnectionString=redis:6379
+      - Mongo_ConnectionString=mongodb://mongo:27017
       - Identityserver_URL=http://10.0.75.1:55009
       - WebApiTest_URL=http://10.0.75.1:55001
       - WebApiTest2_URL=http://10.0.75.1:55002
@@ -41,6 +64,7 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionString=Server=192.168.11.100;Database=WebApiTest2;User ID=sa;Password=sa.123;
       - Redis_ConnectionString=redis:6379
+      - Mongo_ConnectionString=mongodb://mongo:27017
       - Identityserver_URL=http://10.0.75.1:55009
       - WebApiTest_URL=http://10.0.75.1:55001
       - WebApiTest2_URL=http://10.0.75.1:55002

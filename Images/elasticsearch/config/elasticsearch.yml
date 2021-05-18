@@ -1,0 +1,5 @@
+network.host: 0.0.0.0
+discovery.type: "single-node"
+bootstrap.memory_lock: "true"
+cluster.name: "webapitest-es-cluster"
+node.name: "webapitest-es-single-node"

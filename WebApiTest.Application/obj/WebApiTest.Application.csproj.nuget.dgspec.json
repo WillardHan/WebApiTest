@@ -120,6 +120,10 @@
               "target": "Package",
               "version": "[3.1.1, )"
             },
+            "Serilog.Sinks.Elasticsearch": {
+              "target": "Package",
+              "version": "[8.4.1, )"
+            },
             "Serilog.Sinks.RollingFile": {
               "target": "Package",
               "version": "[3.3.0, )"
@@ -257,6 +261,12 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[2.12.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

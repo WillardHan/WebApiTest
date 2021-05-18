@@ -1756,3 +1756,309 @@
 2021/05/12 14:45:20 [notice] 1#1: start worker process 32
 2021/05/12 14:45:20 [notice] 1#1: start worker process 33
 2021/05/12 14:45:20 [notice] 1#1: start worker process 34
+2021/05/12 20:50:22 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/12 20:50:22 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/12 20:50:22 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/12 20:50:22 [notice] 1#1: using the "epoll" event method
+2021/05/12 20:50:22 [notice] 1#1: nginx/1.20.0
+2021/05/12 20:50:22 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/12 20:50:22 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/12 20:50:22 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/12 20:50:22 [notice] 1#1: start worker processes
+2021/05/12 20:50:22 [notice] 1#1: start worker process 31
+2021/05/12 20:50:22 [notice] 1#1: start worker process 32
+2021/05/12 20:50:22 [notice] 1#1: start worker process 33
+2021/05/12 20:50:22 [notice] 1#1: start worker process 34
+2021/05/12 20:50:22 [notice] 1#1: start worker process 35
+2021/05/12 21:02:08 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/12 21:02:08 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/12 21:02:08 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/12 21:02:08 [notice] 1#1: using the "epoll" event method
+2021/05/12 21:02:08 [notice] 1#1: nginx/1.20.0
+2021/05/12 21:02:08 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/12 21:02:08 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/12 21:02:08 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/12 21:02:08 [notice] 1#1: start worker processes
+2021/05/12 21:02:08 [notice] 1#1: start worker process 31
+2021/05/12 21:02:08 [notice] 1#1: start worker process 32
+2021/05/12 21:02:08 [notice] 1#1: start worker process 33
+2021/05/12 21:02:08 [notice] 1#1: start worker process 34
+2021/05/12 21:02:08 [notice] 1#1: start worker process 35
+2021/05/12 21:09:47 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/12 21:09:47 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/12 21:09:47 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/12 21:09:47 [notice] 1#1: using the "epoll" event method
+2021/05/12 21:09:47 [notice] 1#1: nginx/1.20.0
+2021/05/12 21:09:47 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/12 21:09:47 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/12 21:09:47 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/12 21:09:47 [notice] 1#1: start worker processes
+2021/05/12 21:09:47 [notice] 1#1: start worker process 31
+2021/05/12 21:09:47 [notice] 1#1: start worker process 32
+2021/05/12 21:09:47 [notice] 1#1: start worker process 33
+2021/05/12 21:09:47 [notice] 1#1: start worker process 34
+2021/05/12 21:09:47 [notice] 1#1: start worker process 35
+2021/05/12 21:49:23 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/12 21:49:23 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/12 21:49:23 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/12 21:49:23 [notice] 1#1: using the "epoll" event method
+2021/05/12 21:49:23 [notice] 1#1: nginx/1.20.0
+2021/05/12 21:49:23 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/12 21:49:23 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/12 21:49:23 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/12 21:49:23 [notice] 1#1: start worker processes
+2021/05/12 21:49:23 [notice] 1#1: start worker process 32
+2021/05/12 21:49:23 [notice] 1#1: start worker process 33
+2021/05/12 21:49:23 [notice] 1#1: start worker process 34
+2021/05/12 21:49:23 [notice] 1#1: start worker process 35
+2021/05/12 21:49:23 [notice] 1#1: start worker process 36
+2021/05/14 14:15:23 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/14 14:15:23 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/14 14:15:23 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/14 14:15:23 [notice] 1#1: using the "epoll" event method
+2021/05/14 14:15:23 [notice] 1#1: nginx/1.20.0
+2021/05/14 14:15:23 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/14 14:15:23 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/14 14:15:23 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/14 14:15:23 [notice] 1#1: start worker processes
+2021/05/14 14:15:23 [notice] 1#1: start worker process 31
+2021/05/14 14:15:23 [notice] 1#1: start worker process 32
+2021/05/14 14:15:23 [notice] 1#1: start worker process 33
+2021/05/14 14:15:23 [notice] 1#1: start worker process 34
+2021/05/14 14:15:23 [notice] 1#1: start worker process 35
+2021/05/17 21:12:22 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/17 21:12:22 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/17 21:12:22 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/17 21:12:22 [notice] 1#1: using the "epoll" event method
+2021/05/17 21:12:22 [notice] 1#1: nginx/1.20.0
+2021/05/17 21:12:22 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/17 21:12:22 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/17 21:12:22 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/17 21:12:22 [notice] 1#1: start worker processes
+2021/05/17 21:12:22 [notice] 1#1: start worker process 23
+2021/05/17 21:12:22 [notice] 1#1: start worker process 24
+2021/05/17 21:12:22 [notice] 1#1: start worker process 25
+2021/05/17 21:12:22 [notice] 1#1: start worker process 26
+2021/05/17 21:12:22 [notice] 1#1: start worker process 27
+2021/05/17 21:14:17 [error] 23#23: *1 open() "/usr/share/nginx/html/www.willard.com/favicon.ico" failed (2: No such file or directory), client: 172.28.0.1, server: www.willard.com, request: "GET /favicon.ico HTTP/1.1", host: "10.0.75.1:55000", referrer: "http://10.0.75.1:55000/"
+2021/05/18 09:15:19 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/05/18 09:15:19 [notice] 23#23: gracefully shutting down
+2021/05/18 09:15:19 [notice] 24#24: gracefully shutting down
+2021/05/18 09:15:19 [notice] 25#25: gracefully shutting down
+2021/05/18 09:15:19 [notice] 26#26: gracefully shutting down
+2021/05/18 09:15:19 [notice] 26#26: exiting
+2021/05/18 09:15:19 [notice] 27#27: gracefully shutting down
+2021/05/18 09:15:19 [notice] 23#23: exiting
+2021/05/18 09:15:19 [notice] 24#24: exiting
+2021/05/18 09:15:19 [notice] 25#25: exiting
+2021/05/18 09:15:19 [notice] 26#26: exit
+2021/05/18 09:15:19 [notice] 27#27: exiting
+2021/05/18 09:15:19 [notice] 23#23: exit
+2021/05/18 09:15:19 [notice] 24#24: exit
+2021/05/18 09:15:19 [notice] 25#25: exit
+2021/05/18 09:15:19 [notice] 27#27: exit
+2021/05/18 09:15:19 [notice] 1#1: signal 17 (SIGCHLD) received from 26
+2021/05/18 09:15:19 [notice] 1#1: worker process 26 exited with code 0
+2021/05/18 09:15:19 [notice] 1#1: signal 29 (SIGIO) received
+2021/05/18 09:15:19 [notice] 1#1: signal 17 (SIGCHLD) received from 25
+2021/05/18 09:15:19 [notice] 1#1: worker process 24 exited with code 0
+2021/05/18 09:15:19 [notice] 1#1: worker process 25 exited with code 0
+2021/05/18 09:15:19 [notice] 1#1: signal 29 (SIGIO) received
+2021/05/18 09:15:19 [notice] 1#1: signal 17 (SIGCHLD) received from 24
+2021/05/18 09:15:19 [notice] 1#1: worker process 23 exited with code 0
+2021/05/18 09:15:19 [notice] 1#1: worker process 27 exited with code 0
+2021/05/18 09:15:19 [notice] 1#1: exit
+2021/05/18 09:15:27 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/18 09:15:27 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/18 09:15:27 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/18 09:15:27 [notice] 1#1: using the "epoll" event method
+2021/05/18 09:15:27 [notice] 1#1: nginx/1.20.0
+2021/05/18 09:15:27 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/18 09:15:27 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/18 09:15:27 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/18 09:15:27 [notice] 1#1: start worker processes
+2021/05/18 09:15:27 [notice] 1#1: start worker process 30
+2021/05/18 09:15:27 [notice] 1#1: start worker process 31
+2021/05/18 09:15:27 [notice] 1#1: start worker process 32
+2021/05/18 09:15:27 [notice] 1#1: start worker process 33
+2021/05/18 09:15:27 [notice] 1#1: start worker process 34
+2021/05/18 14:28:22 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/05/18 14:28:22 [notice] 30#30: gracefully shutting down
+2021/05/18 14:28:22 [notice] 31#31: gracefully shutting down
+2021/05/18 14:28:22 [notice] 32#32: gracefully shutting down
+2021/05/18 14:28:22 [notice] 33#33: gracefully shutting down
+2021/05/18 14:28:22 [notice] 33#33: exiting
+2021/05/18 14:28:22 [notice] 34#34: gracefully shutting down
+2021/05/18 14:28:22 [notice] 30#30: exiting
+2021/05/18 14:28:22 [notice] 31#31: exiting
+2021/05/18 14:28:22 [notice] 32#32: exiting
+2021/05/18 14:28:22 [notice] 33#33: exit
+2021/05/18 14:28:22 [notice] 34#34: exiting
+2021/05/18 14:28:22 [notice] 30#30: exit
+2021/05/18 14:28:22 [notice] 31#31: exit
+2021/05/18 14:28:22 [notice] 32#32: exit
+2021/05/18 14:28:22 [notice] 34#34: exit
+2021/05/18 14:28:22 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2021/05/18 14:28:22 [notice] 1#1: worker process 33 exited with code 0
+2021/05/18 14:28:22 [notice] 1#1: signal 29 (SIGIO) received
+2021/05/18 14:28:22 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2021/05/18 14:28:22 [notice] 1#1: worker process 34 exited with code 0
+2021/05/18 14:28:22 [notice] 1#1: signal 29 (SIGIO) received
+2021/05/18 14:28:22 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2021/05/18 14:28:22 [notice] 1#1: worker process 31 exited with code 0
+2021/05/18 14:28:22 [notice] 1#1: worker process 32 exited with code 0
+2021/05/18 14:28:22 [notice] 1#1: signal 29 (SIGIO) received
+2021/05/18 14:28:22 [notice] 1#1: signal 17 (SIGCHLD) received from 30
+2021/05/18 14:28:22 [notice] 1#1: worker process 30 exited with code 0
+2021/05/18 14:28:22 [notice] 1#1: exit
+2021/05/18 14:28:26 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/18 14:28:26 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/18 14:28:26 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/18 14:28:26 [notice] 1#1: using the "epoll" event method
+2021/05/18 14:28:26 [notice] 1#1: nginx/1.20.0
+2021/05/18 14:28:26 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/18 14:28:26 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/18 14:28:26 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/18 14:28:26 [notice] 1#1: start worker processes
+2021/05/18 14:28:26 [notice] 1#1: start worker process 30
+2021/05/18 14:28:26 [notice] 1#1: start worker process 31
+2021/05/18 14:28:26 [notice] 1#1: start worker process 32
+2021/05/18 14:28:26 [notice] 1#1: start worker process 33
+2021/05/18 14:28:26 [notice] 1#1: start worker process 34
+2021/05/18 15:10:18 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/05/18 15:10:18 [notice] 32#32: gracefully shutting down
+2021/05/18 15:10:18 [notice] 34#34: gracefully shutting down
+2021/05/18 15:10:18 [notice] 33#33: gracefully shutting down
+2021/05/18 15:10:18 [notice] 34#34: exiting
+2021/05/18 15:10:18 [notice] 31#31: gracefully shutting down
+2021/05/18 15:10:18 [notice] 32#32: exiting
+2021/05/18 15:10:18 [notice] 33#33: exiting
+2021/05/18 15:10:18 [notice] 31#31: exiting
+2021/05/18 15:10:18 [notice] 30#30: gracefully shutting down
+2021/05/18 15:10:18 [notice] 31#31: exit
+2021/05/18 15:10:18 [notice] 33#33: exit
+2021/05/18 15:10:18 [notice] 32#32: exit
+2021/05/18 15:10:18 [notice] 34#34: exit
+2021/05/18 15:10:18 [notice] 30#30: exiting
+2021/05/18 15:10:18 [notice] 30#30: exit
+2021/05/18 15:10:18 [notice] 1#1: signal 17 (SIGCHLD) received from 33
+2021/05/18 15:10:18 [notice] 1#1: worker process 30 exited with code 0
+2021/05/18 15:10:18 [notice] 1#1: worker process 31 exited with code 0
+2021/05/18 15:10:18 [notice] 1#1: worker process 33 exited with code 0
+2021/05/18 15:10:18 [notice] 1#1: signal 29 (SIGIO) received
+2021/05/18 15:10:18 [notice] 1#1: signal 17 (SIGCHLD) received from 31
+2021/05/18 15:10:18 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2021/05/18 15:10:18 [notice] 1#1: worker process 32 exited with code 0
+2021/05/18 15:10:18 [notice] 1#1: worker process 34 exited with code 0
+2021/05/18 15:10:18 [notice] 1#1: exit
+2021/05/18 15:10:21 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/18 15:10:21 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/18 15:10:21 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/18 15:10:21 [notice] 1#1: using the "epoll" event method
+2021/05/18 15:10:21 [notice] 1#1: nginx/1.20.0
+2021/05/18 15:10:21 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/18 15:10:21 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/18 15:10:21 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/18 15:10:21 [notice] 1#1: start worker processes
+2021/05/18 15:10:21 [notice] 1#1: start worker process 31
+2021/05/18 15:10:21 [notice] 1#1: start worker process 32
+2021/05/18 15:10:21 [notice] 1#1: start worker process 33
+2021/05/18 15:10:21 [notice] 1#1: start worker process 34
+2021/05/18 15:10:21 [notice] 1#1: start worker process 35
+2021/05/18 15:20:03 [notice] 1#1: signal 3 (SIGQUIT) received, shutting down
+2021/05/18 15:20:03 [notice] 32#32: gracefully shutting down
+2021/05/18 15:20:03 [notice] 32#32: exiting
+2021/05/18 15:20:03 [notice] 32#32: exit
+2021/05/18 15:20:03 [notice] 33#33: gracefully shutting down
+2021/05/18 15:20:03 [notice] 35#35: gracefully shutting down
+2021/05/18 15:20:03 [notice] 35#35: exiting
+2021/05/18 15:20:03 [notice] 31#31: gracefully shutting down
+2021/05/18 15:20:03 [notice] 34#34: gracefully shutting down
+2021/05/18 15:20:03 [notice] 33#33: exiting
+2021/05/18 15:20:03 [notice] 35#35: exit
+2021/05/18 15:20:03 [notice] 31#31: exiting
+2021/05/18 15:20:03 [notice] 34#34: exiting
+2021/05/18 15:20:03 [notice] 33#33: exit
+2021/05/18 15:20:03 [notice] 31#31: exit
+2021/05/18 15:20:03 [notice] 34#34: exit
+2021/05/18 15:20:03 [notice] 1#1: signal 17 (SIGCHLD) received from 32
+2021/05/18 15:20:03 [notice] 1#1: worker process 32 exited with code 0
+2021/05/18 15:20:03 [notice] 1#1: signal 29 (SIGIO) received
+2021/05/18 15:20:03 [notice] 1#1: signal 17 (SIGCHLD) received from 35
+2021/05/18 15:20:03 [notice] 1#1: worker process 35 exited with code 0
+2021/05/18 15:20:03 [notice] 1#1: signal 29 (SIGIO) received
+2021/05/18 15:20:03 [notice] 1#1: signal 17 (SIGCHLD) received from 34
+2021/05/18 15:20:03 [notice] 1#1: worker process 31 exited with code 0
+2021/05/18 15:20:03 [notice] 1#1: worker process 33 exited with code 0
+2021/05/18 15:20:03 [notice] 1#1: worker process 34 exited with code 0
+2021/05/18 15:20:03 [notice] 1#1: exit
+2021/05/18 15:20:11 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/18 15:20:11 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/18 15:20:11 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/18 15:20:11 [notice] 1#1: using the "epoll" event method
+2021/05/18 15:20:11 [notice] 1#1: nginx/1.20.0
+2021/05/18 15:20:11 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/18 15:20:11 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/18 15:20:11 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/18 15:20:11 [notice] 1#1: start worker processes
+2021/05/18 15:20:11 [notice] 1#1: start worker process 31
+2021/05/18 15:20:11 [notice] 1#1: start worker process 32
+2021/05/18 15:20:11 [notice] 1#1: start worker process 33
+2021/05/18 15:20:11 [notice] 1#1: start worker process 34
+2021/05/18 15:20:11 [notice] 1#1: start worker process 35
+2021/05/18 15:26:27 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/18 15:26:27 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/18 15:26:27 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/18 15:26:27 [notice] 1#1: using the "epoll" event method
+2021/05/18 15:26:27 [notice] 1#1: nginx/1.20.0
+2021/05/18 15:26:27 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/18 15:26:27 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/18 15:26:27 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/18 15:26:27 [notice] 1#1: start worker processes
+2021/05/18 15:26:27 [notice] 1#1: start worker process 31
+2021/05/18 15:26:27 [notice] 1#1: start worker process 32
+2021/05/18 15:26:27 [notice] 1#1: start worker process 33
+2021/05/18 15:26:27 [notice] 1#1: start worker process 34
+2021/05/18 15:26:27 [notice] 1#1: start worker process 35
+2021/05/18 15:46:24 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/18 15:46:24 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/18 15:46:24 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/18 15:46:24 [notice] 1#1: using the "epoll" event method
+2021/05/18 15:46:24 [notice] 1#1: nginx/1.20.0
+2021/05/18 15:46:24 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/18 15:46:24 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/18 15:46:24 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/18 15:46:24 [notice] 1#1: start worker processes
+2021/05/18 15:46:24 [notice] 1#1: start worker process 31
+2021/05/18 15:46:24 [notice] 1#1: start worker process 32
+2021/05/18 15:46:24 [notice] 1#1: start worker process 33
+2021/05/18 15:46:24 [notice] 1#1: start worker process 34
+2021/05/18 15:46:24 [notice] 1#1: start worker process 35
+2021/05/18 15:55:28 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/18 15:55:28 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/18 15:55:28 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/18 15:55:28 [notice] 1#1: using the "epoll" event method
+2021/05/18 15:55:28 [notice] 1#1: nginx/1.20.0
+2021/05/18 15:55:28 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/18 15:55:28 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/18 15:55:28 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/18 15:55:28 [notice] 1#1: start worker processes
+2021/05/18 15:55:28 [notice] 1#1: start worker process 30
+2021/05/18 15:55:28 [notice] 1#1: start worker process 31
+2021/05/18 15:55:28 [notice] 1#1: start worker process 32
+2021/05/18 15:55:28 [notice] 1#1: start worker process 33
+2021/05/18 15:55:28 [notice] 1#1: start worker process 34
+2021/05/18 15:58:38 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:69
+2021/05/18 15:58:38 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:86
+2021/05/18 15:58:38 [warn] 1#1: duplicate MIME type "text/html" in /etc/nginx/nginx.conf:100
+2021/05/18 15:58:38 [notice] 1#1: using the "epoll" event method
+2021/05/18 15:58:38 [notice] 1#1: nginx/1.20.0
+2021/05/18 15:58:38 [notice] 1#1: built by gcc 8.3.0 (Debian 8.3.0-6) 
+2021/05/18 15:58:38 [notice] 1#1: OS: Linux 4.9.125-linuxkit
+2021/05/18 15:58:38 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+2021/05/18 15:58:38 [notice] 1#1: start worker processes
+2021/05/18 15:58:38 [notice] 1#1: start worker process 31
+2021/05/18 15:58:38 [notice] 1#1: start worker process 32
+2021/05/18 15:58:38 [notice] 1#1: start worker process 33
+2021/05/18 15:58:38 [notice] 1#1: start worker process 34
+2021/05/18 15:58:38 [notice] 1#1: start worker process 35
