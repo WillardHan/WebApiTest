@@ -17,7 +17,6 @@ services:
       - TZ=Asia/Shanghai
     volumes:
       - ./Images/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
-      - ./Images/elasticsearch/data:/usr/share/elasticsearch/data
       - ./Images/elasticsearch/logs:/usr/share/elasticsearch/logs
     ports:
       - "59200:9200"
@@ -41,6 +40,18 @@ services:
     environment:
       - TZ=Asia/Shanghai
 
+  rabbitmq:
+    environment:
+      - TZ=Asia/Shanghai
+      - RABBITMQ_DEFAULT_USER=hzm
+      - RABBITMQ_DEFAULT_PASS=123456
+    privileged: true
+    volumes:
+      - ./Images/redis/logs/var/log/rabbitmq
+    ports:
+      - "55673:15672"
+      - "55672:5672"
+
   identityserver:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -51,6 +62,9 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionString=Server=192.168.11.100;Database=WebApiTest;User ID=sa;Password=sa.123;
+      - RabbitMq_HostName=rabbitmq
+      - RabbitMq_UserName=hzm
+      - RabbitMq_Password=123456
       - Redis_ConnectionString=redis:6379
       - Mongo_ConnectionString=mongodb://mongo:27017
       - Identityserver_URL=http://10.0.75.1:55009
@@ -63,6 +77,9 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionString=Server=192.168.11.100;Database=WebApiTest2;User ID=sa;Password=sa.123;
+      - RabbitMq_HostName=rabbitmq
+      - RabbitMq_UserName=hzm
+      - RabbitMq_Password=123456
       - Redis_ConnectionString=redis:6379
       - Mongo_ConnectionString=mongodb://mongo:27017
       - Identityserver_URL=http://10.0.75.1:55009

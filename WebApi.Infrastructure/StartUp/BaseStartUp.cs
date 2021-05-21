@@ -28,6 +28,9 @@ using Microsoft.Extensions.Configuration;
 using StackExchange.Redis;
 using Newtonsoft.Json;
 using Serilog;
+using DotNetCore.CAP;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 //using AspectCore;
 //using AspectCore.Extensions.DependencyInjection;
 //using AspectCore.Configuration;
@@ -62,12 +65,9 @@ namespace WebApiTest.Infrastructure.StartUp
             services.AddAutoMapper();
             services.AddRedisClient(Configuration);
             services.AddTransient<HttpClientTokenHandler>();
-            services.AddHttpClient("token")
-                .AddHttpMessageHandler<HttpClientTokenHandler>()
-                .ConfigureHttpClient((sp, httpClient) =>
-                {
-                    //httpClient.BaseAddress = new Uri(Configuration.GetValue<string>("Base_URL"));
-                });
+            services.AddHttpClientWithToken();
+            services.AddCapService();
+            services.AddCapClient(Configuration);
         }
 
         public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -122,6 +122,27 @@ namespace WebApiTest.Infrastructure.StartUp
             {
                 await context.Response.WriteAsync("This is MapRequest hello");
             });
+        }
+    }
+
+    public static class ConfigureServicesExtentionForAll
+    {
+        public static void AddEFCore<T>(this IServiceCollection services, IConfiguration configuration) where T : DbContext
+        {
+            services.AddDbContext<T>(optionsBuilder =>
+            {
+                optionsBuilder.UseSqlServer(configuration.GetValue<string>("ConnectionString"), options =>
+                {
+                    options.CommandTimeout(60);
+                })
+                .LogTo(Console.WriteLine, LogLevel.Information);
+            });
+        }
+
+        public static void AddOptions<T>(this IServiceCollection services, IConfiguration configuration, string NodeName) where T : class 
+        {
+            var section = configuration.GetSection("TestConfigure");
+            services.AddOptions().Configure<T>(section);
         }
     }
 
@@ -289,6 +310,23 @@ namespace WebApiTest.Infrastructure.StartUp
             }
         }
 
+        public static void AddCapService(this IServiceCollection services)
+        {
+            List<Type> types = AppDomain.CurrentDomain
+                               .GetAssemblies()
+                               .SelectMany(x => x.GetTypes())
+                               .Where(t => typeof(ICapSubscribe).IsAssignableFrom(t) && t.IsClass && !t.IsAbstract)
+                               .ToList();
+            foreach (var type in types)
+            {
+                Type[] interfaces = type.GetInterfaces();
+                interfaces.ToList().ForEach(r =>
+                {
+                    services.AddTransient(r, type);
+                });
+            }
+        }
+
         public static void AddRedisClient(this IServiceCollection services, IConfiguration configuration)
         {
             var connstr = configuration.GetValue<string>("Redis_ConnectionString");
@@ -304,6 +342,43 @@ namespace WebApiTest.Infrastructure.StartUp
         public static void AddMongoClient(this IServiceCollection services, IConfiguration configuration)
         {
 
+        }
+
+        public static void AddHttpClientWithToken(this IServiceCollection services)
+        {
+            services.AddHttpClient("token")
+            .AddHttpMessageHandler<HttpClientTokenHandler>()
+            .ConfigureHttpClient((sp, httpClient) =>
+            {
+                //httpClient.BaseAddress = new Uri(Configuration.GetValue<string>("Base_URL"));
+            });
+        }
+
+        public static void AddCapClient(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddCap(x =>
+            {
+                x.UseSqlServer(configuration.GetValue<string>("ConnectionString"));
+                x.UseRabbitMQ(m => {
+                    m.HostName = configuration.GetValue<string>("RabbitMq_HostName");
+                    m.UserName = configuration.GetValue<string>("RabbitMq_UserName");
+                    m.Password = configuration.GetValue<string>("RabbitMq_Password");
+                });
+
+                x.SucceedMessageExpiredAfter = 24 * 3600;
+                x.FailedRetryCount = 5;
+
+                x.UseDashboard();
+                //x.UseDiscovery(d =>
+                //{
+                //    d.DiscoveryServerHostName = "localhost";
+                //    d.DiscoveryServerPort = 8500;
+                //    d.CurrentNodeHostName = "localhost";
+                //    d.CurrentNodePort = 5800;
+                //    d.NodeId = "1";
+                //    d.NodeName = "CAP No.1 Node";
+                //});
+            });
         }
     }
 

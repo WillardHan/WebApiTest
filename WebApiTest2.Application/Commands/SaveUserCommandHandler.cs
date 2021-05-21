@@ -19,7 +19,7 @@ namespace WebApiTest2.Commands
 
         public async Task<bool> Handle(SaveUserCommand request, CancellationToken cancellationToken)
         {
-            if (request.Id.HasValue)
+            if (!request.Id.HasValue)
             {
                 if (repository.IsCodeExist(request.Code)) throw new ValidateLevelException("该电脑编码已存在");
                 repository.Add(new User(request.Code, request.Name));

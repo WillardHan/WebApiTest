@@ -32,7 +32,7 @@ namespace WebApiTest2.Application.Services
         {
             var test = await companyService.GetAllAsync();
             var models = databaseContext.User.ToList();
-            return test.ToDTO<IEnumerable<UserModel>>();
+            return models.ToDTO<IEnumerable<UserModel>>();
         }
     }
 }

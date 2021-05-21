@@ -21,6 +21,10 @@ services:
     container_name: test_mongo
     image: mongo:4.4.6
 
+  rabbitmq:
+    container_name: test_rabbitmq
+    image: rabbitmq:3.8.16-management
+
   identityserver:
     container_name: test_identityserver
     image: test_identityserver:${TAG:-latest}
@@ -33,6 +37,7 @@ services:
       - kibana
       - redis
       - mongo
+      - rabbitmq
 
   webapitest:
     container_name: test_webapitest
