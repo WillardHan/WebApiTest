@@ -31,6 +31,14 @@ using Serilog;
 using DotNetCore.CAP;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
+using Hangfire;
+using Hangfire.SqlServer;
+using Microsoft.AspNetCore.DataProtection;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption;
+using Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel;
+using System.IO;
+using WebApi.Infrastructure.Hangfire;
+using WebApi.Infrastructure.Cap;
 //using AspectCore;
 //using AspectCore.Extensions.DependencyInjection;
 //using AspectCore.Configuration;
@@ -44,6 +52,7 @@ namespace WebApiTest.Infrastructure.StartUp
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddSwagger();
+            services.AddHangFireSerivce(Configuration);
             services.AddControllers(options =>
             {
                 options.Filters.Add<LoggerFilter>();
@@ -63,11 +72,11 @@ namespace WebApiTest.Infrastructure.StartUp
             services.AddFluentValidationExceptionHandler();
             services.AddIdentityAuth(Configuration);
             services.AddAutoMapper();
-            services.AddRedisClient(Configuration);
+            services.AddRedisService(Configuration);
             services.AddTransient<HttpClientTokenHandler>();
             services.AddHttpClientWithToken();
             services.AddCapService();
-            services.AddCapClient(Configuration);
+            services.AddCapService(Configuration);
         }
 
         public virtual void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -77,9 +86,15 @@ namespace WebApiTest.Infrastructure.StartUp
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             app.UseSerilogRequestLogging();
             //app.UseHttpsRedirection();
             app.UseSwaggerComponent();
+            app.UseHangfireDashboard("/hangfire", new Hangfire.DashboardOptions
+            {
+                Authorization = new[] { new HangfireAuthorizationFilter() }
+            });
+
             app.UseRouting();
             app.UseAuthentication();
             app.UseAuthorization();
@@ -97,6 +112,7 @@ namespace WebApiTest.Infrastructure.StartUp
                 //endpoints.MapControllers().RequireAuthorization("ApiScope");
                 endpoints.MapControllers();
                 endpoints.MapControllerRoute("default", "{controller=Home}/{action=Index}/{id?}");
+                //endpoints.MapHangfireDashboard();
             });
         }
 
@@ -148,6 +164,24 @@ namespace WebApiTest.Infrastructure.StartUp
 
     static class ConfigureServicesExtention
     {
+        public static void AddHangFireSerivce(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddHangfire(config => config
+                .SetDataCompatibilityLevel(CompatibilityLevel.Version_170)
+                .UseSimpleAssemblyNameTypeSerializer()
+                .UseRecommendedSerializerSettings()
+                .UseSqlServerStorage(configuration.GetValue<string>("ConnectionString"), new SqlServerStorageOptions
+                {
+                    CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
+                    SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
+                    QueuePollInterval = TimeSpan.Zero,
+                    UseRecommendedIsolationLevel = true,
+                    DisableGlobalLocks = true
+                }));
+
+            services.AddHangfireServer();
+        }
+
         public static void AddSwagger(this IServiceCollection services)
         {
             services.AddSwaggerGen(options =>
@@ -327,7 +361,7 @@ namespace WebApiTest.Infrastructure.StartUp
             }
         }
 
-        public static void AddRedisClient(this IServiceCollection services, IConfiguration configuration)
+        public static void AddRedisService(this IServiceCollection services, IConfiguration configuration)
         {
             var connstr = configuration.GetValue<string>("Redis_ConnectionString");
             var options = ConfigurationOptions.Parse(connstr, true);
@@ -339,7 +373,7 @@ namespace WebApiTest.Infrastructure.StartUp
             services.AddSingleton<IConnectionMultiplexer>(sp => ConnectionMultiplexer.Connect(options));
         }
 
-        public static void AddMongoClient(this IServiceCollection services, IConfiguration configuration)
+        public static void AddMongoService(this IServiceCollection services, IConfiguration configuration)
         {
 
         }
@@ -354,7 +388,7 @@ namespace WebApiTest.Infrastructure.StartUp
             });
         }
 
-        public static void AddCapClient(this IServiceCollection services, IConfiguration configuration)
+        public static void AddCapService(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddCap(x =>
             {
@@ -368,7 +402,12 @@ namespace WebApiTest.Infrastructure.StartUp
                 x.SucceedMessageExpiredAfter = 24 * 3600;
                 x.FailedRetryCount = 5;
 
-                x.UseDashboard();
+                x.UseDashboard(opt =>
+                {
+                    opt.PathMatch = "/cap";
+                    opt.Authorization = new[] { new CapAuthorizationFilter() };
+                });
+
                 //x.UseDiscovery(d =>
                 //{
                 //    d.DiscoveryServerHostName = "localhost";

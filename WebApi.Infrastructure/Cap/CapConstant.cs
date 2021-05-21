@@ -6,6 +6,6 @@ namespace WebApi.Infrastructure.Cap
 {
     public class CapConstant
     {
-        public const string CreateDefaultUserForDepartment = "CreateDefaultUserForDepartment";
+        public const string CreateDefaultUserForDepartment = "3f42cfb3-cb67-e412-c8ae-5fe2953c4116";
     }
 }

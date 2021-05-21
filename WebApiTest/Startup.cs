@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using WebApiTest.Domain;
 using WebApiTest.Infrastructure.StartUp;
+using Hangfire;
+using WebApiTest.Application.Jobs;
 
 namespace WebApiTest
 {
@@ -26,6 +28,7 @@ namespace WebApiTest
         public override void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             base.Configure(app, env);
+            RecurringJob.AddOrUpdate<RecordJob>(m => m.Execute(), Cron.Minutely);
         }
     }
 }

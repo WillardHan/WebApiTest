@@ -4,6 +4,8 @@ using MediatR;
 using WebApiTest.Application.Services;
 using WebApiTest.Application.Commands;
 using WebApi.Infrastructure.Controller;
+using Hangfire;
+using System;
 
 namespace WebApiTest.Controllers
 {
