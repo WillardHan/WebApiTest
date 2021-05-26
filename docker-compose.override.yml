@@ -47,7 +47,7 @@ services:
       - RABBITMQ_DEFAULT_PASS=123456
     privileged: true
     volumes:
-      - ./Images/redis/logs/var/log/rabbitmq
+      - ./Images/redis/logs:/var/log/rabbitmq
     ports:
       - "55673:15672"
       - "55672:5672"
