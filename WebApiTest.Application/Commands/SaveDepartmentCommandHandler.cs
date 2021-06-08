@@ -19,33 +19,39 @@ namespace WebApiTest.Commands
     {
         private readonly ICompanyRepository repository;
         private readonly IMediator mediator;
+        private readonly DatabaseContext dbContext;
         private readonly ICapPublisher capPublisher;
 
         public SaveDepartmentCommandHandler(
             ICompanyRepository repository,
             IMediator mediator,
+            DatabaseContext dbContext,
             ICapPublisher capPublisher
             )
         {
             this.repository = repository;
             this.mediator = mediator;
+            this.dbContext = dbContext;
             this.capPublisher = capPublisher;
         }
 
         public async Task<bool> Handle(SaveDepartmentCommand request, CancellationToken cancellationToken)
         {
-            var company = repository.Get(request.CompanyId) ?? throw new ValidateLevelException("找不到该公司");
-            var model = new Department(request.Code, request.Name);
-            company.Departments.Add(model);
-
-            repository.Update(company);
-            await mediator.Publish(new SaveDepartmentDomainEvent(model));
-
-            await capPublisher.PublishAsync(CapConstant.CreateDefaultUserForDepartment, new CreateDefaultUserForDepartmentDto
+            using (var trans = dbContext.Database.BeginTransaction(capPublisher, autoCommit: true))
             {
-                Code = $"default_{Guid.NewGuid()}",
-                Name = "默认员工"
-            });
+                var company = repository.Get(request.CompanyId) ?? throw new ValidateLevelException("找不到该公司");
+                var model = new Department(request.Code, request.Name);
+                company.Departments.Add(model);
+
+                repository.Update(company);
+                await mediator.Publish(new SaveDepartmentDomainEvent(model));
+
+                await capPublisher.PublishAsync(CapConstant.CreateDefaultUserForDepartment, new CreateDefaultUserForDepartmentDto
+                {
+                    Code = $"default_{Guid.NewGuid()}",
+                    Name = "默认员工"
+                });
+            }
 
             return await repository.SaveChangesAsync() > 0;
         }

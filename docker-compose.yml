@@ -27,7 +27,7 @@ services:
 
   identityserver:
     container_name: test_identityserver
-    image: test_identityserver:${TAG:-latest}
+    image: 139.224.128.17:5000/test_identityserver:${TAG:-latest}
     build:
       context: .
       dockerfile: IdentityServer/Dockerfile
@@ -41,7 +41,7 @@ services:
 
   webapitest:
     container_name: test_webapitest
-    image: test_webapitest:${TAG:-latest}
+    image: 139.224.128.17:5000/test_webapitest:${TAG:-latest}
     build:
       context: .
       dockerfile: WebApiTest/Dockerfile
@@ -50,7 +50,7 @@ services:
 
   webapitest2:
     container_name: test_webapitest2
-    image: test_webapitest2:${TAG:-latest}
+    image: 139.224.128.17:5000/test_webapitest2:${TAG:-latest}
     build:
       context: .
       dockerfile: WebApiTest2/Dockerfile

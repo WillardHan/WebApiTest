@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System;
 using System.IdentityModel.Tokens.Jwt;
 
 namespace MvcTest
@@ -35,19 +36,27 @@ namespace MvcTest
             .AddCookie(CookieAuthenticationDefaults.AuthenticationScheme)
             .AddOpenIdConnect(OpenIdConnectDefaults.AuthenticationScheme, options =>
             {
-                options.SignInScheme = "Cookies";
+                //options.SignInScheme = "Cookies";
                 options.Authority = DomainParameter.IdentityServerUrl;
                 options.RequireHttpsMetadata = false;
-                options.ClientId = "client3";
-                options.ClientSecret = "9d66f2cb-b5c4-004b-83ac-2a550e4b40f3";
+                options.ClientId = "client5";
+                options.ClientSecret = "secret5";
                 options.SaveTokens = true;  // save in cookies
-                options.ResponseType = "code";  // response authrization code
+                options.ResponseType = OidcConstants.ResponseTypes.CodeIdToken;  // for code || token 
+
+                //options.ResponseType = "code token id_token";
+                //options.ResponseMode = "fragment";
+                options.GetClaimsFromUserInfoEndpoint = true;
+
                 options.Scope.Clear();
                 options.Scope.Add("mvctest");
                 options.Scope.Add("openid");
                 options.Scope.Add("profile");
                 options.Scope.Add("address");
-                options.Scope.Add(OidcConstants.StandardScopes.OfflineAccess);
+                options.Scope.Add(OidcConstants.StandardScopes.OfflineAccess);  // not for implicit
+
+                options.TokenValidationParameters.ClockSkew = TimeSpan.FromSeconds(10);
+                options.TokenValidationParameters.RequireExpirationTime = true;
             });
         }
 

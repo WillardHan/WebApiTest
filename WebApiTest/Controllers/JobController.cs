@@ -28,13 +28,13 @@ namespace WebApiTest.Controllers
             return Ok(await Task.FromResult(result));
         }
 
-        public async Task SendSmsForTest()
+        private async Task SendSmsForTest()
         {
             // await service, retry in dashboard when fail
             var test = await Task.FromResult(DateTime.Now);
         }
 
-        public async Task SendEmailForTest()
+        private async Task SendEmailForTest()
         {
             // await service, retry in dashboard when fail
             var test = await Task.FromResult(DateTime.Now);
@@ -47,7 +47,7 @@ namespace WebApiTest.Controllers
             return Ok(await Task.FromResult(jobId));
         }
 
-        public async Task SendDelayedEmail()
+        private async Task SendDelayedEmail()
         {
             // await service, retry in dashboard when fail
             var test = await Task.FromResult(DateTime.Now);

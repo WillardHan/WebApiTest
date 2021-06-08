@@ -14,7 +14,6 @@ using MvcTest.Models;
 
 namespace MvcTest.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -29,6 +28,7 @@ namespace MvcTest.Controllers
             return View();
         }
 
+        [Authorize]
         public async Task<IActionResult> Privacy()
         {
             var accessToken = await HttpContext.GetTokenAsync(OpenIdConnectParameterNames.AccessToken);

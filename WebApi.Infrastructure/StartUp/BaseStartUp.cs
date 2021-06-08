@@ -234,7 +234,7 @@ namespace WebApiTest.Infrastructure.StartUp
                 options.AddPolicy("ApiScope", policy =>
                 {
                     policy.RequireAuthenticatedUser();
-                    policy.RequireClaim("scope", DomainParameter.Audience);
+                    policy.RequireClaim("scope", "webapitest webapitest2");
                 });
             });
 
@@ -243,12 +243,12 @@ namespace WebApiTest.Infrastructure.StartUp
             {
                 options.Authority = configuration.GetValue<string>("Identityserver_URL");
                 options.RequireHttpsMetadata = false;
-                options.Audience = DomainParameter.Audience;
+                //options.Audience = DomainParameter.Audience;
                 //options.SaveToken = true;
                 options.TokenValidationParameters = new TokenValidationParameters
                 {
                     //ValidateIssuer = true,
-                    ValidateAudience = true,
+                    ValidateAudience = false,
                     //ValidateLifetime = true,
                     //ValidateIssuerSigningKey = true,
                     //ValidIssuer = "http://localhost:61768/",
@@ -471,6 +471,6 @@ namespace WebApiTest.Infrastructure.StartUp
 
     public static class DomainParameter
     {
-        public static string Audience { get; set; } = "webapitest";
+        //public static string Audience { get; set; } = "webapitest";
     }
 }

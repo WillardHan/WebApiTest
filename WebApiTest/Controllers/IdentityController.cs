@@ -1,18 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Net.Http;
-using System.Security.Claims;
-using System.Text;
 using System.Threading.Tasks;
-using IdentityModel;
 using IdentityModel.Client;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
 using WebApi.Infrastructure.Controller;
-using WebApiTest.Infrastructure.StartUp;
 
 namespace WebApiTest.Controllers
 {
@@ -45,10 +37,10 @@ namespace WebApiTest.Controllers
             {
                 Address = response.TokenEndpoint,
                 ClientId = "client2",
-                ClientSecret = "c8d0cf33-391a-bc27-9609-6eb1d2b0dc8b",
+                ClientSecret = "secret2",
                 UserName = "alice",
                 Password = "alice",
-                Scope = $"{DomainParameter.Audience} openid profile email"
+                Scope = $"webapitest webapitest2 openid profile email"
             });
             if (tokenResponse.IsError) Console.WriteLine(tokenResponse.Error);
 
