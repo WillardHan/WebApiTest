@@ -52,6 +52,33 @@ services:
       - "55673:15672"
       - "55672:5672"
 
+  zookeeper:
+    environment:
+      - ZOO_MY_ID=1
+      - ZOO_SERVERS=server.1=0.0.0.0:2888:3888;2181 server.2=zookeeper2:2888:3888;2181 server.3=zookeeper3:2888:3888;2181
+      - TZ=Asia/Shanghai
+    ports:
+      - "62181:2181"
+      - "58081:8080"
+
+  zookeeper2:
+    environment:
+      - ZOO_MY_ID=2
+      - ZOO_SERVERS=server.1=zookeeper:2888:3888;2181 server.2=0.0.0.0:2888:3888;2181 server.3=zookeeper3:2888:3888;2181
+      - TZ=Asia/Shanghai
+    ports:
+      - "62182:2181"
+      - "58082:8080"
+
+  zookeeper3:
+    environment:
+      - ZOO_MY_ID=3
+      - ZOO_SERVERS=server.1=zookeeper:2888:3888;2181 server.2=zookeeper2:2888:3888;2181 server.3=0.0.0.0:2888:3888;2181
+      - TZ=Asia/Shanghai
+    ports:
+      - "62183:2181"
+      - "58083:8080"
+
   identityserver:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

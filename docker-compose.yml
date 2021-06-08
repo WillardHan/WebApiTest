@@ -25,6 +25,18 @@ services:
     container_name: test_rabbitmq
     image: rabbitmq:3.8.16-management
 
+  zookeeper:
+    container_name: test_zookeeper
+    image: zookeeper:3.7.0
+
+  zookeeper2:
+    container_name: test_zookeeper2
+    image: zookeeper:3.7.0
+
+  zookeeper3:
+    container_name: test_zookeeper3
+    image: zookeeper:3.7.0
+
   identityserver:
     container_name: test_identityserver
     image: 139.224.128.17:5000/test_identityserver:${TAG:-latest}
@@ -38,6 +50,9 @@ services:
       - redis
       - mongo
       - rabbitmq
+      - zookeeper
+      - zookeeper2
+      - zookeeper3
 
   webapitest:
     container_name: test_webapitest

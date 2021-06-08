@@ -34,6 +34,7 @@
     <PackageReference Include="Serilog.Sinks.RollingFile" Version="3.3.0" />
     <PackageReference Include="StackExchange.Redis" Version="2.2.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
+    <PackageReference Include="ZooKeeperNetEx.Recipes" Version="3.4.12.4" />
   </ItemGroup>
 
 </Project>
