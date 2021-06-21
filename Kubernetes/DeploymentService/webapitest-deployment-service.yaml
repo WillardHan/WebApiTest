@@ -1,0 +1,49 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: webapitest-deployment
+  labels:
+    deployment: webapitest
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      api: webapitest
+  template:
+    metadata:
+      labels:
+        api: webapitest
+    spec:
+      containers:
+      - name: k8s-webapitest
+        image: 139.224.128.17:5000/test_webapitest:latest
+        env:
+        - name: CONNECTIONSTRING
+          valueFrom:
+            configMapKeyRef:
+              name: database-connection-config
+              key: ConnectionString_WebApiTest
+        envFrom:
+        - configMapRef:
+            name: system-config
+        - configMapRef:
+            name: api-url-config
+        - configMapRef:
+            name: middleware-config
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapitest
+  labels:
+    service: webapitest
+spec:
+  selector:
+    api: webapitest
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

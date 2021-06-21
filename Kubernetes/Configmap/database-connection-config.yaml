@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: database-connection-config
+data:
+  ConnectionString_WebApiTest: Server=192.168.11.100;Database=WebApiTest;User ID=sa;Password=sa.123;
+  ConnectionString_WebApiTest2: Server=192.168.11.100;Database=WebApiTest2;User ID=sa;Password=sa.123;

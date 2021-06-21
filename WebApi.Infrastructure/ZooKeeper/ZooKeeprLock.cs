@@ -9,7 +9,7 @@ namespace WebApi.Infrastructure.ZooKeepr
     public class ZooKeeprLock
     {
         private const int CONNECTION_TIMEOUT = 50000;
-        private const string CONNECTION_STRING = "zookeeper:2181,zookeeper2:2182,zookeeper3:2183";
+        private const string CONNECTION_STRING = "zookeeper:2181,zookeeper2:2181,zookeeper3:2181";
 
         /// <summary>
         /// 加锁

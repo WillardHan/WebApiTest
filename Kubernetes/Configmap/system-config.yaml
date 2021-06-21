@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: system-config
+data:
+  TZ: Asia/Shanghai
+  ASPNETCORE_ENVIRONMENT: Development

@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: middleware-config
+data:
+  RABBITMQ_DEFAULT_USER: hzm
+  RABBITMQ_DEFAULT_PASS: "123456"
+  RabbitMq_HostName: rabbitmq
+  RabbitMq_UserName: hzm
+  RabbitMq_Password: "123456"
+  Redis_ConnectionString: redis:6379
+  Mongo_ConnectionString: mongodb://mongo:27017
+  Zookeeper_ConnectionString: zookeeper:2181

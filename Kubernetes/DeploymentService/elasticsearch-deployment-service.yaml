@@ -1,0 +1,67 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: elasticsearch-deployment
+  labels:
+    deployment: elasticsearch
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: elasticsearch
+  template:
+    metadata:
+      labels:
+        component: elasticsearch
+    spec:
+      containers:
+      - name: k8s-elasticsearch
+        image: elasticsearch:7.12.1
+        env:
+        - name: ES_JAVA_OPTS
+          value: -Xms2g -Xmx2g
+        - name: TAKE_FILE_OWNERSHIP
+          value: "1"
+        - name: discovery.type
+          value: single-node
+        - name: bootstrap.memory_lock
+          value: "true"
+        envFrom:
+        - configMapRef:
+            name: system-config
+        - configMapRef:
+            name: middleware-config
+        ports:
+        - protocol: TCP
+          name: http
+          containerPort: 9200
+        resources:
+          limits:
+            cpu: 500m
+            memory: 4Gi
+          requests:
+            cpu: 500m
+            memory: 4Gi
+        volumeMounts:
+          - name: elasticsearch-pvc
+            mountPath: "/usr/share/elasticsearch/data"
+      volumes:
+      - name: elasticsearch-pvc
+        persistentVolumeClaim:
+          claimName: elasticsearch-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: elasticsearch
+  labels:
+    service: elasticsearch
+spec:
+  selector:
+    component: elasticsearch
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    name: http
+    port: 80
+    targetPort: 9200

@@ -1,0 +1,43 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: api-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/use-regex: "true"
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+    nginx.ingress.kubernetes.io/proxy-redirect-from: /
+    nginx.ingress.kubernetes.io/proxy-redirect-to: $app_path/
+    nginx.ingress.kubernetes.io/server-snippet: |
+      proxy_set_header Host $host;
+      proxy_set_header Authorization $http_authorization;
+      proxy_set_header X-Real-IP $remote_addr;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    nginx.ingress.kubernetes.io/configuration-snippet: |
+      set $app_path '';
+      if ( $location_path ~* (/\w+)(/\w*) ){
+        set $app_path $1;
+      }
+      
+      # swagger
+      sub_filter_types text/html;
+      sub_filter '/swagger/v1/swagger.json' '$app_path/swagger/v1/swagger.json';
+      sub_filter_types text/json application/json;
+      sub_filter '/v' '$app_path/v';
+      sub_filter_once off;
+spec:
+  rules:
+  - host: www.willard.com
+    http:
+      paths:
+      - path: /identityserver/(.*)
+        backend:
+          serviceName: identityserver
+          servicePort: 80
+      - path: /webapitest/(.*)
+        backend:
+          serviceName: webapitest
+          servicePort: 80
+      - path: /webapitest2/(.*)
+        backend:
+          serviceName: webapitest2
+          servicePort: 80

@@ -1,0 +1,49 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: kibana-deployment
+  labels:
+    deployment: kibana
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: kibana
+  template:
+    metadata:
+      labels:
+        component: kibana
+    spec:
+      containers:
+      - name: k8s-kibana
+        image: kibana:7.12.1
+        env:
+        - name: I18N_LOCALE
+          value: zh-CN
+        - name: TIMELION_ENABLED
+          value: 'true'
+        - name: ELASTICSEARCH_URL
+          value: http://elasticsearch:9200
+        envFrom:
+        - configMapRef:
+            name: system-config
+        ports:
+        - protocol: TCP
+          name: http
+          containerPort: 5601
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kibana
+  labels:
+    service: kibana
+spec:
+  selector:
+    component: kibana
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    name: http
+    port: 80
+    targetPort: 5601

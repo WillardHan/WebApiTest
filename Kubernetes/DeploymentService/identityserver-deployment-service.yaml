@@ -1,0 +1,49 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: identityserver-deployment
+  labels:
+    deployment: identityserver
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      api: identityserver
+  template:
+    metadata:
+      labels:
+        api: identityserver
+    spec:
+      containers:
+      - name: k8s-identityserver
+        image: 139.224.128.17:5000/test_identityserver:latest
+        env:
+        - name: CONNECTIONSTRING
+          valueFrom:
+            configMapKeyRef:
+              name: database-connection-config
+              key: ConnectionString_WebApiTest
+        envFrom:
+        - configMapRef:
+            name: system-config
+        - configMapRef:
+            name: api-url-config
+        - configMapRef:
+            name: middleware-config
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: identityserver
+  labels:
+    service: identityserver
+spec:
+  selector:
+    api: identityserver
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80

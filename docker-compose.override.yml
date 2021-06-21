@@ -85,6 +85,12 @@ services:
     ports:
       - "55009:80"
 
+  mvctest:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "55008:80"
+
   webapitest:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development

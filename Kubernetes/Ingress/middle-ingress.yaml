@@ -1,0 +1,26 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: middle-ingress
+  #annotations:
+    #nginx.ingress.kubernetes.io/rewrite-target: /
+    #nginx.ingress.kubernetes.io/auth-type: basic
+    #nginx.ingress.kubernetes.io/auth-secret: auth-kibana
+    #nginx.ingress.kubernetes.io/auth-realm: 'please enter your account to login'
+spec:
+  rules:
+  - host: www.willard.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: kibana
+          servicePort: 80
+      - path: /rabbitmq/
+        backend:
+          serviceName: rabbitmq
+          servicePort: 8080
+      - path: /zookeeper/
+        backend:
+          serviceName: zookeeper
+          servicePort: 8080

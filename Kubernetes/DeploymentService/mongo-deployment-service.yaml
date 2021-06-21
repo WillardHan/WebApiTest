@@ -1,0 +1,45 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: mongo-deployment
+  labels:
+    deployment: mongo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: mongo
+  template:
+    metadata:
+      labels:
+        component: mongo
+    spec:
+      containers:
+      - name: k8s-mongo
+        image: mongo:4.4.6
+        envFrom:
+        - configMapRef:
+            name: system-config
+        ports:
+        - containerPort: 27017
+        volumeMounts:
+          - name: mongo-pvc
+            mountPath: "/data/db"
+      volumes:
+        - name: mongo-pvc
+          persistentVolumeClaim:
+            claimName: mongo-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo
+  labels:
+    service: mongo
+spec:
+  type: ClusterIP
+  selector:
+    component: mongo
+  ports:
+  - port: 80
+    targetPort: 27017

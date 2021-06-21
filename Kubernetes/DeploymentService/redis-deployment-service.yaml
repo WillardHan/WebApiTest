@@ -1,0 +1,49 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: redis-deployment
+  labels:
+    deployment: redis
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: redis
+  template:
+    metadata:
+      labels:
+        component: redis
+    spec:
+      containers:
+      - name: k8s-redis
+        image: redis:6.2
+        envFrom:
+        - configMapRef:
+            name: system-config
+        - configMapRef:
+            name: middleware-config
+        ports:
+        - containerPort: 6379
+        volumeMounts:
+          - name: redis-pvc
+            mountPath: "/data"
+        securityContext:
+          privileged: true
+      volumes:
+        - name: redis-pvc
+          persistentVolumeClaim:
+            claimName: redis-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: redis
+  labels:
+    service: redis
+spec:
+  type: ClusterIP
+  selector:
+    component: redis
+  ports:
+  - port: 80
+    targetPort: 6379

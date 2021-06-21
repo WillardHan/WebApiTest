@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-url-config
+data:
+  Identityserver_URL: Server=192.168.11.100;Database=WebApiTest;User ID=sa;Password=sa.123;
+  WebApiTest_URL: Server=192.168.11.100;Database=WebApiTest;User ID=sa;Password=sa.123;
+  WebApiTest2_URL: Server=192.168.11.100;Database=WebApiTest2;User ID=sa;Password=sa.123;

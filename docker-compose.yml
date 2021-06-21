@@ -54,6 +54,15 @@ services:
       - zookeeper2
       - zookeeper3
 
+  mvctest:
+    container_name: test_mvctest
+    image: 139.224.128.17:5000/test_mvctest:${TAG:-latest}
+    build:
+      context: .
+      dockerfile: MvcTest/Dockerfile
+    depends_on:
+      - identityserver
+
   webapitest:
     container_name: test_webapitest
     image: 139.224.128.17:5000/test_webapitest:${TAG:-latest}
